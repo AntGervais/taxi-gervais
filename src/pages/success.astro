@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title='Message Envoyé | Taxi Anthony Gervais'>
+  <div class='min-h-screen bg-gray-50 flex items-center justify-center px-4'>
+    <div class='max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center'>
+      <div
+        class='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+        <i class='fas fa-check text-3xl text-green-600'></i>
+      </div>
+      <h1 class='text-2xl font-bold text-slate-900 mb-4'>Message Reçu !</h1>
+      <p class='text-gray-600 mb-8'>
+        Merci de m'avoir contacté. Je vous répondrai dans les plus brefs délais
+        pour confirmer votre réservation.
+      </p>
+      <a
+        href='/'
+        class='inline-block bg-yellow-400 text-slate-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-500 transition shadow-md'>
+        Retour à l'accueil
+      </a>
+    </div>
+  </div>
+</Layout>
