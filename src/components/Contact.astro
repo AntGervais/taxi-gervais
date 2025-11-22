@@ -30,6 +30,7 @@
 
         <!-- Formulaire avec attribut Netlify pour que ça marche sans serveur -->
         <form
+          id='contact-form'
           name='contact'
           method='POST'
           action='/success'
@@ -65,21 +66,23 @@
           <div class='grid md:grid-cols-2 gap-6'>
             <div>
               <label class='block text-sm font-medium text-gray-700 mb-1'
-                >Date</label
+                >Date de la réservation</label
               >
               <input
                 type='date'
                 name='date'
+                required
                 class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
               />
             </div>
             <div>
               <label class='block text-sm font-medium text-gray-700 mb-1'
-                >Heure</label
+                >Heure de la réservation</label
               >
               <input
                 type='time'
                 name='heure'
+                required
                 class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
               />
             </div>
@@ -98,12 +101,71 @@
           </div>
 
           <button
+            id='submit-btn'
             type='submit'
-            class='w-full bg-gray-100 text-slate-900 font-bold py-3 rounded-lg hover:bg-gray-200 transition flex items-center justify-center border border-gray-300'>
-            <span>Envoyer la demande de réservation</span>
+            disabled
+            class='w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition flex items-center justify-center border border-gray-300'>
+            <span>Remplissez tous les champs</span>
             <i class='fas fa-paper-plane ml-2'></i>
           </button>
         </form>
+
+        <script>
+          const form = document.getElementById(
+            "contact-form",
+          ) as HTMLFormElement;
+          const btn = document.getElementById(
+            "submit-btn",
+          ) as HTMLButtonElement;
+          const inputs = form.querySelectorAll("input, textarea");
+
+          function checkForm() {
+            let isValid = true;
+            inputs.forEach((input) => {
+              if (
+                input instanceof HTMLInputElement ||
+                input instanceof HTMLTextAreaElement
+              ) {
+                if (!input.value.trim()) isValid = false;
+              }
+            });
+
+            if (isValid) {
+              btn.disabled = false;
+              btn.classList.remove(
+                "bg-gray-300",
+                "text-gray-500",
+                "cursor-not-allowed",
+              );
+              btn.classList.add(
+                "bg-yellow-400",
+                "text-slate-900",
+                "hover:bg-yellow-500",
+                "cursor-pointer",
+              );
+              btn.innerHTML = `<span>Envoyer la demande de réservation</span> <i class="fas fa-paper-plane ml-2"></i>`;
+            } else {
+              btn.disabled = true;
+              btn.classList.add(
+                "bg-gray-300",
+                "text-gray-500",
+                "cursor-not-allowed",
+              );
+              btn.classList.remove(
+                "bg-yellow-400",
+                "text-slate-900",
+                "hover:bg-yellow-500",
+                "cursor-pointer",
+              );
+              btn.innerHTML = `<span>Remplissez tous les champs</span> <i class="fas fa-paper-plane ml-2"></i>`;
+            }
+          }
+
+          inputs.forEach((input) => {
+            input.addEventListener("input", checkForm);
+            input.addEventListener("change", checkForm);
+          });
+        </script>
       </div>
     </div>
   </div>
