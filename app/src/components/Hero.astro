@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import heroBg from "../assets/taxi-anthony-gervais-laroche-85.webp";
+---
+
 <div id='accueil' class='relative bg-slate-800 text-white py-24'>
   <div class='absolute inset-0 overflow-hidden opacity-20'>
     <!-- Image de fond -->
-    <img
-      src='https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop'
-      alt='Route Vendée'
+    <Image
+      src={heroBg}
+      alt='Taxi Anthony Gervais - Transport médical et privé à La Roche-sur-Yon'
       class='w-full h-full object-cover'
     />
   </div>
