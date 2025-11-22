@@ -19,9 +19,9 @@ import "../styles/global.css";
 		<meta
 			name='description'
 			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 8 places."}
+				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
 		/>
-		<link rel='canonical' href='https://taxi-gervais-85.fr/' />
+		<link rel='canonical' href={new URL(Astro.url.pathname, Astro.site)} />
 
 		<script type='application/ld+json'>
 			{
@@ -62,29 +62,34 @@ import "../styles/global.css";
 					],
 					"opens": "00:00",
 					"closes": "23:59"
+				},
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5",
+					"reviewCount": "134"
 				}
 			}
 		</script>
 
 		<!-- Open Graph / Facebook -->
 		<meta property='og:type' content='website' />
-		<meta property='og:url' content='https://taxi-gervais-85.fr/' />
+		<meta property='og:url' content={Astro.url} />
 		<meta property='og:title' content={title} />
 		<meta
 			property='og:description'
 			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 8 places."}
+				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
 		/>
 		<meta property='og:image' content='/social-image.webp' />
 
 		<!-- Twitter -->
 		<meta property='twitter:card' content='summary_large_image' />
-		<meta property='twitter:url' content='https://taxi-gervais-85.fr/' />
+		<meta property='twitter:url' content={Astro.url} />
 		<meta property='twitter:title' content={title} />
 		<meta
 			property='twitter:description'
 			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 8 places."}
+				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
 		/>
 		<meta property='twitter:image' content='/social-image.webp' />
 		<link
