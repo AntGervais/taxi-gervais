@@ -21,6 +21,72 @@ import "../styles/global.css";
 			content={description ||
 				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 9 places."}
 		/>
+		<link rel='canonical' href='https://taxi-gervais-85.fr/' />
+
+		<script type='application/ld+json'>
+			{
+				"@context": "https://schema.org",
+				"@type": "TaxiService",
+				"name": "Taxi Anthony Gervais",
+				"image": "https://taxi-gervais-85.fr/social-image.webp",
+				"telephone": "06 33 96 80 23",
+				"email": "tag85@gmx.fr",
+				"url": "https://taxi-gervais-85.fr",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Stationnement Place Napoléon",
+					"addressLocality": "La Roche-sur-Yon",
+					"postalCode": "85000",
+					"addressCountry": "FR"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 46.6705,
+					"longitude": -1.426
+				},
+				"areaServed": {
+					"@type": "City",
+					"name": "La Roche-sur-Yon"
+				},
+				"priceRange": "$$",
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": [
+						"Monday",
+						"Tuesday",
+						"Wednesday",
+						"Thursday",
+						"Friday",
+						"Saturday",
+						"Sunday"
+					],
+					"opens": "00:00",
+					"closes": "23:59"
+				}
+			}
+		</script>
+
+		<!-- Open Graph / Facebook -->
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://taxi-gervais-85.fr/' />
+		<meta property='og:title' content={title} />
+		<meta
+			property='og:description'
+			content={description ||
+				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 9 places."}
+		/>
+		<meta property='og:image' content='/social-image.webp' />
+
+		<!-- Twitter -->
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:url' content='https://taxi-gervais-85.fr/' />
+		<meta property='twitter:title' content={title} />
+		<meta
+			property='twitter:description'
+			content={description ||
+				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport privé, gares, aéroports et rapatriement en cas de panne. Véhicule 9 places."}
+		/>
+		<meta property='twitter:image' content='/social-image.webp' />
 		<link
 			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
 			rel='stylesheet'
