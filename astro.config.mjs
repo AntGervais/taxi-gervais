@@ -9,8 +9,16 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://taxi-gervais-85.fr',
 
+  build: {
+    inlineStylesheets: 'auto',
+  },
+
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      cssMinify: true,
+      minify: 'terser',
+    }
   },
 
   integrations: [sitemap()]
