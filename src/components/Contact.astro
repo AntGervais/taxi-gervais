@@ -22,7 +22,7 @@
 
         <div class='relative flex py-5 items-center'>
           <div class='flex-grow border-t border-gray-300'></div>
-          <span class='flex-shrink-0 mx-4 text-gray-600'
+          <span class='flex-shrink-0 mx-4 text-gray-500'
             >Ou par écrit (réservation à l'avance)</span
           >
           <div class='flex-grow border-t border-gray-300'></div>
@@ -67,7 +67,9 @@
 
           <div class='grid md:grid-cols-2 gap-6'>
             <div>
-              <label for='date' class='block text-sm font-medium text-gray-700 mb-1'
+              <label
+                for='date'
+                class='block text-sm font-medium text-gray-700 mb-1'
                 >Date de la réservation</label
               >
               <input
@@ -79,7 +81,9 @@
               />
             </div>
             <div>
-              <label for='heure' class='block text-sm font-medium text-gray-700 mb-1'
+              <label
+                for='heure'
+                class='block text-sm font-medium text-gray-700 mb-1'
                 >Heure de la réservation</label
               >
               <input
@@ -116,10 +120,10 @@
 
         <script>
           const form = document.getElementById(
-            "contact-form",
+            "contact-form"
           ) as HTMLFormElement;
           const btn = document.getElementById(
-            "submit-btn",
+            "submit-btn"
           ) as HTMLButtonElement;
           const inputs = form.querySelectorAll("input, textarea");
 
@@ -139,13 +143,13 @@
               btn.classList.remove(
                 "bg-gray-300",
                 "text-gray-500",
-                "cursor-not-allowed",
+                "cursor-not-allowed"
               );
               btn.classList.add(
                 "bg-yellow-400",
                 "text-slate-900",
                 "hover:bg-yellow-500",
-                "cursor-pointer",
+                "cursor-pointer"
               );
               btn.innerHTML = `<span>Envoyer la demande de réservation</span> <i class="fas fa-paper-plane ml-2"></i>`;
             } else {
@@ -153,13 +157,13 @@
               btn.classList.add(
                 "bg-gray-300",
                 "text-gray-500",
-                "cursor-not-allowed",
+                "cursor-not-allowed"
               );
               btn.classList.remove(
                 "bg-yellow-400",
                 "text-slate-900",
                 "hover:bg-yellow-500",
-                "cursor-pointer",
+                "cursor-pointer"
               );
               btn.innerHTML = `<span>Remplissez tous les champs</span> <i class="fas fa-paper-plane ml-2"></i>`;
             }
