@@ -1,22 +1,16 @@
 ---
 const reviews = [
   {
-    author: "Sophie Martin",
+    author: "Amélie Laurin",
     rating: 5,
-    text: "Service impeccable ! Chauffeur très ponctuel et véhicule d'une propreté irréprochable. Je recommande vivement pour tous vos déplacements.",
-    date: "Il y a 2 mois",
-  },
-  {
-    author: "Pierre Dubois",
-    rating: 5,
-    text: "Excellent trajet vers l'aéroport. Conduite souple et agréable. Merci pour votre professionnalisme et votre gentillesse.",
+    text: "Anthony est un excellent conducteur, ponctuel, fiable. Il est très sympathique et c'est agréable de discuter avec lui. Je recommande vivement de faire appel à lui pour vos déplacements. Le meilleur chauffeur de taxi que j'aie rencontré.",
     date: "Il y a 1 mois",
   },
   {
-    author: "Marie Lecomte",
+    author: "Catherine Testa",
     rating: 5,
-    text: "Très satisfaite du service pour mes rendez-vous médicaux. M. Gervais est très arrangeant et bienveillant. À bientôt !",
-    date: "Il y a 3 semaines",
+    text: "Super !! Je recommande +++. Un des rares taxis à prendre les réservations à la roche sur Yon ! À l’heure !",
+    date: "Il y a 4 mois",
   },
   {
     author: "Jean-Luc Moreau",
@@ -25,16 +19,22 @@ const reviews = [
     date: "Il y a 4 mois",
   },
   {
-    author: "Isabelle Petit",
+    author: "Valentin Giraudet",
     rating: 5,
-    text: "Disponibilité et sympathie au rendez-vous. Je fais régulièrement appel à ce taxi et je ne suis jamais déçue.",
+    text: "Je recommande fortement ce taxi! Très sympathique, arrangeant et tarifs raisonnables ! Nous avons fait 3 courses dans le week-end avec ce même chauffeur !",
     date: "Il y a 5 mois",
   },
   {
-    author: "Thomas Bernard",
+    author: "Jean-Philippe Coutant",
     rating: 5,
-    text: "Transport médical assis très confortable. Le chauffeur est à l'écoute et très serviable. Je recommande les yeux fermés.",
-    date: "Il y a 6 mois",
+    text: "Départ ce matin à 4h45 direction l'aéroport Nantes. Ponctualité, excellente conduite et échanges très sympathiques ont ponctué ce trajet. Je vous recommande vivement Anthony",
+    date: "Il y a 8 mois",
+  },
+  {
+    author: "Sophie Meunier",
+    rating: 5,
+    text: "Quelle chance d'avoir connu Anthony G dans cette période de traitement si difficile! Je recommande à 400%, sa conduite est excellentissime! J'éspère avoir l'occasion de le croiser de nouveau! N'hésitez pas une seconde pour vos trajets!",
+    date: "Il y a 11 mois",
   },
 ];
 
@@ -44,13 +44,32 @@ const writeReviewLink =
   "https://www.google.com/search?newwindow=1&sca_esv=454c728905f0b91c&sxsrf=AE3TifNwtmrLBlZ5EzZwWRMQLEtdpGMoMg:1764109083140&q=Taxi+Anthony+Gervais+-+La+Roche+sur+Yon+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDSwtDAyNbE0NjA0tDS3MDA32cDI-IpRJySxIlPBMa8kIz-vUsE9tagsMbNYQVfBJ1EhKD85I1WhuLRIITI_T8GxLLN4EStJygHgbYl_eAAAAA&rldimm=9109825493011978074&tbm=lcl&hl=fr-FR&sa=X&ved=2ahUKEwjXovu5qo6RAxWrUKQEHbQkLbEQ9fQKegQIKhAF&biw=1728&bih=911&dpr=2#lkt=LocalPoiReviews&lrd=0x48042f5059cd427d:0x7e6c9a051cc6d75a,3,,,,";
 ---
 
-<section class='py-20 bg-gray-50'>
+<section class='py-16 bg-gray-50'>
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='text-center mb-16'>
-      <h2 class='text-3xl font-bold text-slate-900'>
-        Ce que nos clients disent
-      </h2>
-      <div class='w-20 h-1 bg-yellow-400 mx-auto mt-4 mb-6'></div>
+      <div class='flex flex-col items-center gap-5'>
+        <h2 class='text-3xl font-bold text-slate-900'>
+          Ce que nos clients disent
+        </h2>
+        <div
+          class='bg-white px-6 py-3 rounded-lg shadow-md border border-gray-200 flex items-center gap-3'>
+          <div class='text-center'>
+            <div class='text-2xl font-bold text-slate-900'>5,0</div>
+            <div class='text-yellow-400 text-sm flex gap-0.5'>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+              <i class='fas fa-star'></i>
+            </div>
+          </div>
+          <div class='text-gray-600 text-sm border-l border-gray-300 pl-3'>
+            <div class='font-semibold'>135 avis</div>
+            <div class='text-xs text-gray-500'>Google</div>
+          </div>
+        </div>
+      </div>
+      <div class='w-20 h-1 bg-yellow-400 mx-auto mt-6 mb-6'></div>
       <p class='text-gray-600 mx-auto'>
         La satisfaction de nos clients est notre priorité.
         <br />
