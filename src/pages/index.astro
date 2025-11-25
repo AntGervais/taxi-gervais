@@ -6,27 +6,29 @@ import Services from "../components/Services.astro";
 import ZoneIntervention from "../components/ZoneIntervention.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Contact from "../components/Contact.astro";
+import GoogleReviews from "../components/GoogleReviews.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Layout title='Taxi Gervais - La Roche-sur-Yon - 06 33 96 80 23'>
-	<Navbar />
-	<main>
-		<Hero />
-		<Services />
-		<ZoneIntervention />
-		<Testimonials />
-		<Contact />
-	</main>
-	<Footer />
+  <Navbar />
+  <main>
+    <Hero />
+    <Services />
+    <ZoneIntervention />
+    <Testimonials />
+    <GoogleReviews />
+    <Contact />
+  </main>
+  <Footer />
 
-	<!-- Mobile Call Button -->
-	<div class='md:hidden fixed bottom-4 right-4 z-50'>
-		<a
-			href='tel:0633968023'
-			aria-label='Appeler Taxi Anthony Gervais'
-			class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-			<i class='fas fa-phone-alt text-2xl'></i>
-		</a>
-	</div>
+  <!-- Mobile Call Button -->
+  <div class='md:hidden fixed bottom-4 right-4 z-50'>
+    <a
+      href='tel:0633968023'
+      aria-label='Appeler Taxi Anthony Gervais'
+      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
+      <i class='fas fa-phone-alt text-2xl'></i>
+    </a>
+  </div>
 </Layout>
