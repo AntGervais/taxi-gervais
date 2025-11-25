@@ -36,6 +36,42 @@ const reviews = [
     text: "Quelle chance d'avoir connu Anthony G dans cette période de traitement si difficile! Je recommande à 400%, sa conduite est excellentissime! J'éspère avoir l'occasion de le croiser de nouveau! N'hésitez pas une seconde pour vos trajets!",
     date: "Il y a 11 mois",
   },
+  {
+    author: "Julie Da Graça Neves",
+    rating: 5,
+    text: "Anthony a été super arrangeant, nous avons réservé 4 voyages avec lui sur un week-end. Hyper disponible et très réactif je vous le recommande vivement !",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Jérôme GORCE",
+    rating: 5,
+    text: "Au top ! Qualité de service, ponctualité, amabilité, échanges très sympathiques, conduite impeccable. Je vous conseille vivement ses services !!! Il m'a réconcilié avec la profession dont je n'avais pas forcément de bons souvenirs ! Faites appel à ses services sans aucune hésitation !",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Marion Foulquier",
+    rating: 5,
+    text: "En panne de voiture avec mes enfants, nous avons été ravis de tomber sur un chauffeur aussi professionnel, serviable et sympathique pour nous amener à destination. Recommandation +++ !",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Laurent Mathieu",
+    rating: 5,
+    text: "Je recommande vivement ce taxi qui a bien voulu accepter ma demande un dimanche soir entre la gare et l'hôtel Ibis. Sans ça, j'étais pied ! Donc, très bon accueil, très bon service et très \"commerçant\".",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Maëlle Aboukinane",
+    rating: 5,
+    text: "Franchement super bon trajet avec Anthony il m'a très clairement sauvé la vie en me prenant, il est très agréable, très souriant et c'est très simple de lui parler et très à l'écoute je recommande vraiment! Merci pour tout encore une fois !",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Canal Franzo",
+    rating: 5,
+    text: "Anthony est un super chauffeur. À l'heure, il est fiable et vraiment très sympathique. Aux petits soins pour ses clients/passagers. Il cherche vraiment à faire au mieux malgré certains horaires contraignants. De passage pour un salon littéraire à Jard-sur-mer, il a été d'une rapidité à toute épreuve. Un immense merci ! Je recommande à 100% ses services !",
+    date: "Il y a 2 ans",
+  },
 ];
 
 const googleReviewsLink =
@@ -151,7 +187,7 @@ const writeReviewLink =
         throw new Error("Required elements not found");
       }
 
-      const totalReviews = 6;
+      const totalReviews = 12;
       let currentIndex = 0;
 
       function getReviewsPerPage(): number {
