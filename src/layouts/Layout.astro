@@ -1,7 +1,7 @@
 ---
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 
 import "@fontsource/inter/300.css";
@@ -15,113 +15,113 @@ import "../styles/global.css";
 
 <!doctype html>
 <html lang='fr' class='scroll-smooth scroll-pt-12'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<link rel='icon' type='image/png' href='/favicon.png' />
-		<meta name='generator' content={Astro.generator} />
-		<title>{title}</title>
-		<meta
-			name='description'
-			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
-		/>
-		<link rel='canonical' href={new URL(Astro.url.pathname, Astro.site)} />
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='icon' type='image/png' href='/favicon.png' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name='description'
+      content={description ||
+        "Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
+    />
+    <link rel='canonical' href={new URL(Astro.url.pathname, Astro.site)} />
 
-		<script type='application/ld+json'>
-			{
-				"@context": "https://schema.org",
-				"@type": "TaxiService",
-				"name": "Taxi Anthony Gervais",
-				"image": "https://taxi-gervais-85.fr/social-image.webp",
-				"telephone": "06 33 96 80 23",
-				"email": "tag85@gmx.fr",
-				"url": "https://taxi-gervais-85.fr",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "Stationnement Place Napoléon",
-					"addressLocality": "La Roche-sur-Yon",
-					"postalCode": "85000",
-					"addressCountry": "FR"
-				},
-				"geo": {
-					"@type": "GeoCoordinates",
-					"latitude": 46.6705,
-					"longitude": -1.426
-				},
-				"areaServed": {
-					"@type": "City",
-					"name": "La Roche-sur-Yon"
-				},
-				"priceRange": "$$",
-				"openingHoursSpecification": {
-					"@type": "OpeningHoursSpecification",
-					"dayOfWeek": [
-						"Monday",
-						"Tuesday",
-						"Wednesday",
-						"Thursday",
-						"Friday",
-						"Saturday",
-						"Sunday"
-					],
-					"opens": "00:00",
-					"closes": "23:59"
-				},
-				"aggregateRating": {
-					"@type": "AggregateRating",
-					"ratingValue": "5",
-					"reviewCount": "134"
-				}
-			}
-		</script>
+    <script type='application/ld+json'>
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Taxi Anthony Gervais",
+        "image": "https://taxi-gervais-85.fr/social-image.webp",
+        "telephone": "06 33 96 80 23",
+        "email": "tag85@gmx.fr",
+        "url": "https://taxi-gervais-85.fr",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Stationnement Place Napoléon",
+          "addressLocality": "La Roche-sur-Yon",
+          "postalCode": "85000",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 46.6705,
+          "longitude": -1.426
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "La Roche-sur-Yon"
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "135"
+        }
+      }
+    </script>
 
-		<!-- Open Graph / Facebook -->
-		<meta property='og:type' content='website' />
-		<meta property='og:url' content={Astro.url} />
-		<meta property='og:title' content={title} />
-		<meta
-			property='og:description'
-			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
-		/>
-		<meta property='og:image' content='/social-image.webp' />
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={Astro.url} />
+    <meta property='og:title' content={title} />
+    <meta
+      property='og:description'
+      content={description ||
+        "Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
+    />
+    <meta property='og:image' content='/social-image.webp' />
 
-		<!-- Twitter -->
-		<meta property='twitter:card' content='summary_large_image' />
-		<meta property='twitter:url' content={Astro.url} />
-		<meta property='twitter:title' content={title} />
-		<meta
-			property='twitter:description'
-			content={description ||
-				"Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
-		/>
-		<meta property='twitter:image' content='/social-image.webp' />
-	</head>
-	<body class='bg-gray-50 text-gray-800 font-sans antialiased'>
-		<slot />
-	</body>
+    <!-- Twitter -->
+    <meta property='twitter:card' content='summary_large_image' />
+    <meta property='twitter:url' content={Astro.url} />
+    <meta property='twitter:title' content={title} />
+    <meta
+      property='twitter:description'
+      content={description ||
+        "Taxi Anthony Gervais à La Roche-sur-Yon. Transport médical conventionné CPAM, gares, aéroports et rapatriement. Véhicule 8 places confort."}
+    />
+    <meta property='twitter:image' content='/social-image.webp' />
+  </head>
+  <body class='bg-gray-50 text-gray-800 font-sans antialiased'>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	body {
-		font-family: "Inter", sans-serif;
-	}
-	.taxi-yellow {
-		color: #fbbf24;
-	}
-	.bg-taxi-yellow {
-		background-color: #fbbf24;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .taxi-yellow {
+    color: #fbbf24;
+  }
+  .bg-taxi-yellow {
+    background-color: #fbbf24;
+  }
 </style>
