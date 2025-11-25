@@ -44,9 +44,9 @@ const writeReviewLink =
   "https://www.google.com/search?newwindow=1&sca_esv=454c728905f0b91c&sxsrf=AE3TifNwtmrLBlZ5EzZwWRMQLEtdpGMoMg:1764109083140&q=Taxi+Anthony+Gervais+-+La+Roche+sur+Yon+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDSwtDAyNbE0NjA0tDS3MDA32cDI-IpRJySxIlPBMa8kIz-vUsE9tagsMbNYQVfBJ1EhKD85I1WhuLRIITI_T8GxLLN4EStJygHgbYl_eAAAAA&rldimm=9109825493011978074&tbm=lcl&hl=fr-FR&sa=X&ved=2ahUKEwjXovu5qo6RAxWrUKQEHbQkLbEQ9fQKegQIKhAF&biw=1728&bih=911&dpr=2#lkt=LocalPoiReviews&lrd=0x48042f5059cd427d:0x7e6c9a051cc6d75a,3,,,,";
 ---
 
-<section class='py-16 bg-gray-50'>
+<section class='py-12 bg-gray-50'>
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='text-center mb-16'>
+    <div class='text-center mb-12'>
       <div class='flex flex-col items-center gap-5'>
         <h2 class='text-3xl font-bold text-slate-900'>
           Ce que nos clients disent
@@ -77,33 +77,175 @@ const writeReviewLink =
       </p>
     </div>
 
-    <div class='grid md:grid-cols-3 gap-8 mb-12'>
-      {
-        reviews.map((review) => (
-          <div class='bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100 flex flex-col h-full'>
-            <div class='flex items-center mb-4'>
-              <div class='text-yellow-400 text-sm flex'>
-                {[...Array(review.rating)].map(() => (
-                  <i class='fas fa-star' />
-                ))}
+    <div class='relative mb-12'>
+      <!-- Bouton précédent -->
+      <button
+        id='prevBtn'
+        class='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed'>
+        <i class='fas fa-chevron-left'></i>
+      </button>
+
+      <!-- Container du slider -->
+      <div class='overflow-hidden -mx-4' id='sliderContainer'>
+        <div id='reviewsSlider' class='flex transition-transform duration-500 ease-in-out'>
+          {
+            reviews.map((review, index) => (
+              <div
+                class='w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4'
+                data-index={index}>
+                <div class='bg-white p-6 md:p-8 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100 flex flex-col h-full'>
+                  <div class='flex items-center mb-4'>
+                    <div class='text-yellow-400 text-sm flex'>
+                      {[...Array(review.rating)].map(() => (
+                        <i class='fas fa-star' />
+                      ))}
+                    </div>
+                    <span class='text-gray-400 text-xs ml-auto'>
+                      {review.date}
+                    </span>
+                  </div>
+                  <p class='text-gray-600 italic mb-6 grow'>"{review.text}"</p>
+                  <div class='flex items-center mt-auto'>
+                    <div class='w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-3'>
+                      {review.author.charAt(0)}
+                    </div>
+                    <div>
+                      <p class='font-bold text-slate-900 text-sm'>
+                        {review.author}
+                      </p>
+                      <p class='text-xs text-gray-500'>Client Google</p>
+                    </div>
+                    <i class='fab fa-google text-slate-300 text-xl ml-auto' />
+                  </div>
+                </div>
               </div>
-              <span class='text-gray-400 text-xs ml-auto'>{review.date}</span>
-            </div>
-            <p class='text-gray-600 italic mb-6 grow'>"{review.text}"</p>
-            <div class='flex items-center mt-auto'>
-              <div class='w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-3'>
-                {review.author.charAt(0)}
-              </div>
-              <div>
-                <p class='font-bold text-slate-900 text-sm'>{review.author}</p>
-                <p class='text-xs text-gray-500'>Client Google</p>
-              </div>
-              <i class='fab fa-google text-slate-300 text-xl ml-auto' />
-            </div>
-          </div>
-        ))
-      }
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Bouton suivant -->
+      <button
+        id='nextBtn'
+        class='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed'>
+        <i class='fas fa-chevron-right'></i>
+      </button>
+
+      <!-- Indicateurs -->
+      <div class='flex justify-center gap-2 mt-8' id='indicators'>
+        <!-- Sera rempli par JavaScript -->
+      </div>
     </div>
+
+    <script>
+      const slider = document.getElementById("reviewsSlider");
+      const prevBtn = document.getElementById(
+        "prevBtn"
+      ) as HTMLButtonElement | null;
+      const nextBtn = document.getElementById(
+        "nextBtn"
+      ) as HTMLButtonElement | null;
+      const indicators = document.getElementById("indicators");
+
+      if (!slider || !prevBtn || !nextBtn || !indicators) {
+        throw new Error("Required elements not found");
+      }
+
+      const totalReviews = 6;
+      let currentIndex = 0;
+
+      function getReviewsPerPage(): number {
+        const width = window.innerWidth;
+        if (width >= 1024) return 3; // lg breakpoint
+        if (width >= 768) return 2; // md breakpoint
+        return 1; // mobile
+      }
+
+      function getTotalPages(): number {
+        return Math.ceil(totalReviews / getReviewsPerPage());
+      }
+
+      function createIndicators() {
+        if (!indicators) return;
+        indicators.innerHTML = "";
+        const totalPages = getTotalPages();
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement("button");
+          dot.className = "w-2.5 h-2.5 rounded-full transition-all";
+          dot.onclick = () => goToPage(i);
+          indicators.appendChild(dot);
+        }
+      }
+
+      function updateSlider() {
+        if (!slider || !prevBtn || !nextBtn || !indicators) return;
+
+        const reviewsPerPage = getReviewsPerPage();
+        const totalPages = getTotalPages();
+        const currentPage = Math.floor(currentIndex / reviewsPerPage);
+
+        // Calculer le décalage basé sur le nombre d'éléments par page
+        // Chaque "page" déplace de 100% de la largeur du conteneur
+        const offset = currentPage * 100;
+        slider.style.transform = `translateX(-${offset}%)`;
+
+        // Mettre à jour les boutons
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage >= totalPages - 1;
+
+        // Mettre à jour les indicateurs
+        Array.from(indicators.children).forEach((dot, index) => {
+          if (index === currentPage) {
+            dot.className =
+              "w-8 h-2.5 rounded-full bg-yellow-400 transition-all";
+          } else {
+            dot.className =
+              "w-2.5 h-2.5 rounded-full bg-gray-300 transition-all";
+          }
+        });
+      }
+
+      function goToPage(page: number) {
+        const reviewsPerPage = getReviewsPerPage();
+        currentIndex = page * reviewsPerPage;
+        updateSlider();
+      }
+
+      function handleResize() {
+        const reviewsPerPage = getReviewsPerPage();
+        const currentPage = Math.floor(currentIndex / reviewsPerPage);
+        currentIndex = currentPage * reviewsPerPage;
+        createIndicators();
+        updateSlider();
+      }
+
+      prevBtn.addEventListener("click", () => {
+        const reviewsPerPage = getReviewsPerPage();
+        if (currentIndex >= reviewsPerPage) {
+          currentIndex -= reviewsPerPage;
+          updateSlider();
+        }
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const reviewsPerPage = getReviewsPerPage();
+        if (currentIndex < totalReviews - reviewsPerPage) {
+          currentIndex += reviewsPerPage;
+          updateSlider();
+        }
+      });
+
+      // Gérer le redimensionnement avec debounce
+      let resizeTimeout: ReturnType<typeof setTimeout>;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(handleResize, 150);
+      });
+
+      // Initialiser
+      createIndicators();
+      updateSlider();
+    </script>
 
     <div class='flex flex-col sm:flex-row justify-center items-center gap-4'>
       <a
