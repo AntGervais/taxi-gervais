@@ -239,9 +239,17 @@ const writeReviewLink =
         <i class='fas fa-chevron-right'></i>
       </button>
 
-      <!-- Indicateurs -->
-      <div class='flex justify-center gap-2 mt-8' id='indicators'>
-        <!-- Sera rempli par JavaScript -->
+      <!-- Pagination -->
+      <div class='mt-8'>
+        <div class='flex justify-center items-center gap-4'>
+          <div class='text-sm text-slate-600 font-medium' id='pagination'>
+            <!-- Sera rempli par JavaScript -->
+          </div>
+        </div>
+        <!-- Barre de progression -->
+        <div class='max-w-xs mx-auto mt-3 h-1 bg-gray-200 rounded-full overflow-hidden'>
+          <div id='progressBar' class='h-full bg-yellow-400 transition-all duration-500 ease-in-out' style='width: 0%'></div>
+        </div>
       </div>
     </div>
 
@@ -253,9 +261,10 @@ const writeReviewLink =
       const nextBtn = document.getElementById(
         "nextBtn"
       ) as HTMLButtonElement | null;
-      const indicators = document.getElementById("indicators");
+      const pagination = document.getElementById("pagination");
+      const progressBar = document.getElementById("progressBar");
 
-      if (!slider || !prevBtn || !nextBtn || !indicators) {
+      if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar) {
         throw new Error("Required elements not found");
       }
 
@@ -273,20 +282,8 @@ const writeReviewLink =
         return Math.ceil(totalReviews / getReviewsPerPage());
       }
 
-      function createIndicators() {
-        if (!indicators) return;
-        indicators.innerHTML = "";
-        const totalPages = getTotalPages();
-        for (let i = 0; i < totalPages; i++) {
-          const dot = document.createElement("button");
-          dot.className = "w-2.5 h-2.5 rounded-full transition-all";
-          dot.onclick = () => goToPage(i);
-          indicators.appendChild(dot);
-        }
-      }
-
       function updateSlider() {
-        if (!slider || !prevBtn || !nextBtn || !indicators) return;
+        if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar) return;
 
         const reviewsPerPage = getReviewsPerPage();
         const totalPages = getTotalPages();
@@ -301,29 +298,18 @@ const writeReviewLink =
         prevBtn.disabled = currentPage === 0;
         nextBtn.disabled = currentPage >= totalPages - 1;
 
-        // Mettre à jour les indicateurs
-        Array.from(indicators.children).forEach((dot, index) => {
-          if (index === currentPage) {
-            dot.className =
-              "w-8 h-2.5 rounded-full bg-yellow-400 transition-all";
-          } else {
-            dot.className =
-              "w-2.5 h-2.5 rounded-full bg-gray-300 transition-all";
-          }
-        });
-      }
+        // Mettre à jour la pagination
+        pagination.textContent = `${currentPage + 1} / ${totalPages}`;
 
-      function goToPage(page: number) {
-        const reviewsPerPage = getReviewsPerPage();
-        currentIndex = page * reviewsPerPage;
-        updateSlider();
+        // Mettre à jour la barre de progression
+        const progress = ((currentPage + 1) / totalPages) * 100;
+        progressBar.style.width = `${progress}%`;
       }
 
       function handleResize() {
         const reviewsPerPage = getReviewsPerPage();
         const currentPage = Math.floor(currentIndex / reviewsPerPage);
         currentIndex = currentPage * reviewsPerPage;
-        createIndicators();
         updateSlider();
       }
 
@@ -351,7 +337,6 @@ const writeReviewLink =
       });
 
       // Initialiser
-      createIndicators();
       updateSlider();
     </script>
 
