@@ -9,7 +9,7 @@ const reviews = [
   {
     author: "Catherine Testa",
     rating: 5,
-    text: "Super !! Je recommande +++. Un des rares taxis à prendre les réservations à la roche sur Yon ! À l’heure !",
+    text: "Super !! Je recommande +++. Un des rares taxis à prendre les réservations à la roche sur Yon ! À l'heure !",
     date: "Il y a 4 mois",
   },
   {
@@ -71,6 +71,78 @@ const reviews = [
     rating: 5,
     text: "Anthony est un super chauffeur. À l'heure, il est fiable et vraiment très sympathique. Aux petits soins pour ses clients/passagers. Il cherche vraiment à faire au mieux malgré certains horaires contraignants. De passage pour un salon littéraire à Jard-sur-mer, il a été d'une rapidité à toute épreuve. Un immense merci ! Je recommande à 100% ses services !",
     date: "Il y a 2 ans",
+  },
+  {
+    author: "Brice ROBERT",
+    rating: 5,
+    text: "Bon trajet avec Anthony Gervais, ponctuel, met à l'aise dès le début, conduite agréable, contact et échange facile pendant le trajet, voiture confortable. Je recommande.",
+    date: "Il y a 1 mois",
+  },
+  {
+    author: "Corentin Boisson",
+    rating: 5,
+    text: "Je recommande très fortement Anthony, il conduit très bien il est super sympathique c'est une très bonne personne et j'ai passé un très bon trajet à ses côtés 👍",
+    date: "Il y a 1 mois",
+  },
+  {
+    author: "Benjamin Carboni",
+    rating: 5,
+    text: "Très professionnel ! Conducteur sympathique, vous pouvez lui faire confiance ! Au top",
+    date: "Il y a 3 mois",
+  },
+  {
+    author: "weslly godinho",
+    rating: 5,
+    text: "Il est top, très gentil et serviable, un vrai gentleman",
+    date: "Il y a 3 mois",
+  },
+  {
+    author: "Charles Guesneau",
+    rating: 5,
+    text: "Taxi intervenu via l'assistance de notre assurance auto sur panne de notre véhicule. Intervention réactive un dimanche soir, appréciable. Aimable, courtois et professionnel.",
+    date: "Il y a 5 mois",
+  },
+  {
+    author: "romain Chartier",
+    rating: 5,
+    text: "Très bon conducteur à l'écoute bonne conduite et avec de la discussion je valide",
+    date: "Il y a 6 mois",
+  },
+  {
+    author: "Raphael Mucha",
+    rating: 5,
+    text: "Prise en charge parfaite par Anthony. Arrangeant, ponctuel et super sympa 👌 Parfait 🤘",
+    date: "Il y a 10 mois",
+  },
+  {
+    author: "Nolwenn P",
+    rating: 5,
+    text: "Très bonne prise en charge. Très bonne conduite rapide et efficace je recommande",
+    date: "Il y a 11 mois",
+  },
+  {
+    author: "Bob Dolonne",
+    rating: 5,
+    text: "Ce monsieur a récupéré mon fils en panne de voiture, qui l'a trouvé fort sympathique, agréable et prévenant. Il y a des cartes de visites à conserver, celle-ci en fait partie.",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Ludovic Afonso",
+    rating: 5,
+    text: "Tombé en panne fin avril, notre assurance nous a envoyé Anthony qui a été impeccable sur toute la ligne. Sérieux, professionnel, arrangeant, souriant.",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Pascale Gamby",
+    rating: 5,
+    text: "Taxi très agréable et professionnel ! On a discuté pendant tout le trajet. Je recommande vivement !",
+    date: "Il y a 1 an",
+  },
+  {
+    author: "Delphine Michaud",
+    rating: 5,
+    text: "Ponctuel, sympathique, professionnel, et se plie en 4 pour trouver des solutions... Je sais qui appeler lors de mes prochains déplacements à la Roche-sur-Yon. Merci",
+    date: "Il y a 1 an",
   },
 ];
 
@@ -187,7 +259,7 @@ const writeReviewLink =
         throw new Error("Required elements not found");
       }
 
-      const totalReviews = 12;
+      const totalReviews = 24;
       let currentIndex = 0;
 
       function getReviewsPerPage(): number {
