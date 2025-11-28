@@ -1,0 +1,566 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Rapatriement Panne Automobile La Roche-sur-Yon - Taxi Longue Distance | Taxi Gervais"
+  description="Votre voiture en panne loin de chez vous ? Service de rapatriement taxi longue distance, pris en charge par votre assurance auto. Disponible 7j/7 en Vendée et toute la France."
+>
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mon assurance auto prend-elle en charge le rapatriement en taxi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui ! La plupart des assurances auto incluent une garantie assistance qui couvre le rapatriement des passagers en cas de panne ou accident, souvent dès 0 km du domicile. Je vous fournis une facture détaillée que vous transmettez à votre assurance pour remboursement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour venir me chercher après une panne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je m'organise au plus vite selon votre localisation. Pour les pannes dans un rayon de 100 km, je peux généralement intervenir sous 1 à 2 heures. Pour les pannes plus éloignées, nous organisons ensemble l'intervention. Disponible 7j/7."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que faire si je suis en panne avec toute ma famille et beaucoup de bagages ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas de panique ! Mon taxi 8 places peut rapatrier jusqu'à 8 personnes avec leurs bagages en un seul trajet. Plus besoin d'organiser plusieurs véhicules ou de laisser des affaires sur place. Tout le monde rentre ensemble."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles distances couvrez-vous pour le rapatriement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "J'interviens partout en France pour vous ramener vers La Roche-sur-Yon et la Vendée. Je peux aussi vous rapatrier depuis la Vendée vers n'importe quelle destination en cas de panne lors de vos départs en vacances ou déplacements."
+          }
+        }
+      ]
+    }
+  </script>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-red-900 to-red-800 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-car-crash mr-2"></i>
+            Service d'Urgence Disponible
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Rapatriement Taxi Suite à Panne Automobile
+          </h1>
+          <p class="text-xl text-gray-200 mb-4">
+            Votre véhicule est en panne loin de chez vous ? Je vous rapatrie en taxi longue distance vers La Roche-sur-Yon et toute la Vendée. Service souvent <strong class="text-yellow-400">pris en charge par votre assurance auto</strong>.
+          </p>
+          <p class="text-lg text-gray-300 mb-8">
+            Disponible 7j/7, avec possibilité de rapatrier jusqu'à 8 personnes et leurs bagages en un seul trajet.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:0633968023"
+              class="bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center"
+            >
+              <i class="fas fa-phone-alt mr-2"></i>
+              Appelez Maintenant - 06 33 96 80 23
+            </a>
+            <a
+              href="#procedure"
+              class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-red-900 transition text-center"
+            >
+              Comment ça marche ?
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Situations de panne -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Situations d'Urgence Couvertes
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+          <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+            Je suis là pour vous rapatrier dans toutes les situations de panne ou d'accident
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-red-600">
+            <div class="text-red-600 text-3xl mb-4">
+              <i class="fas fa-road"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Panne sur Autoroute</h3>
+            <p class="text-gray-700">
+              En panne sur l'autoroute lors d'un long trajet ? Je viens vous récupérer à la sortie la plus proche ou à l'aire de service pour vous ramener chez vous en toute sécurité.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-orange-600">
+            <div class="text-orange-600 text-3xl mb-4">
+              <i class="fas fa-umbrella-beach"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Panne Départ Vacances</h3>
+            <p class="text-gray-700">
+              Votre voiture tombe en panne au départ de vos vacances ? Je peux vous conduire jusqu'à votre destination pendant que votre véhicule est pris en charge par le dépanneur.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-yellow-600">
+            <div class="text-yellow-600 text-3xl mb-4">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Retour Domicile</h3>
+            <p class="text-gray-700">
+              En panne loin de chez vous (autre région, autre département) ? Je vous rapatrie jusqu'à votre domicile en Vendée, quelle que soit la distance.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-blue-600">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-car-burst"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Accident Sans Blessé</h3>
+            <p class="text-gray-700">
+              Après un accident matériel sans gravité, votre véhicule n'est plus en état de rouler ? Je vous ramène chez vous pendant les démarches d'expertise.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-green-600">
+            <div class="text-green-600 text-3xl mb-4">
+              <i class="fas fa-user-group"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Famille au Complet</h3>
+            <p class="text-gray-700">
+              En panne avec toute la famille (enfants, grands-parents) ? Mon taxi 8 places rapatrie tout le monde ensemble, sans séparation ni organisation compliquée.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-purple-600">
+            <div class="text-purple-600 text-3xl mb-4">
+              <i class="fas fa-suitcase-rolling"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Avec Bagages Volumineux</h3>
+            <p class="text-gray-700">
+              Valises, équipements sportifs, courses de vacances : mon grand coffre permet de rapatrier tous vos bagages en même temps que les passagers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prise en charge assurance -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <div class="text-center mb-8">
+            <div class="inline-block bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center mb-6 text-4xl">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">
+              Pris en Charge par Votre Assurance Auto
+            </h2>
+            <div class="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+              La plupart des contrats d'assurance automobile incluent une <strong>garantie assistance rapatriement</strong> qui couvre le transport des passagers en cas de panne ou d'accident.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="flex items-start">
+              <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4 text-xl">
+                <i class="fas fa-check"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Garantie Assistance 0 km</h3>
+                <p class="text-gray-700">
+                  Beaucoup d'assurances couvrent le rapatriement dès 0 km du domicile, même pour une panne devant chez vous avant de partir en vacances.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4 text-xl">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Facture Détaillée</h3>
+                <p class="text-gray-700">
+                  Je vous fournis une facture complète et détaillée à transmettre à votre assurance pour obtenir le remboursement du trajet.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4 text-xl">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Contact Direct Assureur</h3>
+                <p class="text-gray-700">
+                  Appelez d'abord votre assurance pour déclarer la panne et obtenir l'accord de prise en charge. Ils vous communiqueront la procédure à suivre.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4 text-xl">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Avance de Frais Possible</h3>
+                <p class="text-gray-700">
+                  Si besoin, vous réglez le trajet et vous êtes remboursé ensuite par votre assurance. Certains assureurs peuvent aussi régler directement.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mt-8">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <i class="fas fa-lightbulb text-yellow-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Conseil Important</h3>
+                <p class="text-gray-700">
+                  Avant de m'appeler, <strong>contactez votre assurance</strong> pour déclarer la panne et demander leur accord. Conservez le numéro de dossier. Cela facilitera le remboursement et évitera les mauvaises surprises.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procédure -->
+    <section id="procedure" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Comment Organiser Votre Rapatriement ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Sécurisez-vous</h3>
+            <p class="text-gray-600">
+              Mettez-vous en sécurité (bande d'arrêt d'urgence, aire de repos) et activez vos feux de détresse
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Appelez Votre Assurance</h3>
+            <p class="text-gray-600">
+              Déclarez la panne à votre assureur et demandez la prise en charge du rapatriement. Notez le numéro de dossier
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Contactez-moi</h3>
+            <p class="text-gray-600">
+              Appelez-moi au <strong>06 33 96 80 23</strong> : je note votre position, destination et nombre de passagers
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              4
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Je Vous Rapatrie</h3>
+            <p class="text-gray-600">
+              J'arrive au plus vite pour vous ramener chez vous. Vous recevez la facture pour votre assurance
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-gray-50 rounded-xl p-8">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 text-center">
+            <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+            Informations à Me Communiquer
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4 mt-6">
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt text-red-600 mr-3"></i>
+              <span class="text-gray-700">Votre position exacte (ville, adresse, borne kilométrique)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-location-dot text-red-600 mr-3"></i>
+              <span class="text-gray-700">Destination souhaitée (domicile, gare, autre)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-users text-red-600 mr-3"></i>
+              <span class="text-gray-700">Nombre de passagers (adultes, enfants)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-suitcase text-red-600 mr-3"></i>
+              <span class="text-gray-700">Quantité de bagages à transporter</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-file-contract text-red-600 mr-3"></i>
+              <span class="text-gray-700">Numéro de dossier assurance (si déjà déclaré)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock text-red-600 mr-3"></i>
+              <span class="text-gray-700">Degré d'urgence de la situation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Pourquoi Choisir Mon Service de Rapatriement ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-green-600 text-3xl mb-4">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Disponibilité 7j/7</h3>
+            <p class="text-gray-700">
+              Service disponible tous les jours de la semaine, week-ends et jours fériés. Les pannes n'arrivent jamais au bon moment !
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-blue-600 text-3xl mb-4">
+              <i class="fas fa-van-shuttle"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Taxi 8 Places Disponible</h3>
+            <p class="text-gray-700">
+              Possibilité de rapatrier jusqu'à 8 personnes en un seul trajet, idéal pour les familles ou groupes en panne.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-yellow-600 text-3xl mb-4">
+              <i class="fas fa-gauge-high"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Intervention Rapide</h3>
+            <p class="text-gray-700">
+              Je m'organise au plus vite pour venir vous chercher. Dans les situations d'urgence, chaque minute compte.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-purple-600 text-3xl mb-4">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Toutes Distances</h3>
+            <p class="text-gray-700">
+              Rapatriement dans toute la France, quelle que soit la distance. Trajets courts comme trajets de plusieurs centaines de kilomètres.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-red-600 text-3xl mb-4">
+              <i class="fas fa-couch"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Confort et Sérénité</h3>
+            <p class="text-gray-700">
+              Véhicule confortable, climatisé. Vous pouvez vous reposer pendant que je gère la conduite. Moins stressant qu'un train ou bus.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="text-orange-600 text-3xl mb-4">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900">Service Professionnel</h3>
+            <p class="text-gray-700">
+              Chauffeur expérimenté, habitué aux longues distances et aux situations d'urgence. Discrétion et bienveillance garanties.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Questions Fréquentes
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Mon assurance auto prend-elle en charge le rapatriement en taxi ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Oui ! La plupart des assurances auto incluent une garantie assistance qui couvre le rapatriement des passagers en cas de panne ou accident, souvent dès 0 km du domicile. Je vous fournis une facture détaillée que vous transmettez à votre assurance pour remboursement. Vérifiez les conditions de votre contrat ou appelez votre assureur pour confirmation.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Combien de temps faut-il pour venir me chercher après une panne ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Je m'organise au plus vite selon votre localisation. Pour les pannes dans un rayon de 100 km autour de La Roche-sur-Yon, je peux généralement intervenir sous 1 à 2 heures. Pour les pannes plus éloignées (autres régions), nous organisons ensemble l'intervention en fonction de l'urgence. Disponible 7j/7.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Que faire si je suis en panne avec toute ma famille et beaucoup de bagages ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Pas de panique ! Mon <a href="/taxi-8-places-transport-groupe" class="text-blue-600 hover:underline">taxi 8 places</a> peut rapatrier jusqu'à 8 personnes avec leurs bagages en un seul trajet. Le grand coffre permet d'emporter valises, sacs et équipements. Plus besoin d'organiser plusieurs véhicules ou de laisser des affaires sur place. Tout le monde rentre ensemble.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Quelles distances couvrez-vous pour le rapatriement ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              J'interviens partout en France pour vous ramener vers La Roche-sur-Yon et la Vendée. Je peux aussi vous rapatrier depuis la Vendée vers n'importe quelle destination en cas de panne lors de vos départs en vacances ou déplacements professionnels. Aucune limite de distance.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Faut-il payer immédiatement ou l'assurance règle directement ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Cela dépend de votre assurance. Certains assureurs acceptent de régler directement le prestataire, d'autres demandent que vous avanciez les frais pour être remboursé ensuite. Appelez votre assurance au moment de la panne pour connaître leur procédure. Dans tous les cas, je vous fournis une facture complète.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Que deviennent mes affaires restées dans le véhicule en panne ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Avant que la dépanneuse emporte votre véhicule, prenez le temps de récupérer tous vos effets personnels, bagages et objets de valeur. Mon taxi peut transporter vos affaires pendant le rapatriement. Pour les objets trop volumineux, coordonnez-vous avec le dépanneur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services connexes -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-xl font-bold text-slate-900 mb-6 text-center">Découvrez aussi mes autres services</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/taxi-8-places-transport-groupe" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-users text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Taxi 8 Places</h4>
+              <p class="text-gray-600 text-sm">Idéal pour rapatriement</p>
+            </div>
+          </a>
+          <a href="/taxi-gare-aeroport-nantes" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-plane text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Aéroport & Gare</h4>
+              <p class="text-gray-600 text-sm">Longue distance</p>
+            </div>
+          </a>
+          <a href="/taxi-professionnel-entreprise" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-briefcase text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Transport Pro</h4>
+              <p class="text-gray-600 text-sm">Déplacements business</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-gradient-to-br from-red-900 to-red-800 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-yellow-400 text-slate-900 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl">
+          <i class="fas fa-car-crash"></i>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          En Panne ? Appelez-moi Maintenant
+        </h2>
+        <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          Service de rapatriement disponible 7j/7. Pris en charge par votre assurance auto dans la plupart des cas.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:0633968023"
+            class="bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            06 33 96 80 23
+          </a>
+          <a
+            href="/#contact"
+            class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-red-900 transition text-lg"
+          >
+            <i class="fas fa-envelope mr-2"></i>
+            Me Contacter
+          </a>
+        </div>
+        <p class="text-gray-300 mt-8 text-sm">
+          <i class="fas fa-shield-halved mr-2"></i>
+          Pensez à contacter votre assurance auto avant pour déclarer la panne
+        </p>
+        <p class="text-gray-300 mt-2 text-sm">
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          Rapatriement toutes distances - Depuis et vers La Roche-sur-Yon (85)
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <!-- Mobile Call Button -->
+  <div class="md:hidden fixed bottom-4 right-4 z-50">
+    <a
+      href="tel:0633968023"
+      aria-label="Appeler Taxi Anthony Gervais - Urgence Panne"
+      class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition animate-pulse"
+    >
+      <i class="fas fa-phone-alt text-2xl"></i>
+    </a>
+  </div>
+</Layout>
