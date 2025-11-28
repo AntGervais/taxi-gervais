@@ -10,7 +10,7 @@ export default defineConfig({
   site: 'https://taxi-gervais-85.fr',
 
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
 
   vite: {
