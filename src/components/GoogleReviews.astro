@@ -195,7 +195,9 @@ const writeReviewLink =
 
       <!-- Container du slider -->
       <div class='overflow-hidden -mx-4' id='sliderContainer'>
-        <div id='reviewsSlider' class='flex transition-transform duration-500 ease-in-out'>
+        <div
+          id='reviewsSlider'
+          class='flex transition-transform duration-500 ease-in-out'>
           {
             reviews.map((review, index) => (
               <div
@@ -247,8 +249,13 @@ const writeReviewLink =
           </div>
         </div>
         <!-- Barre de progression -->
-        <div class='max-w-xs mx-auto mt-3 h-1 bg-gray-200 rounded-full overflow-hidden'>
-          <div id='progressBar' class='h-full bg-yellow-400 transition-all duration-500 ease-in-out' style='width: 0%'></div>
+        <div
+          class='max-w-xs mx-auto mt-3 h-1 bg-gray-200 rounded-full overflow-hidden'>
+          <div
+            id='progressBar'
+            class='h-full bg-yellow-400 transition-all duration-500 ease-in-out'
+            style='width: 0%'>
+          </div>
         </div>
       </div>
     </div>
@@ -283,7 +290,8 @@ const writeReviewLink =
       }
 
       function updateSlider() {
-        if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar) return;
+        if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar)
+          return;
 
         const reviewsPerPage = getReviewsPerPage();
         const totalPages = getTotalPages();
@@ -335,6 +343,50 @@ const writeReviewLink =
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(handleResize, 150);
       });
+
+      // Gestion du swipe tactile
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      slider.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        },
+        { passive: true }
+      );
+
+      slider.addEventListener(
+        "touchend",
+        (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        },
+        { passive: true }
+      );
+
+      function handleSwipe() {
+        const threshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) < threshold) return;
+
+        const reviewsPerPage = getReviewsPerPage();
+
+        if (swipeDistance < 0) {
+          // Swipe vers la gauche -> Suivant
+          if (currentIndex < totalReviews - reviewsPerPage) {
+            currentIndex += reviewsPerPage;
+            updateSlider();
+          }
+        } else {
+          // Swipe vers la droite -> Précédent
+          if (currentIndex >= reviewsPerPage) {
+            currentIndex -= reviewsPerPage;
+            updateSlider();
+          }
+        }
+      }
 
       // Initialiser
       updateSlider();
