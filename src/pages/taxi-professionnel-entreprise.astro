@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Taxi Professionnel La Roche-sur-Yon - Transport Entreprise Vendée | Taxi Gervais"
+  title="Taxi Professionnel La Roche-sur-Yon | Taxi Gervais"
   description="Solution de transport professionnel pour entreprises à La Roche-sur-Yon. Facture, compte professionnel, ponctualité garantie. Déplacements business, séminaires, salons."
 >
   <script type="application/ld+json" slot="head">
@@ -168,7 +168,7 @@ import Footer from "../components/Footer.astro";
               <div>
                 <h3 class="text-lg font-bold mb-2 text-slate-900">Facturation Entreprise</h3>
                 <p class="text-gray-700">
-                  Factures détaillées conformes aux exigences comptables. Toutes les informations pour vos notes de frais et remboursements.
+                  Factures détaillées conformes aux exigences comptables. Toutes les informations pour vos notes de frais et remboursements. Je gère aussi la <a href="/transport-medical-cpam" class="text-blue-600 hover:underline">facturation CPAM pour le transport médical conventionné</a>.
                 </p>
               </div>
             </div>
@@ -442,24 +442,52 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Votre Partenaire Transport Professionnel
-        </h2>
-        <p class="text-xl text-gray-300 mb-8">
-          Appelez-moi pour discuter de vos besoins et obtenir un devis entreprise
-        </p>
-        <a
-          href="tel:0633968023"
-          class="inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
-        >
-          <i class="fas fa-phone-alt mr-2"></i>
-          06 33 96 80 23
-        </a>
-        <p class="text-gray-400 mt-6 text-sm">
-          Service professionnel 7j/7 - Devis gratuit sous 24h
-        </p>
+    <section class="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white border-opacity-20">
+          <div class="text-center mb-8">
+            <div class="bg-yellow-400 text-slate-900 w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto text-2xl">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Simplifiez Vos Déplacements Professionnels
+            </h2>
+            <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+              Devis entreprise personnalisé • Facturation adaptée • Service prioritaire
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-slate-700 bg-opacity-50 rounded-xl p-6 text-center">
+              <i class="fas fa-file-invoice text-yellow-400 text-3xl mb-3"></i>
+              <h3 class="font-bold mb-2">Facturation Pro</h3>
+              <p class="text-sm text-gray-300">Mensuelle ou à la course</p>
+            </div>
+            <div class="bg-slate-700 bg-opacity-50 rounded-xl p-6 text-center">
+              <i class="fas fa-headset text-yellow-400 text-3xl mb-3"></i>
+              <h3 class="font-bold mb-2">Disponibilité</h3>
+              <p class="text-sm text-gray-300">7j/7 pour vos urgences</p>
+            </div>
+            <div class="bg-slate-700 bg-opacity-50 rounded-xl p-6 text-center">
+              <i class="fas fa-shield-alt text-yellow-400 text-3xl mb-3"></i>
+              <h3 class="font-bold mb-2">Discrétion</h3>
+              <p class="text-sm text-gray-300">Confidentialité garantie</p>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a
+              href="tel:0633968023"
+              class="inline-block bg-yellow-400 text-slate-900 px-10 py-5 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg shadow-xl"
+            >
+              <i class="fas fa-phone-alt mr-2"></i>
+              Demander un Devis Entreprise
+            </a>
+            <p class="text-gray-300 mt-6 text-sm">
+              Réponse sous 24h • 06 33 96 80 23
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

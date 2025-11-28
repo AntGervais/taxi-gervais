@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Rapatriement Panne Automobile La Roche-sur-Yon - Taxi Longue Distance | Taxi Gervais"
+  title="Rapatriement Panne Taxi La Roche-sur-Yon | Taxi Gervais"
   description="Votre voiture en panne loin de chez vous ? Service de rapatriement taxi longue distance, pris en charge par votre assurance auto. Disponible 7j/7 en Vendée et toute la France."
 >
   <script type="application/ld+json" slot="head">
@@ -327,41 +327,50 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 bg-gradient-to-br from-red-900 to-red-800 text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="bg-yellow-400 text-slate-900 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl">
+    <section class="py-20 bg-gradient-to-br from-red-900 to-red-800 text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-20"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div class="bg-yellow-400 text-red-900 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl shadow-2xl animate-pulse">
           <i class="fas fa-car-crash"></i>
         </div>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          En Panne ? Appelez-moi Maintenant
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Votre Voiture en Panne ? Je Vous Rapatrie
         </h2>
-        <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          Service de rapatriement disponible 7j/7. Pris en charge par votre assurance auto dans la plupart des cas.
+        <div class="bg-yellow-400 bg-opacity-20 border-2 border-yellow-400 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+          <p class="text-xl text-yellow-300 font-bold mb-3">
+            <i class="fas fa-shield-halved mr-2"></i>
+            Souvent Pris en Charge par Votre Assurance Auto
+          </p>
+          <p class="text-gray-200">
+            Je vous fournis une facture détaillée pour remboursement. La plupart des assurances couvrent le rapatriement dès 0 km du domicile.
+          </p>
+        </div>
+        <p class="text-lg text-gray-200 mb-8">
+          Disponible 7j/7 • Toutes distances • Véhicule 8 places pour toute la famille
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:0633968023"
-            class="bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
+            class="bg-yellow-400 text-red-900 px-10 py-5 rounded-full font-bold hover:bg-yellow-300 transition transform hover:scale-105 text-lg shadow-2xl"
           >
-            <i class="fas fa-phone-alt mr-2"></i>
-            06 33 96 80 23
-          </a>
-          <a
-            href="/#contact"
-            class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-red-900 transition text-lg"
-          >
-            <i class="fas fa-envelope mr-2"></i>
-            Me Contacter
+            <i class="fas fa-phone-volume mr-2"></i>
+            Urgence : 06 33 96 80 23
           </a>
         </div>
-        <p class="text-gray-300 mt-8 text-sm">
-          <i class="fas fa-shield-halved mr-2"></i>
-          Pensez à contacter votre assurance auto avant pour déclarer la panne
-        </p>
-        <p class="text-gray-300 mt-2 text-sm">
-          <i class="fas fa-map-marker-alt mr-2"></i>
-          Rapatriement toutes distances - Depuis et vers La Roche-sur-Yon (85)
-        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-6 justify-center items-center text-sm">
+          <div class="flex items-center">
+            <i class="fas fa-clock text-yellow-400 mr-2 text-xl"></i>
+            <span>Intervention rapide 7j/7</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-users text-yellow-400 mr-2 text-xl"></i>
+            <span>Jusqu'à 8 passagers</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-route text-yellow-400 mr-2 text-xl"></i>
+            <span>Toute la France</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>

@@ -201,7 +201,7 @@ import Footer from "../components/Footer.astro";
             </div>
             <h3 class="text-xl font-bold mb-4 text-slate-900">Accompagnement</h3>
             <p class="text-gray-700">
-              Aide à la montée et descente, assistance personnalisée, conduite douce et attentionnée.
+              Aide à la montée et descente, assistance personnalisée, conduite douce et attentionnée. Pour les patients nécessitant des déplacements réguliers, je propose aussi des <a href="/taxi-professionnel-entreprise" class="text-blue-600 hover:underline">forfaits mensuels adaptés</a>.
             </p>
           </div>
 
@@ -293,21 +293,37 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <section class="py-20 bg-gradient-to-br from-green-900 to-teal-900 text-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Réservez Votre Transport Médical
+        <div class="bg-green-600 text-white w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl">
+          <i class="fas fa-heart-pulse"></i>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Transport Médical Sans Avance de Frais
         </h2>
-        <p class="text-xl text-gray-300 mb-8">
-          Appelez-moi pour vérifier votre éligibilité et réserver
+        <div class="bg-white bg-opacity-10 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+          <p class="text-lg text-green-200 mb-4">
+            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+            Prescription médicale valide ? Je facture directement votre CPAM
+          </p>
+          <p class="text-sm text-gray-200">
+            Vous n'avez rien à payer si vous êtes éligible au tiers payant
+          </p>
+        </div>
+        <p class="text-xl text-gray-200 mb-8">
+          Vérifiez votre éligibilité et réservez votre transport médical
         </p>
         <a
           href="tel:0633968023"
           class="inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
         >
           <i class="fas fa-phone-alt mr-2"></i>
-          06 33 96 80 23
+          Appelez-moi - 06 33 96 80 23
         </a>
+        <p class="text-green-200 mt-6 text-sm font-semibold">
+          <i class="fas fa-clock mr-2"></i>
+          Réservation recommandée 24h à l'avance
+        </p>
       </div>
     </section>
   </main>
