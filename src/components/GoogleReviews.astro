@@ -270,81 +270,80 @@ const writeReviewLink =
       ) as HTMLButtonElement | null;
       const pagination = document.getElementById("pagination");
       const progressBar = document.getElementById("progressBar");
+      const reviewCards = document.querySelectorAll("#reviewsSlider > div");
 
       if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar) {
         throw new Error("Required elements not found");
       }
 
-      const totalReviews = 24;
+      const totalReviews = reviewCards.length;
       let currentIndex = 0;
 
-      function getReviewsPerPage(): number {
+      function getReviewsPerPage() {
         const width = window.innerWidth;
         if (width >= 1024) return 3; // lg breakpoint
         if (width >= 768) return 2; // md breakpoint
         return 1; // mobile
       }
 
-      function getTotalPages(): number {
-        return Math.ceil(totalReviews / getReviewsPerPage());
-      }
-
       function updateSlider() {
+        // TypeScript check
         if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar)
           return;
 
         const reviewsPerPage = getReviewsPerPage();
-        const totalPages = getTotalPages();
-        const currentPage = Math.floor(currentIndex / reviewsPerPage);
+        const maxIndex = Math.max(0, totalReviews - reviewsPerPage);
 
-        // Calculer le décalage basé sur le nombre d'éléments par page
-        // Chaque "page" déplace de 100% de la largeur du conteneur
-        const offset = currentPage * 100;
+        // Ensure index is within bounds
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        if (currentIndex < 0) currentIndex = 0;
+
+        // Calculate offset based on single item width
+        // 100% / reviewsPerPage is the width of one item in percentage of the container view
+        const offset = currentIndex * (100 / reviewsPerPage);
         slider.style.transform = `translateX(-${offset}%)`;
 
-        // Mettre à jour les boutons
-        prevBtn.disabled = currentPage === 0;
-        nextBtn.disabled = currentPage >= totalPages - 1;
+        // Update buttons
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
 
-        // Mettre à jour la pagination
-        pagination.textContent = `${currentPage + 1} / ${totalPages}`;
+        // Update pagination
+        pagination.textContent = `${currentIndex + 1} / ${totalReviews}`;
 
-        // Mettre à jour la barre de progression
-        const progress = ((currentPage + 1) / totalPages) * 100;
+        // Update progress bar
+        // We want the bar to be full when we reach the end
+        const progress = maxIndex > 0 ? (currentIndex / maxIndex) * 100 : 100;
         progressBar.style.width = `${progress}%`;
       }
 
       function handleResize() {
-        const reviewsPerPage = getReviewsPerPage();
-        const currentPage = Math.floor(currentIndex / reviewsPerPage);
-        currentIndex = currentPage * reviewsPerPage;
         updateSlider();
       }
 
       prevBtn.addEventListener("click", () => {
-        const reviewsPerPage = getReviewsPerPage();
-        if (currentIndex >= reviewsPerPage) {
-          currentIndex -= reviewsPerPage;
+        if (currentIndex > 0) {
+          currentIndex--;
           updateSlider();
         }
       });
 
       nextBtn.addEventListener("click", () => {
         const reviewsPerPage = getReviewsPerPage();
-        if (currentIndex < totalReviews - reviewsPerPage) {
-          currentIndex += reviewsPerPage;
+        const maxIndex = totalReviews - reviewsPerPage;
+        if (currentIndex < maxIndex) {
+          currentIndex++;
           updateSlider();
         }
       });
 
-      // Gérer le redimensionnement avec debounce
+      // Handle resize with debounce
       let resizeTimeout: ReturnType<typeof setTimeout>;
       window.addEventListener("resize", () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(handleResize, 150);
       });
 
-      // Gestion du swipe tactile
+      // Touch swipe handling
       let touchStartX = 0;
       let touchEndX = 0;
 
@@ -372,23 +371,24 @@ const writeReviewLink =
         if (Math.abs(swipeDistance) < threshold) return;
 
         const reviewsPerPage = getReviewsPerPage();
+        const maxIndex = totalReviews - reviewsPerPage;
 
         if (swipeDistance < 0) {
-          // Swipe vers la gauche -> Suivant
-          if (currentIndex < totalReviews - reviewsPerPage) {
-            currentIndex += reviewsPerPage;
+          // Swipe left -> Next
+          if (currentIndex < maxIndex) {
+            currentIndex++;
             updateSlider();
           }
         } else {
-          // Swipe vers la droite -> Précédent
-          if (currentIndex >= reviewsPerPage) {
-            currentIndex -= reviewsPerPage;
+          // Swipe right -> Prev
+          if (currentIndex > 0) {
+            currentIndex--;
             updateSlider();
           }
         }
       }
 
-      // Initialiser
+      // Initialize
       updateSlider();
     </script>
 
