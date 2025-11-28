@@ -8,6 +8,46 @@ import Footer from "../components/Footer.astro";
   title="Taxi 8 Places La Roche-sur-Yon - Transport Groupe Vendée - Taxi Gervais"
   description="Véhicule 8 places spacieux et confortable pour vos déplacements en groupe à La Roche-sur-Yon. Parfait pour familles, événements, sorties groupe, aéroport. Réservez votre taxi 8 places."
 >
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte un trajet en taxi 8 places ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le tarif dépend de la distance et de la durée du trajet. Le prix est unique pour le véhicule (pas par passager), ce qui le rend très économique quand on divise par 8 ! Appelez-moi pour un devis gratuit adapté à votre trajet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on vraiment être 8 personnes avec bagages ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui ! Le véhicule dispose de 8 places assises réglementaires ET d'un grand coffre. Pour les bagages très volumineux, je peux adapter la configuration (par exemple 6-7 personnes + beaucoup de bagages). Précisez vos besoins lors de la réservation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le véhicule est-il adapté pour les enfants ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolument. Le véhicule est équipé de ceintures pour tous les passagers. Si vous voyagez avec de jeunes enfants nécessitant des sièges auto, merci de me le signaler lors de la réservation pour que je puisse organiser l'installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je réserver pour plusieurs trajets dans la journée ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, je propose des forfaits à la journée ou demi-journée pour les événements nécessitant plusieurs rotations (mariages, séminaires). C'est souvent plus avantageux que de réserver plusieurs trajets séparés. Contactez-moi pour un devis personnalisé."
+          }
+        }
+      ]
+    }
+  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -478,6 +518,29 @@ import Footer from "../components/Footer.astro";
               Le véhicule dispose d'un espace adaptable. Pour les personnes en fauteuil roulant ou avec des besoins spécifiques, merci de me contacter au préalable pour que je puisse organiser au mieux votre transport.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services connexes -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-xl font-bold text-slate-900 mb-6 text-center">Découvrez aussi mes autres services</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/taxi-gare-aeroport-nantes" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-plane text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Transfert Aéroport & Gare</h4>
+              <p class="text-gray-600 text-sm">Nantes Atlantique, gares SNCF - Idéal en groupe</p>
+            </div>
+          </a>
+          <a href="/transport-medical-cpam" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-heart-pulse text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Transport Médical CPAM</h4>
+              <p class="text-gray-600 text-sm">Avec accompagnants, sans avance de frais</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
