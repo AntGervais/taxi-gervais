@@ -8,6 +8,38 @@ import Footer from "../components/Footer.astro";
   title="Transport Médical Conventionné CPAM La Roche-sur-Yon - Taxi Gervais"
   description="Taxi conventionné CPAM à La Roche-sur-Yon. Pas d'avance de frais pour vos transports médicaux éligibles. Tiers payant accepté pour consultations, examens et traitements."
 >
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps à l'avance dois-je réserver ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je recommande de réserver au moins 24h à l'avance. Pour les urgences, appelez-moi : je ferai mon maximum pour vous accommoder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si j'oublie ma carte Vitale ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sans carte Vitale, je ne peux pas appliquer le tiers payant. Vous devrez régler le trajet et vous faire rembourser par votre CPAM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je être accompagné lors du transport ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si votre prescription le mentionne. Mon véhicule 8 places peut accueillir un ou plusieurs accompagnants."
+          }
+        }
+      ]
+    }
+  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -223,9 +255,32 @@ import Footer from "../components/Footer.astro";
               <span>Puis-je être accompagné lors du transport ?</span>
             </h3>
             <p class="text-gray-700 ml-8">
-              Oui, si votre prescription le mentionne. Mon véhicule 8 places peut accueillir un ou plusieurs accompagnants.
+              Oui, si votre prescription le mentionne. Mon <a href="/taxi-8-places-transport-groupe" class="text-yellow-600 hover:text-yellow-700 font-semibold">véhicule 8 places</a> peut accueillir un ou plusieurs accompagnants.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services connexes -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-xl font-bold text-slate-900 mb-6 text-center">Découvrez aussi mes autres services</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="/taxi-gare-aeroport-nantes" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-plane text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Transfert Aéroport & Gare</h4>
+              <p class="text-gray-600 text-sm">Nantes Atlantique, gares SNCF</p>
+            </div>
+          </a>
+          <a href="/taxi-8-places-transport-groupe" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-users text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Taxi 8 Places</h4>
+              <p class="text-gray-600 text-sm">Transport de groupe et famille</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
