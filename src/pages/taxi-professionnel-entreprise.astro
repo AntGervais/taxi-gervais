@@ -1,0 +1,478 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Taxi Professionnel La Roche-sur-Yon - Transport Entreprise Vendée | Taxi Gervais"
+  description="Solution de transport professionnel pour entreprises à La Roche-sur-Yon. Facture, compte professionnel, ponctualité garantie. Déplacements business, séminaires, salons."
+>
+  <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Proposez-vous la facturation entreprise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, je fournis des factures détaillées avec tous les éléments nécessaires pour vos notes de frais et comptabilité d'entreprise. Possibilité d'ouvrir un compte professionnel pour une facturation mensuelle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous assurer le transport de plusieurs collaborateurs ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolument. Mon véhicule 8 places est idéal pour transporter une équipe complète. Parfait pour les séminaires, formations ou déplacements groupés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des forfaits pour entreprises ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, je propose des forfaits adaptés aux besoins récurrents : mise à disposition à la journée, contrats mensuels, conventions annuelles. Contactez-moi pour un devis personnalisé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je travailler pendant le trajet ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bien sûr. Conduite souple et silencieuse, pour vous permettre de travailler, passer des appels ou vous reposer en toute tranquillité."
+          }
+        }
+      ]
+    }
+  </script>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-briefcase mr-2"></i>
+            Transport Professionnel
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Taxi Professionnel pour Entreprises
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Solution de transport dédiée aux professionnels à La Roche-sur-Yon. Ponctualité, discrétion et service adapté à vos besoins d'entreprise. Facture professionnelle, compte entreprise disponible.
+          </p>
+          <a
+            href="tel:0633968023"
+            class="inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services pour professionnels -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Mes Services pour Professionnels
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Rendez-vous d'Affaires</h3>
+            <p class="text-gray-700">
+              Transport ponctuel pour vos rendez-vous clients, réunions importantes, signatures de contrats. Arrivez à l'heure et détendu.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Séminaires & Formations</h3>
+            <p class="text-gray-700">
+              Transport de vos équipes vers centres de formation, séminaires, team building. Véhicule 8 places pour déplacements groupés.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-600 text-2xl">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Transport de Clients</h3>
+            <p class="text-gray-700">
+              Accueil et transport de vos clients importants. Service premium, discret et professionnel qui reflète l'image de votre entreprise.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-purple-600 text-2xl">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Salons & Foires</h3>
+            <p class="text-gray-700">
+              Liaisons vers salons professionnels, foires, congrès. Transferts depuis/vers gares et aéroports pour vos équipes commerciales.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-red-600 text-2xl">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Déplacements Aéroport</h3>
+            <p class="text-gray-700">
+              Transferts vers aéroports pour vos collaborateurs en déplacement professionnel. Ponctualité absolue, suivi des horaires de vol.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+            <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-indigo-600 text-2xl">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Mise à Disposition</h3>
+            <p class="text-gray-700">
+              Service à la journée ou demi-journée pour accompagner vos dirigeants ou clients lors de déplacements multiples.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Pourquoi Choisir Taxi Gervais pour Votre Entreprise ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-green-100 w-14 h-14 rounded-full flex items-center justify-center text-green-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-file-invoice"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Facturation Entreprise</h3>
+                <p class="text-gray-700">
+                  Factures détaillées conformes aux exigences comptables. Toutes les informations pour vos notes de frais et remboursements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center text-blue-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Ponctualité Garantie</h3>
+                <p class="text-gray-700">
+                  Vos rendez-vous professionnels sont sacrés. Respect absolu des horaires, surveillance du trafic en temps réel.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center text-purple-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-lock"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Discrétion Professionnelle</h3>
+                <p class="text-gray-700">
+                  Confidentialité totale garantie. Environnement propice au travail ou aux appels téléphoniques importants.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-yellow-100 w-14 h-14 rounded-full flex items-center justify-center text-yellow-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Compte Professionnel</h3>
+                <p class="text-gray-700">
+                  Ouverture de compte entreprise possible. Facturation mensuelle, conventions annuelles adaptées à vos besoins.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-red-100 w-14 h-14 rounded-full flex items-center justify-center text-red-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-car"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Véhicule Haut de Gamme</h3>
+                <p class="text-gray-700">
+                  Véhicule récent, spacieux et confortable. Climatisation, conduite souple, espace de travail.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-start mb-4">
+              <div class="bg-indigo-100 w-14 h-14 rounded-full flex items-center justify-center text-indigo-600 text-xl mr-4 flex-shrink-0">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold mb-2 text-slate-900">Disponibilité & Réactivité</h3>
+                <p class="text-gray-700">
+                  Service 7j/7. Réactivité pour les demandes urgentes ou les changements de dernière minute.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formules -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Formules Adaptées aux Entreprises
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="border-2 border-gray-200 rounded-xl p-8 hover:border-yellow-400 transition">
+            <div class="text-center mb-6">
+              <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-600 text-2xl">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-2">À la Course</h3>
+              <p class="text-gray-600">Pour besoins ponctuels</p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Réservation simple et rapide</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Facture détaillée immédiate</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Paiement flexible</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-2 border-yellow-400 rounded-xl p-8 bg-yellow-50 relative">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
+              POPULAIRE
+            </div>
+            <div class="text-center mb-6 mt-2">
+              <div class="bg-yellow-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-900 text-2xl">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-2">Compte Mensuel</h3>
+              <p class="text-gray-600">Pour besoins réguliers</p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-600 mr-3 mt-1"></i>
+                <span class="text-gray-700">Facturation mensuelle groupée</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-600 mr-3 mt-1"></i>
+                <span class="text-gray-700">Priorité sur réservations</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-600 mr-3 mt-1"></i>
+                <span class="text-gray-700">Tarifs préférentiels</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-600 mr-3 mt-1"></i>
+                <span class="text-gray-700">Suivi comptable simplifié</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-2 border-gray-200 rounded-xl p-8 hover:border-yellow-400 transition">
+            <div class="text-center mb-6">
+              <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-600 text-2xl">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-2">Convention Annuelle</h3>
+              <p class="text-gray-600">Pour gros volumes</p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Tarifs négociés sur mesure</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Service dédié garanti</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Reporting mensuel</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span class="text-gray-700">Interlocuteur unique</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-700 mb-6">
+            Besoin d'une solution sur mesure ? Contactez-moi pour établir un devis personnalisé.
+          </p>
+          <a
+            href="tel:0633968023"
+            class="inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            Demander un devis entreprise
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Questions Fréquentes
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Proposez-vous la facturation entreprise ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Oui, je fournis des factures détaillées avec tous les éléments nécessaires pour vos notes de frais et comptabilité d'entreprise. Possibilité d'ouvrir un compte professionnel pour une facturation mensuelle.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Pouvez-vous assurer le transport de plusieurs collaborateurs ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Absolument. Mon <a href="/taxi-8-places-transport-groupe" class="text-yellow-600 hover:text-yellow-700 font-semibold">véhicule 8 places</a> est idéal pour transporter une équipe complète. Parfait pour les séminaires, formations ou déplacements groupés.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Proposez-vous des forfaits pour entreprises ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Oui, je propose des forfaits adaptés aux besoins récurrents : mise à disposition à la journée, contrats mensuels, conventions annuelles. Contactez-moi pour un devis personnalisé.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Puis-je travailler pendant le trajet ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Bien sûr. Conduite souple et silencieuse, pour vous permettre de travailler, passer des appels ou vous reposer en toute tranquillité.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services connexes -->
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-xl font-bold text-slate-900 mb-6 text-center">Découvrez aussi mes autres services</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <a href="/taxi-gare-aeroport-nantes" class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-plane text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Aéroport & Gare</h4>
+              <p class="text-gray-600 text-sm">Déplacements pros</p>
+            </div>
+          </a>
+          <a href="/taxi-8-places-transport-groupe" class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-users text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Taxi 8 Places</h4>
+              <p class="text-gray-600 text-sm">Transport équipe</p>
+            </div>
+          </a>
+          <a href="/transport-medical-cpam" class="bg-gray-50 p-4 rounded-lg shadow hover:shadow-md transition flex items-center">
+            <i class="fas fa-heart-pulse text-yellow-500 text-2xl mr-4"></i>
+            <div>
+              <h4 class="font-bold text-slate-900">Transport CPAM</h4>
+              <p class="text-gray-600 text-sm">Sans avance de frais</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Votre Partenaire Transport Professionnel
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Appelez-moi pour discuter de vos besoins et obtenir un devis entreprise
+        </p>
+        <a
+          href="tel:0633968023"
+          class="inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
+        >
+          <i class="fas fa-phone-alt mr-2"></i>
+          06 33 96 80 23
+        </a>
+        <p class="text-gray-400 mt-6 text-sm">
+          Service professionnel 7j/7 - Devis gratuit sous 24h
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <!-- Mobile Call Button -->
+  <div class="md:hidden fixed bottom-4 right-4 z-50">
+    <a
+      href="tel:0633968023"
+      aria-label="Appeler Taxi Anthony Gervais"
+      class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce"
+    >
+      <i class="fas fa-phone-alt text-2xl"></i>
+    </a>
+  </div>
+</Layout>
