@@ -1,0 +1,461 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Transport Médical Conventionné CPAM La Roche-sur-Yon - Taxi Gervais"
+  description="Taxi conventionné CPAM à La Roche-sur-Yon. Pas d'avance de frais pour vos transports médicaux éligibles. Tiers payant accepté pour consultations, examens et traitements."
+>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
+            <i class="fas fa-heart-pulse mr-2"></i>
+            Service Conventionné CPAM
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Transport Médical Sans Avance de Frais
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            Bénéficiez d'un transport médical professionnel à La Roche-sur-Yon et ses environs avec le tiers payant CPAM. Aucune avance de frais pour vos déplacements médicaux éligibles.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:0633968023"
+              class="bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center"
+            >
+              <i class="fas fa-phone-alt mr-2"></i>
+              06 33 96 80 23
+            </a>
+            <a
+              href="#conditions"
+              class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-slate-900 transition text-center"
+            >
+              Vérifier mon éligibilité
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qu'est-ce que le conventionnement CPAM -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Qu'est-ce que le Transport Médical Conventionné ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            En tant que <strong>taxi conventionné CPAM</strong>, Taxi Anthony Gervais vous permet de bénéficier du <strong>tiers payant</strong> pour vos déplacements médicaux prescrits. Cela signifie que vous n'avez <strong>aucune avance de frais à faire</strong> : je me charge directement de la facturation avec votre caisse d'assurance maladie.
+          </p>
+
+          <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <i class="fas fa-info-circle text-yellow-600 text-2xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">Concrètement, comment ça marche ?</h3>
+                <p class="text-gray-700">
+                  Avec une prescription médicale de transport valide, vous voyagez sans sortir votre portefeuille. La CPAM et votre mutuelle (si vous en avez une) règlent directement le trajet. Vous n'avez qu'à vous concentrer sur votre santé.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conditions d'éligibilité -->
+    <section id="conditions" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Qui Peut Bénéficier du Tiers Payant CPAM ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+              <i class="fas fa-file-medical"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Prescription Médicale Obligatoire</h3>
+            <p class="text-gray-700 mb-4">
+              Votre médecin, chirurgien-dentiste, sage-femme ou tout professionnel de santé habilité doit vous prescrire le transport sur ordonnance. Cette prescription doit mentionner :
+            </p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Le motif médical du déplacement</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Le mode de transport (taxi)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>La date et le lieu du rendez-vous</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Situations Médicales Éligibles</h3>
+            <p class="text-gray-700 mb-4">
+              Le transport médical en taxi conventionné est pris en charge dans les cas suivants :
+            </p>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Hospitalisation (entrée, sortie, transfert)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Affection de longue durée (ALD)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Accident du travail ou maladie professionnelle</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Convocations pour examens médicaux CPAM</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Invalidité ou incapacité supérieure à 67%</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mr-3 mt-1"></i>
+                <span>Chimiothérapie, radiothérapie, dialyse</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-8 rounded-xl">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+              <div class="bg-yellow-400 text-slate-900 w-20 h-20 rounded-full flex items-center justify-center text-3xl">
+                <i class="fas fa-question-circle"></i>
+              </div>
+            </div>
+            <div class="flex-grow text-center md:text-left">
+              <h3 class="text-2xl font-bold mb-3">Vous avez un doute sur votre éligibilité ?</h3>
+              <p class="text-gray-300 mb-0">
+                N'hésitez pas à me contacter. Je vous aide à vérifier si votre situation permet le tiers payant CPAM et je vous guide dans les démarches.
+              </p>
+            </div>
+            <div class="mt-6 md:mt-0 md:ml-8">
+              <a
+                href="tel:0633968023"
+                class="bg-yellow-400 text-slate-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-500 transition whitespace-nowrap inline-block"
+              >
+                <i class="fas fa-phone-alt mr-2"></i>
+                Contactez-moi
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment ça fonctionne -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Comment Fonctionne le Tiers Payant ?
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+          <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+            Un processus simple en 4 étapes pour votre transport médical sans avance de frais
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Étape 1 -->
+          <div class="text-center">
+            <div class="bg-yellow-400 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Prescription Médicale</h3>
+            <p class="text-gray-600">
+              Votre médecin vous prescrit un transport en taxi pour votre rendez-vous médical
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="text-center">
+            <div class="bg-yellow-400 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Réservation</h3>
+            <p class="text-gray-600">
+              Appelez-moi au 06 33 96 80 23 avec votre prescription et les détails de votre rendez-vous
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="text-center">
+            <div class="bg-yellow-400 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Transport</h3>
+            <p class="text-gray-600">
+              Je vous conduis à votre rendez-vous. Apportez votre prescription et votre carte Vitale
+            </p>
+          </div>
+
+          <!-- Étape 4 -->
+          <div class="text-center">
+            <div class="bg-yellow-400 text-slate-900 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-2xl font-bold">
+              4
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-slate-900">Facturation Directe</h3>
+            <p class="text-gray-600">
+              Aucun paiement de votre part : je facture directement la CPAM et votre mutuelle
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-blue-50 border-l-4 border-blue-400 p-6">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Documents à Prévoir</h3>
+              <p class="text-gray-700 mb-3">
+                Pour bénéficier du tiers payant, pensez à avoir avec vous lors du transport :
+              </p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                  <span>Votre <strong>prescription médicale de transport</strong></span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                  <span>Votre <strong>carte Vitale</strong> à jour</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-arrow-right text-blue-500 mr-3 mt-1"></i>
+                  <span>Votre <strong>attestation de mutuelle</strong> (si vous en avez une)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Les Avantages du Transport Médical avec Taxi Gervais
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-green-600 text-2xl">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Aucune Avance de Frais</h3>
+            <p class="text-gray-700">
+              Avec le tiers payant CPAM, vous ne payez rien. Je gère toute la facturation avec votre assurance maladie.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-blue-600 text-2xl">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Service Conventionné</h3>
+            <p class="text-gray-700">
+              Taxi agréé et conventionné CPAM. Conformité totale avec les exigences de l'assurance maladie.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-purple-600 text-2xl">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Ponctualité Garantie</h3>
+            <p class="text-gray-700">
+              Vos rendez-vous médicaux sont importants. J'assure une ponctualité irréprochable pour ne jamais vous mettre en retard.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-yellow-600 text-2xl">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Accompagnement Adapté</h3>
+            <p class="text-gray-700">
+              Aide à la montée et descente du véhicule, assistance avec les affaires personnelles, conduite douce et attentionnée.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-red-600 text-2xl">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Véhicule Spacieux</h3>
+            <p class="text-gray-700">
+              Véhicule 8 places moderne et confortable. Climatisation, espace pour fauteuil roulant si besoin.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+            <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-indigo-600 text-2xl">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-slate-900">Disponibilité 7j/7</h3>
+            <p class="text-gray-700">
+              Service disponible tous les jours de la semaine pour vos rendez-vous médicaux, même les week-ends et jours fériés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-slate-900 mb-4">
+            Questions Fréquentes
+          </h2>
+          <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Dois-je payer quelque chose avec le tiers payant CPAM ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Non, avec le tiers payant intégral, vous n'avez rien à payer. La CPAM prend en charge 65% du tarif conventionné, et votre mutuelle (si vous en avez une) couvre généralement le reste. Je facture directement ces organismes.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Puis-je prendre un taxi conventionné pour aller chez mon médecin généraliste ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Oui, si votre état de santé le justifie et que vous avez une prescription médicale. Par exemple, si vous êtes en ALD (Affection Longue Durée), en invalidité, ou si votre médecin estime que votre état nécessite un transport assis.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Combien de temps à l'avance dois-je réserver ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Pour garantir ma disponibilité, je recommande de réserver au moins 24h à l'avance pour les rendez-vous programmés. Pour les situations urgentes, n'hésitez pas à m'appeler : je ferai mon maximum pour vous accommoder.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Que se passe-t-il si j'oublie ma carte Vitale ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Sans carte Vitale, je ne peux malheureusement pas appliquer le tiers payant. Vous devrez alors régler le trajet et vous faire rembourser ensuite par votre CPAM. Pensez donc à toujours l'avoir avec vous !
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Puis-je être accompagné lors du transport médical ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Oui, si votre prescription médicale le mentionne (pour les personnes mineures, âgées ou dont l'état nécessite une assistance). Mon véhicule 8 places permet d'accueillir confortablement un ou plusieurs accompagnants.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-900 mb-3 flex items-start">
+              <i class="fas fa-question-circle text-yellow-500 mr-3 mt-1"></i>
+              <span>Couvrez-vous les longues distances ?</span>
+            </h3>
+            <p class="text-gray-700 ml-8">
+              Absolument. Je réalise des transports médicaux sur toutes distances, que ce soit pour un hôpital dans le département ou un centre spécialisé plus éloigné. Les transports longue distance sont pris en charge par la CPAM si médicalement justifiés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-yellow-400 text-slate-900 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Besoin d'un Transport Médical à La Roche-sur-Yon ?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Conventionné CPAM, disponible 7j/7, ponctuel et à votre écoute. Réservez votre transport médical dès maintenant.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:0633968023"
+            class="bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            06 33 96 80 23
+          </a>
+          <a
+            href="/#contact"
+            class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-slate-900 transition text-lg"
+          >
+            <i class="fas fa-envelope mr-2"></i>
+            Nous contacter
+          </a>
+        </div>
+        <p class="text-gray-400 mt-8 text-sm">
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          Stationnement Place Napoléon - La Roche-sur-Yon (85000)
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+
+  <!-- Mobile Call Button -->
+  <div class="md:hidden fixed bottom-4 right-4 z-50">
+    <a
+      href="tel:0633968023"
+      aria-label="Appeler Taxi Anthony Gervais"
+      class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce"
+    >
+      <i class="fas fa-phone-alt text-2xl"></i>
+    </a>
+  </div>
+</Layout>
