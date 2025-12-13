@@ -976,7 +976,13 @@ const writeReviewLink =
           review.style.webkitBoxOrient = "vertical";
           btn.textContent = "Voir plus";
           // Remettre le positionnement absolu
-          btn.classList.add("absolute", "bottom-0", "right-0", "shadow-[0_0_10px_10px_rgba(255,255,255,1)]");
+          btn.classList.add(
+            "absolute",
+            "bottom-0",
+            "right-0",
+            "pl-2",
+            "shadow-[0_0_10px_10px_rgba(255,255,255,1)]"
+          );
           btn.classList.remove("mt-2", "inline-block");
         });
       }
@@ -1117,7 +1123,13 @@ const writeReviewLink =
                 review.style.webkitBoxOrient = "unset";
                 btn.textContent = "Voir moins";
                 // Retirer le positionnement absolu et afficher le bouton en dessous du texte
-                btn.classList.remove("absolute", "bottom-0", "right-0", "shadow-[0_0_10px_10px_rgba(255,255,255,1)]");
+                btn.classList.remove(
+                  "absolute",
+                  "bottom-0",
+                  "right-0",
+                  "pl-2",
+                  "shadow-[0_0_10px_10px_rgba(255,255,255,1)]"
+                );
                 btn.classList.add("mt-2", "inline-block");
               } else {
                 // Replier
@@ -1126,7 +1138,12 @@ const writeReviewLink =
                 review.style.webkitBoxOrient = "vertical";
                 btn.textContent = "Voir plus";
                 // Remettre le positionnement absolu
-                btn.classList.add("absolute", "bottom-0", "right-0", "shadow-[0_0_10px_10px_rgba(255,255,255,1)]");
+                btn.classList.add(
+                  "absolute",
+                  "bottom-0",
+                  "right-0",
+                  "shadow-[0_0_10px_10px_rgba(255,255,255,1)]"
+                );
                 btn.classList.remove("mt-2", "inline-block");
               }
             };
