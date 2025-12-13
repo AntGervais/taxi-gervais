@@ -7,8 +7,10 @@
   </defs>
   <!-- Fond jaune -->
   <rect width="64" height="64" rx="12" class="bg"/>
-  <!-- Icône de taxi simplifiée -->
-  <path class="taxi" d="M20 28h24l-2-4h-20l-2 4zm-4 6v10h4v2h4v-2h16v2h4v-2h4V34l-2-6H18l-2 6zm6 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm20 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
-  <!-- Signe TAXI sur le toit -->
-  <rect x="26" y="20" width="12" height="4" rx="1" class="taxi"/>
+  <!-- Icône de taxi simplifiée - Agrandie -->
+  <g transform="translate(32 32) scale(1.7) translate(-32 -32)">
+    <path class="taxi" d="M20 28h24l-2-4h-20l-2 4zm-4 6v10h4v2h4v-2h16v2h4v-2h4V34l-2-6H18l-2 6zm6 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm20 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+    <!-- Signe TAXI sur le toit -->
+    <rect x="26" y="20" width="12" height="4" rx="1" class="taxi"/>
+  </g>
 </svg>
