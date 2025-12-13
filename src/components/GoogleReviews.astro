@@ -1,12 +1,6 @@
 ---
 const reviews = [
   {
-    author: "Antoine Gervais",
-    rating: 5,
-    text: "Très bon voyage, grand taxi juste devant la gare de La Roche sur Yon avec un chauffeur fort sympathique !\nMerci pour cette course",
-    date: "il y a 3 ans",
-  },
-  {
     author: "Brice ROBERT",
     rating: 5,
     text: "Bon trajet avec Anthony Gervais, ponctuel, met à l'aise dès le début, conduite agréable, contact et échange facile pendant le trajet, voiture confortable. Je recommande.",
@@ -63,7 +57,7 @@ const reviews = [
   {
     author: "Patrick Quesne",
     rating: 5,
-    text: "Entreprise très professionnelle avec des personnes extrêmement sympathiques.  Nous pouvons noter la réactivité, et le sérieux. Bien que très professionnelle, cette entreprise garde un sens \"humain\" dans ses relations avec la clientèle....",
+    text: 'Entreprise très professionnelle avec des personnes extrêmement sympathiques.  Nous pouvons noter la réactivité, et le sérieux. Bien que très professionnelle, cette entreprise garde un sens "humain" dans ses relations avec la clientèle....',
     date: "il y a un an",
   },
   {
@@ -377,12 +371,6 @@ const reviews = [
     rating: 5,
     text: "Chauffeur ponctuel, très agréable et la voiture est spacieuse. Je conseille ce chauffeur",
     date: "il y a un an",
-  },
-  {
-    author: "Imc France",
-    rating: 1,
-    text: "Il m à laissé sous la pluie prétextant qu il n avait pas de voiture.\nC est plutôt la xourse qui n était pas très intéressante pour lui.",
-    date: "il y a 2 ans",
   },
   {
     author: "Louis Morin (“Mandrad”)",
@@ -816,6 +804,12 @@ const reviews = [
     text: "",
     date: "il y a 3 ans",
   },
+  {
+    author: "Antoine Gervais",
+    rating: 5,
+    text: "Très bon voyage, grand taxi juste devant la gare de La Roche sur Yon avec un chauffeur fort sympathique !\nMerci pour cette course",
+    date: "il y a 3 ans",
+  },
 ];
 
 const googleReviewsLink =
@@ -844,7 +838,7 @@ const writeReviewLink =
             </div>
           </div>
           <div class='text-gray-600 text-sm border-l border-gray-300 pl-3'>
-            <div class='font-semibold'>136 avis</div>
+            <div class='font-semibold'>135 avis</div>
             <div class='text-xs text-gray-500'>Google</div>
           </div>
         </div>
@@ -867,10 +861,10 @@ const writeReviewLink =
       </button>
 
       <!-- Container du slider -->
-      <div class='overflow-hidden -mx-4' id='sliderContainer'>
+      <div class='overflow-hidden -mx-4 p-4' id='sliderContainer'>
         <div
           id='reviewsSlider'
-          class='flex transition-transform duration-500 ease-in-out'>
+          class='flex transition-transform duration-500 ease-in-out py-4'>
           {
             reviews.map((review, index) => (
               <div
@@ -887,7 +881,16 @@ const writeReviewLink =
                       {review.date}
                     </span>
                   </div>
-                  <p class='text-gray-600 italic mb-6 grow'>"{review.text}"</p>
+                  <div class='mb-6 grow relative'>
+                    <p
+                      class='text-gray-600 italic review-text overflow-hidden'
+                      style='display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;'>
+                      "{review.text}"
+                    </p>
+                    <button class='absolute bottom-0 right-0 bg-white pl-2 text-yellow-400 text-sm font-bold hidden hover:text-yellow-500 transition-colors focus:outline-none shadow-[0_0_10px_10px_rgba(255,255,255,1)]'>
+                      Voir plus
+                    </button>
+                  </div>
                   <div class='flex items-center mt-auto'>
                     <div class='w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-bold mr-3'>
                       {review.author.charAt(0)}
@@ -1064,6 +1067,56 @@ const writeReviewLink =
 
       // Initialize
       updateSlider();
+
+      // Gestion des boutons "Voir plus"
+      function initReadMore() {
+        const reviewsText = document.querySelectorAll(".review-text");
+
+        reviewsText.forEach((el) => {
+          const review = el as HTMLElement;
+          const btn = review.nextElementSibling as HTMLButtonElement | null;
+          if (!btn) return;
+
+          // Réinitialiser l'état
+          // On vérifie si le texte dépasse la hauteur visible définie par le line-clamp
+          if (review.scrollHeight > review.clientHeight) {
+            btn.classList.remove("hidden");
+
+            // S'assurer qu'on n'ajoute pas plusieurs event listeners
+            btn.onclick = (e) => {
+              e.preventDefault();
+              // On vérifie si on a le style inline line-clamp
+              const isCollapsed = review.style.webkitLineClamp !== "unset";
+
+              if (isCollapsed) {
+                // Déplier
+                review.style.display = "block";
+                review.style.webkitLineClamp = "unset";
+                review.style.webkitBoxOrient = "unset";
+                btn.textContent = "Voir moins";
+              } else {
+                // Replier
+                review.style.display = "-webkit-box";
+                review.style.webkitLineClamp = "5";
+                review.style.webkitBoxOrient = "vertical";
+                btn.textContent = "Voir plus";
+              }
+            };
+          }
+        });
+      }
+
+      // Initialiser au chargement et au redimensionnement
+      window.addEventListener("load", initReadMore);
+      // On lance aussi immédiatement au cas où le DOM est déjà prêt
+      initReadMore();
+
+      // Ré-vérifier au redimensionnement (optionnel, mais utile si le layout change)
+      let resizeTimeoutReadMore: ReturnType<typeof setTimeout>;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeoutReadMore);
+        resizeTimeoutReadMore = setTimeout(initReadMore, 200);
+      });
     </script>
 
     <div class='flex flex-col sm:flex-row justify-center items-center gap-4'>
