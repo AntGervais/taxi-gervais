@@ -963,6 +963,21 @@ const writeReviewLink =
         return 1; // mobile
       }
 
+      function collapseAllReviews() {
+        const reviewsText = document.querySelectorAll(".review-text");
+        reviewsText.forEach((el) => {
+          const review = el as HTMLElement;
+          const btn = review.nextElementSibling as HTMLButtonElement | null;
+          if (!btn) return;
+
+          // Replier tous les avis
+          review.style.display = "-webkit-box";
+          review.style.webkitLineClamp = "5";
+          review.style.webkitBoxOrient = "vertical";
+          btn.textContent = "Voir plus";
+        });
+      }
+
       function updateSlider() {
         // TypeScript check
         if (!slider || !prevBtn || !nextBtn || !pagination || !progressBar)
@@ -999,6 +1014,7 @@ const writeReviewLink =
 
       prevBtn.addEventListener("click", () => {
         if (currentIndex > 0) {
+          collapseAllReviews();
           currentIndex--;
           updateSlider();
         }
@@ -1008,6 +1024,7 @@ const writeReviewLink =
         const reviewsPerPage = getReviewsPerPage();
         const maxIndex = totalReviews - reviewsPerPage;
         if (currentIndex < maxIndex) {
+          collapseAllReviews();
           currentIndex++;
           updateSlider();
         }
@@ -1053,12 +1070,14 @@ const writeReviewLink =
         if (swipeDistance < 0) {
           // Swipe left -> Next
           if (currentIndex < maxIndex) {
+            collapseAllReviews();
             currentIndex++;
             updateSlider();
           }
         } else {
           // Swipe right -> Prev
           if (currentIndex > 0) {
+            collapseAllReviews();
             currentIndex--;
             updateSlider();
           }
