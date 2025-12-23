@@ -1,0 +1,219 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title='Taxi La Roche-sur-Yon → Nantes | Aéroport & Gare | 24/24'
+  description='Besoin d un taxi entre La Roche-sur-Yon et Nantes ? Transferts aéroport Nantes Atlantique et Gare de Nantes à tarif fixe. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='bg-gradient-to-br from-blue-900 to-slate-900 text-white py-20'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='max-w-3xl'>
+          Liaison La Roche &lt;-&gt; Nantes
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
+            Taxi <span class='text-yellow-400'>La Roche-sur-Yon ↔ Nantes</span>
+          </h1>
+          <p class='text-xl text-gray-300 mb-8'>
+            Simplifiez vos trajets vers la cité des Ducs. Que ce soit pour
+            l'aéroport, la gare ou un rendez-vous professionnel, profitez d'un
+            trajet confortable et serein.
+          </p>
+          <a
+            href='tel:0633968023'
+            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg'>
+            <i class='fas fa-phone-alt mr-2'></i>
+            Réserver mon trajet Nantes : 06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class='py-20 bg-white'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='grid md:grid-cols-3 gap-8'>
+          <div
+            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-blue-600 shadow-lg'>
+            <div class='text-blue-600 text-4xl mb-4'>
+              <i class='fas fa-plane'></i>
+            </div>
+            <h2 class='text-2xl font-bold text-slate-900 mb-4'>
+              Aéroport Nantes Atlantique
+            </h2>
+            <p class='text-gray-600 mb-4 text-sm'>
+              Évitez le stress du parking et des navettes. Je vous dépose
+              directement devant votre terminal de départ.
+            </p>
+            <ul class='text-sm text-gray-500 space-y-2'>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> ~1h de trajet
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Aide aux bagages
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Suivi de votre vol
+                (retour)
+              </li>
+            </ul>
+          </div>
+          <div
+            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-yellow-500 shadow-lg'>
+            <div class='text-yellow-500 text-4xl mb-4'>
+              <i class='fas fa-train'></i>
+            </div>
+            <h2 class='text-2xl font-bold text-slate-900 mb-4'>
+              Gare de Nantes
+            </h2>
+            <p class='text-gray-600 mb-4 text-sm'>
+              Pour vos correspondances TGV, profitez d'une liaison directe et
+              rapide entre la Vendée et la gare de Nantes.
+            </p>
+            <ul class='text-sm text-gray-500 space-y-2'>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> ~50 min de trajet
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Accès direct quai
+                de gare
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Accueil personnalisé
+              </li>
+            </ul>
+          </div>
+          <div
+            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-slate-900 shadow-lg'>
+            <div class='text-slate-900 text-4xl mb-4'>
+              <i class='fas fa-briefcase'></i>
+            </div>
+            <h2 class='text-2xl font-bold text-slate-900 mb-4'>
+              Trajets Professionnels
+            </h2>
+            <p class='text-gray-600 mb-4 text-sm'>
+              Un rendez-vous d'affaires à Nantes ? Travaillez à bord de mon
+              véhicule spacieux pendant que je assure la route.
+            </p>
+            <ul class='text-sm text-gray-500 space-y-2'>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Facturation simplifiée
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Discrétion totale
+              </li>
+              <li>
+                <i class='fas fa-check text-green-500 mr-2'></i> Véhicule 8 places
+                (Equipe)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class='py-20 bg-slate-900 text-white'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold mb-12 text-center'>
+          Estimation de prix La Roche-Nantes
+        </h2>
+        <div class='overflow-hidden rounded-xl border border-slate-700'>
+          <table class='w-full text-left'>
+            <thead class='bg-slate-800 text-yellow-400'>
+              <tr>
+                <th class='p-4 border-b border-slate-700'>Destinations</th>
+                <th class='p-4 border-b border-slate-700'>Tarif indicatif</th>
+              </tr>
+            </thead>
+            <tbody class='text-gray-300'>
+              <tr>
+                <td class='p-4 border-b border-slate-700'
+                  >La Roche → Nantes Aéroport</td
+                >
+                <td class='p-4 border-b border-slate-700'>à partir de 70€</td>
+              </tr>
+              <tr>
+                <td class='p-4 border-b border-slate-700'
+                  >La Roche → Nantes Centre / Gare</td
+                >
+                <td class='p-4 border-b border-slate-700'>à partir de 80€</td>
+              </tr>
+              <tr>
+                <td class='p-4 border-b border-slate-700'
+                  >La Roche → Nantes Sud</td
+                >
+                <td class='p-4 border-b border-slate-700'>à partir de 65€</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class='mt-6 text-sm text-gray-500 italic text-center'>
+          *Tarifs indicatifs selon la réglementation en vigueur. Contactez-moi
+          pour un devis précis.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class='py-20 bg-white'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold text-slate-900 mb-8 text-center'>
+          Pourquoi choisir Taxi Gervais ?
+        </h2>
+        <div class='grid md:grid-cols-2 gap-8'>
+          <div class='flex items-start'>
+            <i class='fas fa-star text-yellow-400 mr-4 mt-1'></i>
+            <p class='text-gray-600'>
+              <strong>Expérience :</strong> Excellente connaissance de l'itinéraire
+              et du trafic nantais pour éviter les bouchons.
+            </p>
+          </div>
+          <div class='flex items-start'>
+            <i class='fas fa-users text-yellow-400 mr-4 mt-1'></i>
+            <p class='text-gray-600'>
+              <strong>Capacité :</strong> Transport jusqu'à 8 passagers et tous leurs
+              bagages dans un seul taxi.
+            </p>
+          </div>
+          <div class='flex items-start'>
+            <i class='fas fa-shield-alt text-yellow-400 mr-4 mt-1'></i>
+            <p class='text-gray-600'>
+              <strong>Sérénité :</strong> Pas de frais d'autoroute ou de parking cachés,
+              tout est inclus dans le devis.
+            </p>
+          </div>
+          <div class='flex items-start'>
+            <i class='fas fa-calendar-alt text-yellow-400 mr-4 mt-1'></i>
+            <p class='text-gray-600'>
+              <strong>Disponibilité :</strong> Réservation possible 24h/24 pour vos
+              vols matinaux ou retours tardifs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class='py-20 bg-yellow-400 text-slate-900 text-center'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold mb-6'>
+          Prêt pour votre trajet vers Nantes ?
+        </h2>
+        <p class='text-xl mb-8 opacity-90'>
+          Obtenez votre devis gratuit et réservez votre véhicule en 2 minutes.
+        </p>
+        <a
+          href='tel:0633968023'
+          class='inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg'>
+          <i class='fas fa-phone mr-2'></i> Appeler Anthony : 06 33 96 80 23
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,184 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title='Taxi La Roche-sur-Yon → La Tranche-sur-Mer | Trajets Littoral'
+  description='Besoin d un taxi entre La Roche-sur-Yon et La Tranche-sur-Mer ? Transferts vers les plages de Vendée à tarif transparent. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='max-w-3xl'>
+          <div
+            class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
+            <i class='fas fa-umbrella-beach mr-2'></i>
+            Direction le Littoral Vendéen
+          </div>
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
+            Taxi <span class='text-yellow-400'
+              >La Roche-sur-Yon ↔ La Tranche-sur-Mer</span
+            >
+          </h1>
+          <p class='text-xl text-white mb-8'>
+            Profitez de la côte sans les contraintes de stationnement. Transport
+            toutes distances vers les plages et stations balnéaires de Vendée.
+          </p>
+          <a
+            href='tel:0633968023'
+            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg'>
+            <i class='fas fa-phone-alt mr-2'></i>
+            Réserver mon trajet plage : 06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class='py-20 bg-white text-gray-700'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16'>
+        <h2 class='text-3xl font-bold text-slate-900 mb-4'>
+          Votre Liaison Directe vers La Tranche-sur-Mer
+        </h2>
+        <div class='w-20 h-1 bg-yellow-400 mx-auto mb-8'></div>
+        <p class='max-w-3xl mx-auto text-lg'>
+          Située à environ 45 minutes de La Roche-sur-Yon, La Tranche-sur-Mer
+          est l'une des destinations les plus populaires de la côte de Lumière.
+          Taxi Gervais vous y accompagne avec tout le confort nécessaire.
+        </p>
+      </div>
+
+      <div
+        class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12'>
+        <div class='space-y-6'>
+          <div class='flex items-start'>
+            <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
+              <i class='fas fa-users'></i>
+            </div>
+            <div>
+              <h3 class='text-xl font-bold text-slate-900 mb-2'>
+                Transport de Groupes & Familles
+              </h3>
+              <p>
+                Grâce à mon <strong>véhicule 8 places</strong>, emmenez toute
+                votre tribu et vos équipements de plage (sacs, jeux, planches)
+                sans supplément.
+              </p>
+            </div>
+          </div>
+          <div class='flex items-start'>
+            <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
+              <i class='fas fa-map-marked-alt'></i>
+            </div>
+            <div>
+              <h3 class='text-xl font-bold text-slate-900 mb-2'>
+                Desserte Complète
+              </h3>
+              <p>
+                Je vous dépose où vous le souhaitez : la plage centrale, La
+                Grière, la pointe de l'Aiguillon ou votre camping/location de
+                vacances.
+              </p>
+            </div>
+          </div>
+          <div class='flex items-start'>
+            <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
+              <i class='fas fa-coins'></i>
+            </div>
+            <div>
+              <h3 class='text-xl font-bold text-slate-900 mb-2'>
+                Tarif Transparent
+              </h3>
+              <p>
+                Pas de mauvaise surprise liée au trafic estival. Le prix est
+                calculé selon la réglementation ou convenu à l'avance pour les
+                longs trajets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class='bg-slate-50 shadow-lg p-8 rounded-3xl border border-slate-100 flex flex-col justify-center'>
+          <h3 class='text-2xl font-bold text-slate-900 mb-4'>Infos Trajet</h3>
+          <ul class='space-y-4'>
+            <li class='flex justify-between border-b border-slate-200 pb-2'>
+              <span class='font-medium'>Distance :</span>
+              <span>~40 km</span>
+            </li>
+            <li class='flex justify-between border-b border-slate-200 pb-2'>
+              <span class='font-medium'>Temps estimé :</span>
+              <span>40 à 50 minutes</span>
+            </li>
+            <li class='flex justify-between border-b border-slate-200 pb-2'>
+              <span class='font-medium'>Estimation Prix (Jour) :</span>
+              <span>à partir de 45€</span>
+            </li>
+            <li class='flex justify-between'>
+              <span class='font-medium text-orange-600'>Disponibilité :</span>
+              <span>7j/7 sur réservation</span>
+            </li>
+          </ul>
+          <p class='mt-6 text-xs text-gray-500 italic'>
+            *Les tarifs peuvent varier selon le point de départ précis et
+            l'horaire de prise en charge.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destination Highlights -->
+    <section class='py-20 bg-slate-900 text-white'>
+      <div class='max-w-screen-xl mx-auto px-4'>
+        <h2 class='text-3xl font-bold mb-12 text-center text-yellow-400'>
+          Je dessers également tout le littoral
+        </h2>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-4'>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Les Sables-d'Olonne
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Saint-Gilles-Croix-de-Vie
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Talmont-Saint-Hilaire
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Jard-sur-Mer
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            L'Aiguillon-sur-Mer
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Saint-Jean-de-Monts
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            La Faute-sur-Mer
+          </div>
+          <div class='p-4 text-center border border-slate-700 rounded-xl'>
+            Noirmoutier
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class='py-20 bg-yellow-400 text-slate-900 text-center'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold mb-6'>Prêt pour le grand air ?</h2>
+        <p class='text-xl mb-8'>
+          Réservez votre taxi pour La Tranche-sur-Mer et voyagez sans stress.
+        </p>
+        <a
+          href='tel:0633968023'
+          class='inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg shadow-xl uppercase tracking-wider'>
+          <i class='fas fa-phone mr-2'></i> 06 33 96 80 23
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

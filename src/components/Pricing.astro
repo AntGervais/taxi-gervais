@@ -1,0 +1,112 @@
+---
+const routes = [
+  {
+    title: "Transfert Aéroport & Gare",
+    description:
+      "Taxi La Roche-sur-Yon Nantes : liaisons vers l'aéroport Nantes Atlantique et la gare SNCF. Ponctualité garantie.",
+    price: "à partir de 85€",
+    icon: "fas fa-plane",
+    link: "/taxi-nantes/",
+  },
+  {
+    title: "Direction le Littoral",
+    description:
+      "Taxi vers La Tranche-sur-Mer, les Sables-d'Olonne et les autres plages de Vendée. Transport famille et groupes avec véhicule 8 places.",
+    price: "à partir de 45€",
+    icon: "fas fa-umbrella-beach",
+    link: "/taxi-la-tranche-sur-mer/",
+  },
+  {
+    title: "Trajets Urbains",
+    description:
+      "Déplacements à La Roche-sur-Yon : gare SNCF, centre hospitalier, rendez-vous personnel et professionnel. Tarifs réglementés.",
+    price: "à partir de 8€",
+    icon: "fas fa-train",
+    link: "/tarifs/",
+  },
+];
+---
+
+<section id='tarifs' class='py-20 bg-slate-50'>
+  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <div class='text-center mb-16'>
+      <h2 class='text-3xl font-bold text-slate-900'>
+        Tarifs Taxi à La Roche-sur-Yon
+      </h2>
+      <div class='w-20 h-1 bg-yellow-400 mx-auto mt-4'></div>
+      <p class='mt-6 text-gray-600 max-w-2xl mx-auto'>
+        Des tarifs transparents et compétitifs pour tous vos trajets. Estimation
+        gratuite par téléphone ou via notre formulaire.
+      </p>
+    </div>
+
+    <div class='grid md:grid-cols-3 gap-8'>
+      {
+        routes.map((route) => (
+          <div class='bg-gray-50 p-8 rounded-xl hover:shadow-xl shadow-lg transition border-t-4 border-yellow-400 group'>
+            <div class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl group-hover:bg-yellow-400 group-hover:text-slate-900 transition'>
+              <i class={route.icon} />
+            </div>
+            <h3 class='text-xl font-bold mb-4'>{route.title}</h3>
+            <p class='text-gray-600 mb-3'>{route.description}</p>
+            <p class='font-semibold text-slate-900 mb-3'>{route.price}</p>
+            <a
+              href={route.link}
+              class='text-yellow-700 hover:text-yellow-800 font-semibold text-sm'>
+              En savoir plus →
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <div
+      class='mt-12 bg-white p-8 rounded-xl shadow-lg border border-slate-100'>
+      <div class='grid md:grid-cols-2 gap-8 items-center'>
+        <div>
+          <h3 class='text-xl font-bold mb-4'>Calcul de nos tarifs</h3>
+          <p class='text-gray-600 mb-4'>
+            Nos prix sont basés sur les tarifs réglementés en vigueur en Vendée
+            :
+          </p>
+          <ul class='space-y-2 text-sm text-gray-600'>
+            <li class='flex items-center'>
+              <i class='fas fa-check text-yellow-500 mr-2'></i> Prise en charge initiale
+            </li>
+            <li class='flex items-center'>
+              <i class='fas fa-check text-yellow-500 mr-2'></i> Tarif au kilomètre
+              (Jour/Nuit)
+            </li>
+            <li class='flex items-center'>
+              <i class='fas fa-check text-yellow-500 mr-2'></i> Temps d'attente ou
+              marche lente
+            </li>
+          </ul>
+        </div>
+        <div class='text-center md:text-right'>
+          <p class='text-sm text-slate-500 mb-4 italic'>
+            Besoin d'un prix exact pour une autre destination ?
+          </p>
+          <a
+            href='tel:0633968023'
+            class='inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-md'>
+            <i class='fas fa-calculator mr-2'></i> Devis Gratuit au 06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class='mt-8 text-center bg-yellow-50 p-4 rounded-lg border border-yellow-100'>
+      <p class='text-sm text-yellow-800'>
+        <i class='fas fa-info-circle mr-2'></i>
+        <strong>Note :</strong> Pour le <a
+          href='/transport-medical-cpam/'
+          class='font-bold underline hover:text-yellow-900'
+          >transport médical assis</a
+        >, aucun frais n'est à avancer si vous bénéficiez d'un bon de transport
+        (agréé CPAM).
+      </p>
+    </div>
+  </div>
+</section>

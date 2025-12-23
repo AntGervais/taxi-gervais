@@ -1,0 +1,187 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title='Taxi 24/24 La Roche-sur-Yon | Réservation Jour & Nuit'
+  description='Besoin d un taxi disponible 24h/24 et 7j/7 à La Roche-sur-Yon ? Taxi Gervais vous accompagne sur réservation pour tous vos trajets de jour et de nuit. Réservez au 06 33 96 80 23.'>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='max-w-3xl'>
+          <div
+            class='inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse'>
+            <i class='fas fa-clock mr-2'></i>
+            Disponible 24h/24 & 7j/7 sur réservation
+          </div>
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
+            Taxi <span class='text-yellow-400'>24h/24</span> à La Roche-sur-Yon
+          </h1>
+          <p class='text-xl text-gray-300 mb-8'>
+            Un train tôt le matin ? Un retour de soirée ? Anthony Gervais assure
+            votre transport à toute heure du jour et de la nuit à La
+            Roche-sur-Yon et dans toute la Vendée. <span
+              class='text-yellow-400 font-bold'
+              >Service disponible 24h/24 sur réservation.</span
+            >
+          </p>
+          <a
+            href='tel:0633968023'
+            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
+            <i class='fas fa-phone-alt mr-2'></i>
+            Réserver maintenant : 06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class='py-20 bg-white'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='grid md:grid-cols-2 gap-16 items-center'>
+          <div>
+            <h2 class='text-3xl font-bold text-slate-900 mb-6'>
+              Pourquoi choisir Taxi Gervais pour vos trajets 24/24 ?
+            </h2>
+            <p class='text-gray-600 mb-6'>
+              Il n'est pas toujours facile de trouver un taxi disponible en
+              pleine nuit ou très tôt le matin à La Roche-sur-Yon. Taxi Gervais
+              s'engage à vous fournir, sur réservation, un service de transport
+              fiable, quelle que soit l'heure.
+            </p>
+            <ul class='space-y-4'>
+              <li class='flex items-start'>
+                <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
+                  <i class='fas fa-check text-yellow-600'></i>
+                </div>
+                <div>
+                  <h3 class='font-bold text-slate-900'>Réactivité Garantie</h3>
+                  <p class='text-sm text-gray-600'>
+                    Je réponds à vos appels rapidement pour organiser vos
+                    déplacements urgents.
+                  </p>
+                </div>
+              </li>
+              <li class='flex items-start'>
+                <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
+                  <i class='fas fa-moon text-yellow-600'></i>
+                </div>
+                <div>
+                  <h3 class='font-bold text-slate-900'>Service de Nuit</h3>
+                  <p class='text-sm text-gray-600'>
+                    Transport vers les gares, aéroports ou retours de soirées en
+                    toute sécurité.
+                  </p>
+                </div>
+              </li>
+              <li class='flex items-start'>
+                <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
+                  <i class='fas fa-shield-alt text-yellow-600'></i>
+                </div>
+                <div>
+                  <h3 class='font-bold text-slate-900'>Sécurité & Confort</h3>
+                  <p class='text-sm text-gray-600'>
+                    Un véhicule moderne et entretenu pour voyager sereinement,
+                    même à 3h du matin.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class='bg-slate-50 p-8 rounded-2xl shadow-inner border border-slate-100'>
+            <h3 class='text-2xl font-bold text-slate-900 mb-6'>
+              Exemples de réservations 24/24
+            </h3>
+            <div class='space-y-4'>
+              <div class='bg-white p-4 rounded-xl shadow-sm'>
+                <p class='font-bold text-slate-800 mb-1'>
+                  ✈️ Départs pour Nantes Atlantique
+                </p>
+                <p class='text-sm text-gray-600'>
+                  Prise en charge à 4h00 pour un vol de 6h30. Ponctualité
+                  assurée.
+                </p>
+              </div>
+              <div class='bg-white p-4 rounded-xl shadow-sm'>
+                <p class='font-bold text-slate-800 mb-1'>
+                  🚆 Gare de La Roche-sur-Yon
+                </p>
+                <p class='text-sm text-gray-600'>
+                  Transfert vers les premiers trains du matin ou accueil des
+                  derniers trains du soir.
+                </p>
+              </div>
+              <div class='bg-white p-4 rounded-xl shadow-sm'>
+                <p class='font-bold text-slate-800 mb-1'>
+                  🏥 Urgences Médicales
+                </p>
+                <p class='text-sm text-gray-600'>
+                  Transport vers les centres hospitaliers (CHD) à toute heure
+                  (Taxi Conventionné).
+                </p>
+              </div>
+              <div class='bg-white p-4 rounded-xl shadow-sm'>
+                <p class='font-bold text-slate-800 mb-1'>
+                  🌃 Retours de Soirées
+                </p>
+                <p class='text-sm text-gray-600'>
+                  Voyagez en toute sécurité pour vos retours de restaurant ou d
+                  événements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class='py-20 bg-yellow-400'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+        <h2 class='text-3xl font-bold text-slate-900 mb-6'>
+          Un taxi disponible 24h/24 et 7j/7 sur réservation
+        </h2>
+        <p class='text-xl text-slate-800 mb-8'>
+          Appelez le 06 33 96 80 23 pour une prise en charge rapide à La
+          Roche-sur-Yon et ses alentours.
+        </p>
+        <div class='flex flex-col sm:flex-row gap-4 justify-center'>
+          <a
+            href='tel:0633968023'
+            class='bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition transform hover:scale-105 text-lg'>
+            <i class='fas fa-phone-alt mr-2'></i>
+            06 33 96 80 23
+          </a>
+          <a
+            href='/tarifs/'
+            class='bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition transform hover:scale-105 text-lg border-2 border-slate-900'>
+            Consulter les Tarifs
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Links Enrichment -->
+    <section class='py-12 bg-slate-50'>
+      <div
+        class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 text-sm'>
+        <p>
+          Taxi Gervais opère à <strong>La Roche-sur-Yon</strong>, <strong
+            >Mouilleron-le-Captif</strong
+          >, <strong>Venansault</strong>, <strong>Aubigny-les-Clouzeaux</strong> et
+          partout en Vendée. Disponible 365 jours par an, y compris les dimanches
+          et jours fériés, <strong class='text-slate-900'
+            >sur réservation préalable.</strong
+          >
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

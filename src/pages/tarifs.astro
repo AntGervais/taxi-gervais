@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+---
+
+<Layout
+  title='Tarifs Taxi La Roche-sur-Yon | Devis Gratuit 24h/24'
+  description='Consultez les tarifs de votre taxi à La Roche-sur-Yon. Grille tarifaire transparente, prix estimés pour Nantes, La Tranche-sur-Mer, et gares. Devis gratuit 24/24.'>
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20'>
+      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div class='max-w-3xl'>
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
+            Tarifs de votre taxi à <span class='text-yellow-400'
+              >La Roche-sur-Yon</span
+            >
+          </h1>
+          <p class='text-xl text-gray-300 mb-8'>
+            Vous souhaitez connaître le prix d'un taxi à La Roche-sur-Yon ? Taxi
+            Gervais vous propose une tarification transparente et réglementée
+            pour tous vos déplacements en Vendée et au-delà.
+          </p>
+          <a
+            href='tel:0633968023'
+            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
+            <i class='fas fa-calculator mr-2'></i>
+            Obtenir un tarif précis : 06 33 96 80 23
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Component Integrated here -->
+    <Pricing />
+
+    <!-- Detailed Pricing Info -->
+    <section class='py-20 bg-white'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold text-slate-900 mb-8 text-center'>
+          Détail des Tarifs Réglementés en Vendée
+        </h2>
+
+        <div class='prose prose-slate max-w-none text-gray-700'>
+          <p>
+            Les tarifs des taxis sont fixés chaque année par arrêté préfectoral
+            pour le département de la Vendée (85). Ils sont composés de
+            plusieurs éléments :
+          </p>
+
+          <div
+            class='overflow-hidden rounded-2xl border border-slate-200 shadow-lg my-10'>
+            <table class='w-full text-left'>
+              <thead class='bg-slate-900 text-white'>
+                <tr>
+                  <th class='p-4 font-bold'>Tarif</th>
+                  <th class='p-4 font-bold'>Horaires</th>
+                  <th class='p-4 font-bold text-right'>Prix au km</th>
+                </tr>
+              </thead>
+              <tbody class='divide-y divide-slate-100'>
+                <tr class='bg-white hover:bg-slate-50 transition'>
+                  <td class='p-4'>
+                    <span class='font-bold text-slate-900'>Tarif A</span>
+                    <span class='block text-xs text-slate-500'
+                      >Retour en charge</span
+                    >
+                  </td>
+                  <td class='p-4 text-slate-600'>
+                    <i class='fas fa-sun text-yellow-500 mr-2'></i> Jour (7h - 19h)
+                  </td>
+                  <td class='p-4 text-right font-bold text-slate-900 text-lg'
+                    >1,08 €</td
+                  >
+                </tr>
+                <tr class='bg-slate-50 hover:bg-slate-100 transition'>
+                  <td class='p-4'>
+                    <span class='font-bold text-slate-900'>Tarif B</span>
+                    <span class='block text-xs text-slate-500'
+                      >Retour en charge</span
+                    >
+                  </td>
+                  <td class='p-4 text-slate-600'>
+                    <i class='fas fa-moon text-indigo-500 mr-2'></i> Nuit / Dim /
+                    Fériés (19h - 7h)
+                  </td>
+                  <td class='p-4 text-right font-bold text-yellow-600 text-lg'
+                    >1,62 €</td
+                  >
+                </tr>
+                <tr class='bg-white hover:bg-slate-50 transition'>
+                  <td class='p-4'>
+                    <span class='font-bold text-slate-900'>Tarif C</span>
+                    <span class='block text-xs text-slate-500'
+                      >Retour à vide</span
+                    >
+                  </td>
+                  <td class='p-4 text-slate-600'>
+                    <i class='fas fa-sun text-yellow-500 mr-2'></i> Jour (7h - 19h)
+                  </td>
+                  <td class='p-4 text-right font-bold text-slate-900 text-lg'
+                    >2,16 €</td
+                  >
+                </tr>
+                <tr class='bg-slate-50 hover:bg-slate-100 transition'>
+                  <td class='p-4'>
+                    <span class='font-bold text-slate-900'>Tarif D</span>
+                    <span class='block text-xs text-slate-500'
+                      >Retour à vide</span
+                    >
+                  </td>
+                  <td class='p-4 text-slate-600'>
+                    <i class='fas fa-moon text-indigo-500 mr-2'></i> Nuit / Dim /
+                    Fériés (19h - 7h)
+                  </td>
+                  <td class='p-4 text-right font-bold text-yellow-600 text-lg'
+                    >3,24 €</td
+                  >
+                </tr>
+              </tbody>
+              <tfoot class='bg-slate-100'>
+                <tr>
+                  <td colspan='2' class='p-4 text-slate-700'>
+                    <i class='fas fa-flag-checkered text-slate-500 mr-2'></i>
+                    <strong>Prise en charge</strong>
+                  </td>
+                  <td class='p-4 text-right font-bold text-slate-900 text-lg'
+                    >2,94 €</td
+                  >
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p class='text-xs text-slate-500 text-center italic mb-10'>
+            Source : Arrêté préfectoral n°DDPP-25-0033 du 28 février 2025
+            (Vendée)
+          </p>
+
+          <h3>Pourquoi choisir Taxi Gervais pour le prix ?</h3>
+          <ul>
+            <li>
+              <strong>Transparence totale :</strong> Pas de frais cachés, le prix
+              annoncé sur devis est le prix payé.
+            </li>
+            <li>
+              <strong>Pas d'avance de frais :</strong> Pour les trajets médicaux (CPAM),
+              je pratique le tiers-payant.
+            </li>
+            <li>
+              <strong>Tarif compétitif :</strong> Pour les longues distances (Nantes,
+              Paris, Bordeaux), contactez-moi pour un devis personnalisé avantageux.
+            </li>
+          </ul>
+
+          <div
+            class='bg-yellow-50 p-6 rounded-xl border border-yellow-200 mt-10'>
+            <h3 class='text-yellow-800 mt-0'>Exemple de prix courants :</h3>
+            <ul class='space-y-2'>
+              <li>
+                <strong>La Roche-sur-Yon → Centre Hospitalier :</strong> à partir
+                de 12€
+              </li>
+              <li>
+                <strong>La Roche-sur-Yon → Gare SNCF :</strong> à partir de 8€
+              </li>
+              <li>
+                <strong>Transfert Aéroport Nantes :</strong> à partir de 85€
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class='py-20 bg-slate-50'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold text-slate-900 mb-12 text-center'>
+          Questions sur les Tarifs Taxi
+        </h2>
+        <div class='space-y-6'>
+          <div class='bg-white p-6 rounded-xl shadow-sm'>
+            <h3 class='font-bold text-lg mb-3'>
+              Le prix est-il le même la nuit ?
+            </h3>
+            <p class='text-gray-700'>
+              Non, comme tous les taxis en France, un tarif de nuit s'applique
+              entre 19h et 8h du matin, ainsi que les dimanches et jours fériés.
+            </p>
+          </div>
+          <div class='bg-white p-6 rounded-xl shadow-sm'>
+            <h3 class='font-bold text-lg mb-3'>
+              Comment obtenir un devis de taxi ?
+            </h3>
+            <p class='text-gray-700'>
+              Il vous suffit de m'appeler au <a
+                href='tel:0633968023'
+                class='text-yellow-600 font-bold'>06 33 96 80 23</a
+              > en précisant votre point de départ, votre destination et l'horaire
+              souhaité.
+            </p>
+          </div>
+          <div class='bg-white p-6 rounded-xl shadow-sm'>
+            <h3 class='font-bold text-lg mb-3'>
+              Acceptez-vous la carte bancaire ?
+            </h3>
+            <p class='text-gray-700'>
+              Oui, mon véhicule est équipé d'un terminal de paiement pour
+              accepter les cartes bleues, Visa et Mastercard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class='py-20 bg-slate-900 text-white text-center'>
+      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <h2 class='text-3xl font-bold mb-6'>
+          Besoin d'un taxi au meilleur prix ?
+        </h2>
+        <p class='text-xl text-gray-400 mb-8'>
+          Réservez votre trajet dès maintenant et profitez d'un confort premium.
+        </p>
+        <a
+          href='tel:0633968023'
+          class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition text-lg'>
+          <i class='fas fa-phone mr-2'></i> Appeler Anthony : 06 33 96 80 23
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
