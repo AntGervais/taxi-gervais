@@ -5,8 +5,8 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title='Taxi La Roche-sur-Yon → La Tranche-sur-Mer | Trajets Littoral'
-  description='Besoin d un taxi entre La Roche-sur-Yon et La Tranche-sur-Mer ? Transferts vers les plages de Vendée à tarif transparent. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
+  title='Taxi La Roche-sur-Yon → Noirmoutier | Transfert Île Vendée'
+  description='Besoin d un taxi entre La Roche-sur-Yon et l île de Noirmoutier ? Transport vers les plages, le passage du Gois et les marais salants à tarif transparent. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -16,24 +16,25 @@ import Footer from "../components/Footer.astro";
         <div class='max-w-3xl'>
           <div
             class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <i class='fas fa-umbrella-beach mr-2'></i>
-            Direction le Littoral Vendéen
+            <i class='fas fa-island-tropical mr-2'></i>
+            Direction l'Île de Noirmoutier
           </div>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
             Taxi <span class='text-yellow-400'
-              >La Roche-sur-Yon ↔ La Tranche-sur-Mer</span
+              >La Roche-sur-Yon ↔ Noirmoutier</span
             >
           </h1>
           <p class='text-xl text-white mb-8'>
-            Profitez de la côte sans les contraintes de stationnement. Transport
-            toutes distances vers les plages et stations balnéaires de Vendée.
+            Découvrez la perle de l'Atlantique et ses trésors : plages de sable
+            blanc, passage du Gois, marais salants et villages authentiques.
+            Transport toutes distances sans contrainte de stationnement.
           </p>
           <a
             href='tel:0633968023'
             class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
             <span class='flex items-center'>
               <i class='fas fa-phone-alt mr-2'></i>
-              <span class='hidden sm:inline'>Réserver mon trajet plage</span>
+              <span class='hidden sm:inline'>Réserver mon trajet île</span>
               <span class='sm:hidden'>Réserver</span>
             </span>
             <span class='whitespace-nowrap'>06 33 96 80 23</span>
@@ -46,13 +47,14 @@ import Footer from "../components/Footer.astro";
     <section class='py-20 bg-white text-gray-700'>
       <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16'>
         <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-          Votre Liaison Directe vers La Tranche-sur-Mer
+          Votre Liaison Directe vers l'Île de Noirmoutier
         </h2>
         <div class='w-20 h-1 bg-yellow-400 mx-auto mb-8'></div>
         <p class='max-w-3xl mx-auto text-lg'>
-          Située à environ 45 minutes de La Roche-sur-Yon, La Tranche-sur-Mer
-          est l'une des destinations les plus populaires de la côte de Lumière.
-          Taxi Gervais vous y accompagne avec tout le confort nécessaire.
+          Située à environ 1h15 de La Roche-sur-Yon, l'île de Noirmoutier est
+          une destination d'exception réputée pour ses plages paradisiaques, son
+          patrimoine unique et sa douceur de vivre. Taxi Gervais vous y accompagne
+          en tout confort, que ce soit par le pont ou le fameux passage du Gois.
         </p>
       </div>
 
@@ -68,9 +70,10 @@ import Footer from "../components/Footer.astro";
                 Transport de Groupes & Familles
               </h3>
               <p>
-                Grâce à mon <strong>véhicule 8 places</strong>, emmenez toute
-                votre tribu et vos équipements de plage (sacs, jeux, planches)
-                sans supplément.
+                Grâce à mon <strong><a href='/taxi-8-places-transport-groupe' class='text-orange-600 hover:underline'>véhicule 8 places</a></strong> récent
+                et confortable, emmenez toute votre famille ou groupe d'amis
+                avec vos équipements (vélos, matériel de plage, provisions) sans
+                supplément. Le prix divisé par 8 devient très attractif !
               </p>
             </div>
           </div>
@@ -83,9 +86,9 @@ import Footer from "../components/Footer.astro";
                 Desserte Complète
               </h3>
               <p>
-                Je vous dépose où vous le souhaitez : la plage centrale, La
-                Grière, la pointe de l'Aiguillon ou votre camping/location de
-                vacances.
+                Je vous dépose où vous le souhaitez sur l'île : Noirmoutier-en-l'Île,
+                Barbâtre, L'Épine, La Guérinière, les plages ou votre
+                hôtel/location de vacances.
               </p>
             </div>
           </div>
@@ -111,15 +114,15 @@ import Footer from "../components/Footer.astro";
           <ul class='space-y-4'>
             <li class='flex justify-between border-b border-slate-200 pb-2'>
               <span class='font-medium'>Distance :</span>
-              <span>~40 km</span>
+              <span>~80 km</span>
             </li>
             <li class='flex justify-between border-b border-slate-200 pb-2'>
               <span class='font-medium'>Temps estimé :</span>
-              <span>40 à 50 minutes</span>
+              <span>1h10 à 1h20</span>
             </li>
             <li class='flex justify-between border-b border-slate-200 pb-2'>
               <span class='font-medium'>Estimation Prix (Jour) :</span>
-              <span>à partir de 45€</span>
+              <span>à partir de 85€</span>
             </li>
             <li class='flex justify-between'>
               <span class='font-medium text-orange-600'>Disponibilité :</span>
@@ -141,6 +144,9 @@ import Footer from "../components/Footer.astro";
           Je dessers également tout le littoral
         </h2>
         <div class='grid grid-cols-2 md:grid-cols-4 gap-4'>
+          <a href='/taxi-la-tranche-sur-mer/' class='p-4 text-center border border-slate-700 rounded-xl hover:bg-slate-800 hover:border-yellow-400 transition'>
+            La Tranche-sur-Mer
+          </a>
           <a href='/taxi-les-sables-d-olonne/' class='p-4 text-center border border-slate-700 rounded-xl hover:bg-slate-800 hover:border-yellow-400 transition'>
             Les Sables-d'Olonne
           </a>
@@ -162,9 +168,6 @@ import Footer from "../components/Footer.astro";
           <a href='/taxi-la-faute-sur-mer/' class='p-4 text-center border border-slate-700 rounded-xl hover:bg-slate-800 hover:border-yellow-400 transition'>
             La Faute-sur-Mer
           </a>
-          <a href='/taxi-noirmoutier/' class='p-4 text-center border border-slate-700 rounded-xl hover:bg-slate-800 hover:border-yellow-400 transition'>
-            Noirmoutier
-          </a>
         </div>
       </div>
     </section>
@@ -172,9 +175,9 @@ import Footer from "../components/Footer.astro";
     <!-- Final CTA -->
     <section class='py-20 bg-yellow-400 text-slate-900 text-center'>
       <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <h2 class='text-3xl font-bold mb-6'>Prêt pour le grand air ?</h2>
+        <h2 class='text-3xl font-bold mb-6'>Prêt pour l'évasion insulaire ?</h2>
         <p class='text-xl mb-8'>
-          Réservez votre taxi pour La Tranche-sur-Mer et voyagez sans stress.
+          Réservez votre taxi pour Noirmoutier et voyagez sans stress.
         </p>
         <a
           href='tel:0633968023'
