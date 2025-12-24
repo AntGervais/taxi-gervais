@@ -140,21 +140,33 @@ import Pricing from "../components/Pricing.astro";
             (Vendée)
           </p>
 
-          <h3>Pourquoi choisir Taxi Gervais pour le prix ?</h3>
-          <ul>
-            <li>
-              <strong>Transparence totale :</strong> Pas de frais cachés, le prix
-              annoncé sur devis est le prix payé.
-            </li>
-            <li>
-              <strong>Pas d'avance de frais :</strong> Pour les trajets médicaux (CPAM),
-              je pratique le tiers-payant.
-            </li>
-            <li>
-              <strong>Tarif compétitif :</strong> Pour les longues distances (Nantes,
-              Paris, Bordeaux), contactez-moi pour un devis personnalisé avantageux.
-            </li>
-          </ul>
+          <h3 class="text-2xl font-bold text-slate-900 mb-6">Pourquoi choisir Taxi Gervais pour le prix ?</h3>
+
+          <div class="grid md:grid-cols-3 gap-6 my-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-file-invoice-dollar text-yellow-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 mb-2">Transparence totale</h4>
+              <p class="text-gray-600 text-sm">Pas de frais cachés, le prix annoncé sur devis est le prix payé.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-hand-holding-medical text-yellow-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 mb-2">Pas d'avance de frais</h4>
+              <p class="text-gray-600 text-sm">Pour les trajets médicaux (CPAM), je pratique le tiers-payant.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+              <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <i class="fas fa-route text-yellow-600 text-xl"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 mb-2">Tarif compétitif</h4>
+              <p class="text-gray-600 text-sm">Pour les longues distances (Nantes, Paris, Bordeaux), contactez-moi pour un devis personnalisé avantageux.</p>
+            </div>
+          </div>
 
           <div
             class='bg-yellow-50 p-6 rounded-xl border border-yellow-200 mt-10'>
