@@ -27,9 +27,13 @@ import Pricing from "../components/Pricing.astro";
           </p>
           <a
             href='tel:0633968023'
-            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
-            <i class='fas fa-calculator mr-2'></i>
-            Obtenir un tarif précis : 06 33 96 80 23
+            class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center'>
+            <span class='flex items-center'>
+              <i class='fas fa-calculator mr-2'></i>
+              <span class='hidden sm:inline'>Obtenir un tarif précis</span>
+              <span class='sm:hidden'>Tarif précis</span>
+            </span>
+            <span class='whitespace-nowrap'>06 33 96 80 23</span>
           </a>
         </div>
       </div>
@@ -239,8 +243,12 @@ import Pricing from "../components/Pricing.astro";
         </p>
         <a
           href='tel:0633968023'
-          class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition text-lg'>
-          <i class='fas fa-phone mr-2'></i> Appeler Anthony : 06 33 96 80 23
+          class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition text-lg text-center'>
+          <span class='flex items-center'>
+            <i class='fas fa-phone mr-2'></i>
+            Appeler Anthony
+          </span>
+          <span class='whitespace-nowrap'>06 33 96 80 23</span>
         </a>
       </div>
     </section>
