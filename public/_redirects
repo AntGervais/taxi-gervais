@@ -1,0 +1,4 @@
+# Force HTTPS redirection (301 permanent)
+http://taxi-gervais-85.fr/* https://taxi-gervais-85.fr/:splat 301!
+http://www.taxi-gervais-85.fr/* https://taxi-gervais-85.fr/:splat 301!
+https://www.taxi-gervais-85.fr/* https://taxi-gervais-85.fr/:splat 301!

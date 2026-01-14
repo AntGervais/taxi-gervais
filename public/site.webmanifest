@@ -1,6 +1,8 @@
 {
   "name": "Taxi Anthony Gervais",
   "short_name": "Taxi Gervais",
+  "start_url": "https://taxi-gervais-85.fr/",
+  "id": "https://taxi-gervais-85.fr/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
