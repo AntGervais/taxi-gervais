@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const currentPath = Astro.url.pathname;
 ---
 <nav class='bg-slate-900 text-white sticky top-0 z-50 shadow-lg'>
   <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -19,12 +21,12 @@ import { Icon } from 'astro-icon/components';
         </div>
       </a>
       <div class='hidden md:flex space-x-8 items-center'>
-        <a href='/' class='hover:text-yellow-400 transition'>Accueil</a>
-        <a href='/#services' class='hover:text-yellow-400 transition'
+        <a href='/' class='hover:text-yellow-400 transition' aria-current={currentPath === '/' ? 'page' : undefined}>Accueil</a>
+        <a href='/#services' class='hover:text-yellow-400 transition' aria-current={currentPath === '/' ? 'page' : undefined}
           >Services</a
         >
-        <a href='/#avis' class='hover:text-yellow-400 transition'>Avis</a>
-        <a href='/#contact' class='hover:text-yellow-400 transition'>Contact</a>
+        <a href='/#avis' class='hover:text-yellow-400 transition' aria-current={currentPath === '/' ? 'page' : undefined}>Avis</a>
+        <a href='/#contact' class='hover:text-yellow-400 transition' aria-current={currentPath === '/' ? 'page' : undefined}>Contact</a>
       </div>
       <a
         href='tel:0633968023'

@@ -869,7 +869,7 @@ const writeReviewLink =
       </button>
 
       <!-- Container du slider -->
-      <div class='overflow-hidden -mx-4 p-4' id='sliderContainer'>
+      <div class='overflow-hidden -mx-4 p-4' id='sliderContainer' tabindex='0' role='region' aria-label='Avis clients' aria-roledescription='carrousel'>
         <div
           id='reviewsSlider'
           class='flex transition-transform duration-500 ease-in-out py-4'>
@@ -929,7 +929,7 @@ const writeReviewLink =
       <!-- Pagination -->
       <div class='mt-8'>
         <div class='flex justify-center items-center gap-4'>
-          <div class='text-sm text-slate-600 font-medium' id='pagination'>
+          <div class='text-sm text-slate-600 font-medium' id='pagination' aria-live='polite'>
             <!-- Sera rempli par JavaScript -->
           </div>
         </div>
@@ -1170,6 +1170,20 @@ const writeReviewLink =
         clearTimeout(resizeTimeoutReadMore);
         resizeTimeoutReadMore = setTimeout(initReadMore, 200);
       });
+
+      // Navigation clavier du carrousel
+      const sliderContainer = document.getElementById("sliderContainer");
+      if (sliderContainer) {
+        sliderContainer.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+            e.preventDefault();
+            prevBtn.click();
+          } else if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+            e.preventDefault();
+            nextBtn.click();
+          }
+        });
+      }
     </script>
 
     <div class='flex flex-col sm:flex-row justify-center items-center gap-4'>

@@ -1,0 +1,21 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<section class='py-20 bg-yellow-400 text-slate-900 text-center'>
+  <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <h2 class='text-3xl font-bold mb-6'>{title}</h2>
+    <p class='text-xl mb-8'>{description}</p>
+    <a
+      href='tel:0633968023'
+      class='inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg shadow-xl uppercase tracking-wider'>
+      <Icon name='lucide:phone' class='inline mr-2' size={20} /> 06 33 96 80 23
+    </a>
+  </div>
+</section>
