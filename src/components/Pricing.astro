@@ -1,11 +1,13 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const routes = [
   {
     title: "Transfert Aéroport & Gare",
     description:
       "Taxi La Roche-sur-Yon Nantes : liaisons vers l'aéroport Nantes Atlantique et la gare SNCF. Ponctualité garantie.",
     price: "à partir de 160€",
-    icon: "fas fa-plane",
+    icon: "lucide:plane",
     link: "/taxi-nantes/",
   },
   {
@@ -13,7 +15,7 @@ const routes = [
     description:
       "Taxi vers La Tranche-sur-Mer, les Sables-d'Olonne et les autres plages de Vendée. Transport famille et groupes avec véhicule 8 places.",
     price: "à partir de 80€",
-    icon: "fas fa-umbrella-beach",
+    icon: "lucide:umbrella",
     link: "/taxi-la-tranche-sur-mer/",
   },
   {
@@ -21,7 +23,7 @@ const routes = [
     description:
       "Déplacements à La Roche-sur-Yon : gare SNCF, centre hospitalier, rendez-vous personnel et professionnel. Tarifs réglementés.",
     price: "à partir de 10€",
-    icon: "fas fa-train",
+    icon: "lucide:train-front",
     link: "/tarifs/",
   },
 ];
@@ -44,8 +46,8 @@ const routes = [
       {
         routes.map((route) => (
           <div class='bg-gray-50 p-8 rounded-xl hover:shadow-xl shadow-lg transition border-t-4 border-yellow-400 group'>
-            <div class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl group-hover:bg-yellow-400 group-hover:text-slate-900 transition'>
-              <i class={route.icon} />
+            <div class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 group-hover:bg-yellow-400 group-hover:text-slate-900 transition'>
+              <Icon name={route.icon} size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4'>{route.title}</h3>
             <p class='text-gray-600 mb-3'>{route.description}</p>
@@ -71,14 +73,14 @@ const routes = [
           </p>
           <ul class='space-y-2 text-sm text-gray-600'>
             <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Prise en charge initiale
+              <Icon name='lucide:check' class='text-yellow-500 mr-2' size={16} /> Prise en charge initiale
             </li>
             <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Tarif au kilomètre
+              <Icon name='lucide:check' class='text-yellow-500 mr-2' size={16} /> Tarif au kilomètre
               (Jour/Nuit)
             </li>
             <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Temps d'attente ou
+              <Icon name='lucide:check' class='text-yellow-500 mr-2' size={16} /> Temps d'attente ou
               marche lente
             </li>
           </ul>
@@ -90,7 +92,7 @@ const routes = [
           <a
             href='tel:0633968023'
             class='inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-md'>
-            <i class='fas fa-calculator mr-2'></i> 06 33 96 80 23
+            <Icon name='lucide:calculator' class='mr-2' size={20} /> 06 33 96 80 23
           </a>
         </div>
       </div>
@@ -99,7 +101,7 @@ const routes = [
     <div
       class='mt-8 text-center bg-yellow-50 p-4 rounded-lg border border-yellow-100'>
       <p class='text-sm text-yellow-800'>
-        <i class='fas fa-info-circle mr-2'></i>
+        <Icon name='lucide:info' class='inline mr-2' size={16} />
         <strong>Note :</strong> Pour le <a
           href='/transport-medical-cpam/'
           class='font-bold underline hover:text-yellow-900'

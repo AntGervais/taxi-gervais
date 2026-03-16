@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -48,7 +49,7 @@ import Footer from "../components/Footer.astro";
         <div class='max-w-3xl'>
           <div
             class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <i class='fas fa-heart-pulse mr-2'></i>
+            <Icon name='lucide:heart-pulse' size={16} class='mr-2' />
             Service Conventionné CPAM
           </div>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
@@ -62,7 +63,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='tel:0633968023'
             class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
-            <i class='fas fa-phone-alt mr-2'></i>
+            <Icon name='lucide:phone' size={20} class='mr-2' />
             06 33 96 80 23
           </a>
         </div>
@@ -83,7 +84,7 @@ import Footer from "../components/Footer.astro";
           <div class='bg-white p-8 rounded-xl shadow-lg'>
             <div
               class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl'>
-              <i class='fas fa-file-medical'></i>
+              <Icon name='lucide:file-heart' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Prescription Médicale Obligatoire
@@ -95,15 +96,15 @@ import Footer from "../components/Footer.astro";
             </p>
             <ul class='space-y-2 text-gray-700'>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Le motif médical du déplacement</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Le mode de transport (taxi)</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>La date et le lieu du rendez-vous</span>
               </li>
             </ul>
@@ -112,7 +113,7 @@ import Footer from "../components/Footer.astro";
           <div class='bg-white p-8 rounded-xl shadow-lg'>
             <div
               class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl'>
-              <i class='fas fa-hospital'></i>
+              <Icon name='lucide:hospital' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Situations Médicales Éligibles
@@ -123,27 +124,27 @@ import Footer from "../components/Footer.astro";
             </p>
             <ul class='space-y-2 text-gray-700'>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Hospitalisation (entrée, sortie, transfert)</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Affection de longue durée (ALD)</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Accident du travail ou maladie professionnelle</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Convocations pour examens médicaux CPAM</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Invalidité ou incapacité supérieure à 67%</span>
               </li>
               <li class='flex items-start'>
-                <i class='fas fa-check text-yellow-500 mr-3 mt-1'></i>
+                <Icon name='lucide:check' size={16} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
                 <span>Chimiothérapie, radiothérapie, dialyse</span>
               </li>
             </ul>
@@ -220,7 +221,7 @@ import Footer from "../components/Footer.astro";
           <div class='bg-white p-8 rounded-xl shadow-lg text-center'>
             <div
               class='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-purple-600 text-2xl'>
-              <i class='fas fa-clock'></i>
+              <Icon name='lucide:clock' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>Ponctualité</h3>
             <p class='text-gray-700'>
@@ -232,7 +233,7 @@ import Footer from "../components/Footer.astro";
           <div class='bg-white p-8 rounded-xl shadow-lg text-center'>
             <div
               class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-yellow-600 text-2xl'>
-              <i class='fas fa-hand-holding-heart'></i>
+              <Icon name='lucide:heart-handshake' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Accompagnement
@@ -251,7 +252,7 @@ import Footer from "../components/Footer.astro";
           <div class='bg-white p-8 rounded-xl shadow-lg text-center'>
             <div
               class='bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto text-indigo-600 text-2xl'>
-              <i class='fas fa-calendar-alt'></i>
+              <Icon name='lucide:calendar' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Disponibilité 7j/7
@@ -278,7 +279,7 @@ import Footer from "../components/Footer.astro";
         <div class='space-y-6'>
           <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Combien de temps à l'avance dois-je réserver ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -289,7 +290,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Que se passe-t-il si j'oublie ma carte Vitale ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -300,7 +301,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Puis-je être accompagné lors du transport ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -325,7 +326,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-gare-aeroport-nantes/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-plane text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:plane' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Aéroport & Gare</h4>
               <p class='text-gray-600 text-sm'>Nantes Atlantique</p>
@@ -334,7 +335,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-8-places-transport-groupe/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-users text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:users' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Taxi 8 Places</h4>
               <p class='text-gray-600 text-sm'>Transport groupe</p>
@@ -343,7 +344,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-professionnel-entreprise/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-briefcase text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:briefcase' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Transport Pro</h4>
               <p class='text-gray-600 text-sm'>Pour entreprises</p>
@@ -359,14 +360,14 @@ import Footer from "../components/Footer.astro";
       <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div
           class='bg-green-600 text-white w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl'>
-          <i class='fas fa-heart-pulse'></i>
+          <Icon name='lucide:heart-pulse' size={30} />
         </div>
         <h2 class='text-3xl md:text-4xl font-bold mb-4'>
           Transport Médical Sans Avance de Frais
         </h2>
         <div class='bg-white rounded-xl p-6 max-w-2xl mx-auto mb-8 shadow-xl'>
           <p class='text-lg text-green-800 font-bold mb-4'>
-            <i class='fas fa-check-circle text-green-600 mr-2'></i>
+            <Icon name='lucide:circle-check' size={20} class='text-green-600 mr-2 inline' />
             Prescription médicale valide ? Je facture directement votre CPAM
           </p>
           <p class='text-sm text-green-700 font-medium'>
@@ -379,11 +380,11 @@ import Footer from "../components/Footer.astro";
         <a
           href='tel:0633968023'
           class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg'>
-          <i class='fas fa-phone-alt mr-2'></i>
+          <Icon name='lucide:phone' size={20} class='mr-2 inline' />
           Appelez-moi - 06 33 96 80 23
         </a>
         <p class='text-green-200 mt-6 text-sm font-semibold'>
-          <i class='fas fa-clock mr-2'></i>
+          <Icon name='lucide:clock' size={16} class='mr-2 inline' />
           Réservation recommandée 24h à l'avance
         </p>
       </div>
@@ -397,7 +398,7 @@ import Footer from "../components/Footer.astro";
       href='tel:0633968023'
       aria-label='Appeler Taxi Anthony Gervais'
       class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <i class='fas fa-phone-alt text-2xl'></i>
+      <Icon name='lucide:phone' size={24} />
     </a>
   </div>
 </Layout>

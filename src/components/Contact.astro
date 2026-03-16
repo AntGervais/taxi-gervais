@@ -1,3 +1,6 @@
+---
+import { Icon } from 'astro-icon/components';
+---
 <div id='contact' class='pb-12 pt-6 bg-gray-50'>
   <div class='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
     <div class='bg-white rounded-2xl shadow-xl overflow-hidden'>
@@ -16,7 +19,7 @@
           <a
             href='tel:0633968023'
             class='inline-flex items-center justify-center bg-slate-900 text-white text-lg sm:text-xl font-bold px-8 py-5 rounded-full hover:bg-slate-800 transition transform hover:scale-105 shadow-lg w-full md:w-auto whitespace-nowrap'>
-            <i class='fas fa-phone-alt mr-3 text-yellow-400'></i> 06 33 96 80 23
+            <Icon name='lucide:phone' class='mr-3 text-yellow-400' size={20} /> 06 33 96 80 23
           </a>
         </div>
 
@@ -127,8 +130,8 @@
             type='submit'
             disabled
             class='w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition flex items-center justify-center border border-gray-300'>
-            <span>Remplissez tous les champs</span>
-            <i class='fas fa-paper-plane ml-2'></i>
+            <span id='submit-text'>Remplissez tous les champs</span>
+            <Icon name='lucide:send' class='ml-2' size={16} />
           </button>
         </form>
 
@@ -139,6 +142,9 @@
           const btn = document.getElementById(
             "submit-btn"
           ) as HTMLButtonElement;
+          const btnText = document.getElementById(
+            "submit-text"
+          ) as HTMLSpanElement;
           const inputs = form.querySelectorAll("input, textarea");
 
           function checkForm() {
@@ -165,7 +171,7 @@
                 "hover:bg-yellow-500",
                 "cursor-pointer"
               );
-              btn.innerHTML = `<span>Envoyer la demande de réservation</span> <i class="fas fa-paper-plane ml-2"></i>`;
+              btnText.textContent = "Envoyer la demande de réservation";
             } else {
               btn.disabled = true;
               btn.classList.add(
@@ -179,7 +185,7 @@
                 "hover:bg-yellow-500",
                 "cursor-pointer"
               );
-              btn.innerHTML = `<span>Remplissez tous les champs</span> <i class="fas fa-paper-plane ml-2"></i>`;
+              btnText.textContent = "Remplissez tous les champs";
             }
           }
 

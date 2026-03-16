@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -56,7 +57,7 @@ import Footer from "../components/Footer.astro";
         <div class='max-w-3xl'>
           <div
             class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <i class='fas fa-users mr-2'></i>
+            <Icon name='lucide:users' size={16} class='mr-2 inline' />
             Véhicule 8 Places
           </div>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
@@ -72,7 +73,7 @@ import Footer from "../components/Footer.astro";
             <a
               href='tel:0633968023'
               class='bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center'>
-              <i class='fas fa-phone-alt mr-2'></i>
+              <Icon name='lucide:phone' size={20} class='mr-2 inline' />
               06 33 96 80 23
             </a>
             <a
@@ -110,7 +111,7 @@ import Footer from "../components/Footer.astro";
             <div class='bg-yellow-50 border-l-4 border-yellow-400 p-6'>
               <div class='flex'>
                 <div class='flex-shrink-0'>
-                  <i class='fas fa-star text-yellow-600 text-2xl'></i>
+                  <Icon name='lucide:star' size={24} class='text-yellow-600' fill='currentColor' />
                 </div>
                 <div class='ml-4'>
                   <h3 class='text-lg font-bold text-slate-900 mb-2'>
@@ -134,7 +135,7 @@ import Footer from "../components/Footer.astro";
                 <div class='flex items-start'>
                   <div
                     class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-                    <i class='fas fa-users text-xl'></i>
+                    <Icon name='lucide:users' size={20} />
                   </div>
                   <div>
                     <h4 class='font-bold text-lg mb-1'>Capacité 8 Passagers</h4>
@@ -147,7 +148,7 @@ import Footer from "../components/Footer.astro";
                 <div class='flex items-start'>
                   <div
                     class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-                    <i class='fas fa-suitcase text-xl'></i>
+                    <Icon name='lucide:briefcase' size={20} />
                   </div>
                   <div>
                     <h4 class='font-bold text-lg mb-1'>Grand Coffre</h4>
@@ -160,7 +161,7 @@ import Footer from "../components/Footer.astro";
                 <div class='flex items-start'>
                   <div
                     class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-                    <i class='fas fa-snowflake text-xl'></i>
+                    <Icon name='lucide:snowflake' size={20} />
                   </div>
                   <div>
                     <h4 class='font-bold text-lg mb-1'>Climatisation</h4>
@@ -172,7 +173,7 @@ import Footer from "../components/Footer.astro";
                 <div class='flex items-start'>
                   <div
                     class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-4'>
-                    <i class='fas fa-shield-alt text-xl'></i>
+                    <Icon name='lucide:shield' size={20} />
                   </div>
                   <div>
                     <h4 class='font-bold text-lg mb-1'>Sécurité Maximale</h4>
@@ -209,7 +210,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-blue-600 text-2xl'>
-              <i class='fas fa-users'></i>
+              <Icon name='lucide:users' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Sorties en Famille
@@ -226,7 +227,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl'>
-              <i class='fas fa-plane-departure'></i>
+              <Icon name='lucide:plane-takeoff' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Transfert Aéroport / Gare
@@ -247,7 +248,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-purple-600 text-2xl'>
-              <i class='fas fa-glass-cheers'></i>
+              <Icon name='lucide:wine' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Mariages & Événements
@@ -264,7 +265,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-green-600 text-2xl'>
-              <i class='fas fa-user-friends'></i>
+              <Icon name='lucide:users' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Soirées Entre Amis
@@ -280,7 +281,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-red-600 text-2xl'>
-              <i class='fas fa-briefcase'></i>
+              <Icon name='lucide:briefcase' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Déplacements Pros
@@ -296,7 +297,7 @@ import Footer from "../components/Footer.astro";
             class='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition'>
             <div
               class='bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-indigo-600 text-2xl'>
-              <i class='fas fa-car-crash'></i>
+              <Icon name='lucide:car' size={24} />
             </div>
             <h3 class='text-xl font-bold mb-4 text-slate-900'>
               Rapatriement Panne
@@ -328,7 +329,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-euro-sign'></i>
+              <Icon name='lucide:euro' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>
@@ -345,7 +346,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-leaf'></i>
+              <Icon name='lucide:leaf' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>Écologique</h3>
@@ -360,7 +361,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-comments'></i>
+              <Icon name='lucide:message-square' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>
@@ -376,7 +377,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-parking'></i>
+              <Icon name='lucide:square-parking' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>
@@ -393,7 +394,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-clock'></i>
+              <Icon name='lucide:clock' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>Ponctualité</h3>
@@ -408,7 +409,7 @@ import Footer from "../components/Footer.astro";
           <div class='flex items-start'>
             <div
               class='bg-yellow-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 mr-6 text-xl'>
-              <i class='fas fa-map-marked-alt'></i>
+              <Icon name='lucide:map-pin' size={20} />
             </div>
             <div>
               <h3 class='text-xl font-bold mb-3 text-slate-900'>
@@ -442,7 +443,7 @@ import Footer from "../components/Footer.astro";
         <div class='bg-white rounded-xl shadow-lg p-8'>
           <div class='grid md:grid-cols-2 gap-6'>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   La Roche-sur-Yon → Aéroport Nantes Atlantique
@@ -453,7 +454,7 @@ import Footer from "../components/Footer.astro";
               </div>
             </div>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   Circuit touristique <a href='/taxi-puy-du-fou/' class='text-slate-900 hover:text-yellow-600 underline'>Puy du Fou</a> (groupe)
@@ -464,7 +465,7 @@ import Footer from "../components/Footer.astro";
               </div>
             </div>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   Mariage : Hôtel → Salle de réception
@@ -475,7 +476,7 @@ import Footer from "../components/Footer.astro";
               </div>
             </div>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   <a href='/taxi-les-sables-d-olonne/' class='text-slate-900 hover:text-yellow-600 underline'>Les Sables-d'Olonne</a> (journée plage en famille)
@@ -486,7 +487,7 @@ import Footer from "../components/Footer.astro";
               </div>
             </div>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   Séminaire entreprise (aller-retour)
@@ -497,7 +498,7 @@ import Footer from "../components/Footer.astro";
               </div>
             </div>
             <div class='flex items-start'>
-              <i class='fas fa-route text-yellow-500 text-xl mr-4 mt-1'></i>
+              <Icon name='lucide:route' size={20} class='text-yellow-500 mr-4 mt-1 flex-shrink-0' />
               <div>
                 <h4 class='font-bold text-slate-900 mb-1'>
                   Soirée concert Nantes + retour
@@ -565,7 +566,7 @@ import Footer from "../components/Footer.astro";
         <div class='bg-blue-50 border-l-4 border-blue-400 p-6'>
           <div class='flex'>
             <div class='flex-shrink-0'>
-              <i class='fas fa-info-circle text-blue-600 text-2xl'></i>
+              <Icon name='lucide:info' size={24} class='text-blue-600' />
             </div>
             <div class='ml-4'>
               <h3 class='text-lg font-bold text-slate-900 mb-2'>
@@ -596,7 +597,7 @@ import Footer from "../components/Footer.astro";
         <div class='space-y-6'>
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Combien coûte un trajet en taxi 8 places ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -609,7 +610,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Peut-on vraiment être 8 personnes avec bagages ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -622,7 +623,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Le véhicule est-il adapté pour les enfants ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -635,7 +636,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span
                 >Puis-je réserver pour plusieurs trajets dans la journée ?</span
               >
@@ -650,7 +651,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span>Faites-vous les trajets longue distance ?</span>
             </h3>
             <p class='text-gray-700 ml-8'>
@@ -663,7 +664,7 @@ import Footer from "../components/Footer.astro";
 
           <div class='bg-white rounded-xl p-6 shadow-sm'>
             <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <i class='fas fa-question-circle text-yellow-500 mr-3 mt-1'></i>
+              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
               <span
                 >Le véhicule est-il accessible aux personnes à mobilité réduite
                 ?</span
@@ -690,7 +691,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-gare-aeroport-nantes/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-plane text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:plane' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Aéroport & Gare</h4>
               <p class='text-gray-600 text-sm'>Idéal en groupe</p>
@@ -699,7 +700,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-rapatriement-panne-longue-distance/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-car-crash text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:car' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Rapatriement Panne</h4>
               <p class='text-gray-600 text-sm'>Toute la famille</p>
@@ -708,7 +709,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='/taxi-professionnel-entreprise/'
             class='bg-white p-4 rounded-lg shadow hover:shadow-md transition flex items-center'>
-            <i class='fas fa-briefcase text-yellow-500 text-2xl mr-4'></i>
+            <Icon name='lucide:briefcase' size={24} class='text-yellow-500 mr-4' />
             <div>
               <h4 class='font-bold text-slate-900'>Transport Pro</h4>
               <p class='text-gray-600 text-sm'>Transport équipe</p>
@@ -723,7 +724,7 @@ import Footer from "../components/Footer.astro";
       <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <div
           class='bg-yellow-400 text-slate-900 w-20 h-20 rounded-full flex items-center justify-center mb-8 mx-auto text-3xl'>
-          <i class='fas fa-users'></i>
+          <Icon name='lucide:users' size={30} />
         </div>
         <h2 class='text-3xl md:text-4xl font-bold mb-4'>
           Tous Ensemble, Sans Laisser Personne Derrière
@@ -740,13 +741,13 @@ import Footer from "../components/Footer.astro";
           <a
             href='tel:0633968023'
             class='bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg'>
-            <i class='fas fa-phone-alt mr-2'></i>
+            <Icon name='lucide:phone' size={20} class='mr-2 inline' />
             Appelez-moi - 06 33 96 80 23
           </a>
           <a
             href='/#contact'
             class='bg-transparent border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-bold hover:bg-yellow-400 hover:text-slate-900 transition text-lg'>
-            <i class='fas fa-calculator mr-2'></i>
+            <Icon name='lucide:calculator' size={20} class='mr-2 inline' />
             Demander un Devis
           </a>
         </div>
@@ -775,7 +776,7 @@ import Footer from "../components/Footer.astro";
       href='tel:0633968023'
       aria-label='Appeler Taxi Anthony Gervais'
       class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <i class='fas fa-phone-alt text-2xl'></i>
+      <Icon name='lucide:phone' size={24} />
     </a>
   </div>
 </Layout>

@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Pricing from "../components/Pricing.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -29,7 +30,7 @@ import Pricing from "../components/Pricing.astro";
             href='tel:0633968023'
             class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center'>
             <span class='flex items-center'>
-              <i class='fas fa-calculator mr-2'></i>
+              <Icon name='lucide:calculator' size={20} class='mr-2' />
               <span class='hidden sm:inline'>Obtenir un tarif précis</span>
               <span class='sm:hidden'>Obtenir un tarif</span>
             </span>
@@ -75,7 +76,7 @@ import Pricing from "../components/Pricing.astro";
                     >
                   </td>
                   <td class='p-4 text-slate-600'>
-                    <i class='fas fa-sun text-yellow-500 mr-2'></i> Jour (7h - 19h)
+                    <Icon name='lucide:sun' size={16} class='text-yellow-500 mr-2' /> Jour (7h - 19h)
                   </td>
                   <td class='p-4 text-right font-bold text-slate-900 text-lg whitespace-nowrap'
                     >1,08 €</td
@@ -89,7 +90,7 @@ import Pricing from "../components/Pricing.astro";
                     >
                   </td>
                   <td class='p-4 text-slate-600'>
-                    <i class='fas fa-moon text-indigo-500 mr-2'></i> Nuit / Dim /
+                    <Icon name='lucide:moon' size={16} class='text-indigo-500 mr-2' /> Nuit / Dim /
                     Fériés (19h - 7h)
                   </td>
                   <td class='p-4 text-right font-bold text-yellow-600 text-lg whitespace-nowrap'
@@ -104,7 +105,7 @@ import Pricing from "../components/Pricing.astro";
                     >
                   </td>
                   <td class='p-4 text-slate-600'>
-                    <i class='fas fa-sun text-yellow-500 mr-2'></i> Jour (7h - 19h)
+                    <Icon name='lucide:sun' size={16} class='text-yellow-500 mr-2' /> Jour (7h - 19h)
                   </td>
                   <td class='p-4 text-right font-bold text-slate-900 text-lg whitespace-nowrap'
                     >2,16 €</td
@@ -118,7 +119,7 @@ import Pricing from "../components/Pricing.astro";
                     >
                   </td>
                   <td class='p-4 text-slate-600'>
-                    <i class='fas fa-moon text-indigo-500 mr-2'></i> Nuit / Dim /
+                    <Icon name='lucide:moon' size={16} class='text-indigo-500 mr-2' /> Nuit / Dim /
                     Fériés (19h - 7h)
                   </td>
                   <td class='p-4 text-right font-bold text-yellow-600 text-lg whitespace-nowrap'
@@ -129,7 +130,7 @@ import Pricing from "../components/Pricing.astro";
               <tfoot class='bg-slate-100'>
                 <tr>
                   <td colspan='2' class='p-4 text-slate-700'>
-                    <i class='fas fa-flag-checkered text-slate-500 mr-2'></i>
+                    <Icon name='lucide:flag' size={16} class='text-slate-500 mr-2' />
                     <strong>Prise en charge</strong>
                   </td>
                   <td class='p-4 text-right font-bold text-slate-900 text-lg whitespace-nowrap'
@@ -146,7 +147,7 @@ import Pricing from "../components/Pricing.astro";
 
           <div class='bg-slate-50 p-6 rounded-xl border border-slate-200 mb-10'>
             <h3 class='text-lg font-bold text-slate-900 mt-0 mb-3'>
-              <i class='fas fa-info-circle text-yellow-500 mr-2'></i>Pourquoi le Tarif C s'applique-t-il ?
+              <Icon name='lucide:info' size={20} class='text-yellow-500 mr-2' />Pourquoi le Tarif C s'applique-t-il ?
             </h3>
             <p class='text-gray-700 mb-3'>
               Pour la plupart des courses (transfert aéroport, gare, littoral, longue distance…), le taxi vous dépose à destination puis <strong>revient à vide</strong> à son point de départ. C'est pourquoi le <strong>Tarif C</strong> (jour) ou <strong>Tarif D</strong> (nuit/dimanche/férié) s'applique.
@@ -161,7 +162,7 @@ import Pricing from "../components/Pricing.astro";
           <div class="grid md:grid-cols-3 gap-6 my-8">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
               <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-file-invoice-dollar text-yellow-600 text-xl"></i>
+                <Icon name='lucide:file-text' size={20} class='text-yellow-600' />
               </div>
               <h4 class="font-bold text-slate-900 mb-2">Transparence totale</h4>
               <p class="text-gray-600 text-sm">Pas de frais cachés, le prix annoncé sur devis est le prix payé.</p>
@@ -169,7 +170,7 @@ import Pricing from "../components/Pricing.astro";
 
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
               <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-hand-holding-medical text-yellow-600 text-xl"></i>
+                <Icon name='lucide:heart-handshake' size={20} class='text-yellow-600' />
               </div>
               <h4 class="font-bold text-slate-900 mb-2">Pas d'avance de frais</h4>
               <p class="text-gray-600 text-sm">Pour les trajets médicaux (CPAM), je pratique le tiers-payant.</p>
@@ -177,7 +178,7 @@ import Pricing from "../components/Pricing.astro";
 
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
               <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                <i class="fas fa-route text-yellow-600 text-xl"></i>
+                <Icon name='lucide:route' size={20} class='text-yellow-600' />
               </div>
               <h4 class="font-bold text-slate-900 mb-2">Tarif compétitif</h4>
               <p class="text-gray-600 text-sm">Pour les longues distances (Nantes, Paris, Bordeaux), contactez-moi pour un devis personnalisé avantageux.</p>
@@ -260,7 +261,7 @@ import Pricing from "../components/Pricing.astro";
           href='tel:0633968023'
           class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition text-lg text-center'>
           <span class='flex items-center'>
-            <i class='fas fa-phone mr-2'></i>
+            <Icon name='lucide:phone' size={20} class='mr-2' />
             Appeler Anthony
           </span>
           <span class='whitespace-nowrap'>06 33 96 80 23</span>

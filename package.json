@@ -11,12 +11,14 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
     "@fontsource/inter": "^5.2.8",
-    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@iconify-json/lucide": "^1.2.98",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.5",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.74",
     "terser": "^5.44.1"
   }
 }

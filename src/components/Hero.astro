@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components';
 import heroBg from "../assets/hero-Gare_SNCF_de_La-Roche-sur-Yon.webp";
 import taxiImage from "../assets/taxi-anthony-gervais-laroche-85.webp";
 ---
@@ -40,7 +41,7 @@ import taxiImage from "../assets/taxi-anthony-gervais-laroche-85.webp";
         <a
           href='tel:0633968023'
           class='bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg flex items-center justify-center transform hover:scale-105 duration-200 whitespace-nowrap'>
-          <i class='fas fa-phone mr-2'></i> 06 33 96 80 23
+          <Icon name='lucide:phone' class='mr-2' size={20} /> 06 33 96 80 23
         </a>
       </div>
     </div>
@@ -50,7 +51,7 @@ import taxiImage from "../assets/taxi-anthony-gervais-laroche-85.webp";
         class='bg-white text-slate-900 p-6 rounded-xl shadow-2xl max-w-sm rotate-2 hover:rotate-0 transition duration-500 border-4 border-white'>
         <div class='flex items-center justify-between mb-4'>
           <p class='font-bold text-xl'>Anthony Gervais</p>
-          <i class='fas fa-check-circle text-green-500 text-xl'></i>
+          <Icon name='lucide:circle-check' class='text-green-500' size={20} />
         </div>
         <div
           class='h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative'>
@@ -67,15 +68,14 @@ import taxiImage from "../assets/taxi-anthony-gervais-laroche-85.webp";
         </div>
         <div class='space-y-3 text-sm font-medium'>
           <p class='flex items-center'>
-            <i class='fas fa-map-marker-alt text-yellow-500 w-8 text-center'
-            ></i> La Roche-sur-Yon & Agglo
+            <Icon name='lucide:map-pin' class='text-yellow-500 w-8 flex-shrink-0' size={16} /> La Roche-sur-Yon & Agglo
           </p>
           <p class='flex items-center'>
-            <i class='fas fa-clock text-yellow-500 w-8 text-center'></i> Disponible
+            <Icon name='lucide:clock' class='text-yellow-500 w-8 flex-shrink-0' size={16} /> Disponible
             7j/7 sur réservation
           </p>
           <p class='flex items-center'>
-            <i class='fas fa-users text-yellow-500 w-8 text-center'></i> Véhicule
+            <Icon name='lucide:users' class='text-yellow-500 w-8 flex-shrink-0' size={16} /> Véhicule
             8 places
           </p>
         </div>

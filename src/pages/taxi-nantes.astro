@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -26,7 +27,7 @@ import Footer from "../components/Footer.astro";
             href='tel:0633968023'
             class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
             <span class='flex items-center'>
-              <i class='fas fa-phone-alt mr-2'></i>
+              <Icon name='lucide:phone' size={20} class='mr-2' />
               <span class='hidden sm:inline'>Réserver mon trajet Nantes</span>
               <span class='sm:hidden'>Réserver Nantes</span>
             </span>
@@ -42,8 +43,8 @@ import Footer from "../components/Footer.astro";
         <div class='grid md:grid-cols-3 gap-8'>
           <div
             class='bg-slate-50 p-8 rounded-2xl border-t-4 border-blue-600 shadow-lg'>
-            <div class='text-blue-600 text-4xl mb-4'>
-              <i class='fas fa-plane'></i>
+            <div class='text-blue-600 mb-4'>
+              <Icon name='lucide:plane' size={36} />
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Aéroport Nantes Atlantique
@@ -54,21 +55,21 @@ import Footer from "../components/Footer.astro";
             </p>
             <ul class='text-sm text-gray-500 space-y-2'>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> ~1h de trajet
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> ~1h de trajet
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Aide aux bagages
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Aide aux bagages
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Suivi de votre vol
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Suivi de votre vol
                 (retour)
               </li>
             </ul>
           </div>
           <div
             class='bg-slate-50 p-8 rounded-2xl border-t-4 border-yellow-500 shadow-lg'>
-            <div class='text-yellow-500 text-4xl mb-4'>
-              <i class='fas fa-train'></i>
+            <div class='text-yellow-500 mb-4'>
+              <Icon name='lucide:train-front' size={36} />
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Gare de Nantes
@@ -79,21 +80,21 @@ import Footer from "../components/Footer.astro";
             </p>
             <ul class='text-sm text-gray-500 space-y-2'>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> ~50 min de trajet
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> ~50 min de trajet
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Accès direct quai
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Accès direct quai
                 de gare
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Accueil personnalisé
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Accueil personnalisé
               </li>
             </ul>
           </div>
           <div
             class='bg-slate-50 p-8 rounded-2xl border-t-4 border-slate-900 shadow-lg'>
-            <div class='text-slate-900 text-4xl mb-4'>
-              <i class='fas fa-briefcase'></i>
+            <div class='text-slate-900 mb-4'>
+              <Icon name='lucide:briefcase' size={36} />
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Trajets Professionnels
@@ -104,13 +105,13 @@ import Footer from "../components/Footer.astro";
             </p>
             <ul class='text-sm text-gray-500 space-y-2'>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Facturation simplifiée
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Facturation simplifiée
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Discrétion totale
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Discrétion totale
               </li>
               <li>
-                <i class='fas fa-check text-green-500 mr-2'></i> Véhicule 8 places
+                <Icon name='lucide:check' size={16} class='text-green-500 mr-2' /> Véhicule 8 places
                 (Equipe)
               </li>
             </ul>
@@ -170,28 +171,28 @@ import Footer from "../components/Footer.astro";
         </h2>
         <div class='grid md:grid-cols-2 gap-8'>
           <div class='flex items-start'>
-            <i class='fas fa-star text-yellow-400 mr-4 mt-1'></i>
+            <Icon name='lucide:star' size={16} fill='currentColor' class='text-yellow-400 mr-4 mt-1' />
             <p class='text-gray-600'>
               <strong>Expérience :</strong> Excellente connaissance de l'itinéraire
               et du trafic nantais pour éviter les bouchons.
             </p>
           </div>
           <div class='flex items-start'>
-            <i class='fas fa-users text-yellow-400 mr-4 mt-1'></i>
+            <Icon name='lucide:users' size={16} class='text-yellow-400 mr-4 mt-1' />
             <p class='text-gray-600'>
               <strong>Capacité :</strong> Transport jusqu'à 8 passagers et tous leurs
               bagages dans un seul taxi.
             </p>
           </div>
           <div class='flex items-start'>
-            <i class='fas fa-shield-alt text-yellow-400 mr-4 mt-1'></i>
+            <Icon name='lucide:shield' size={16} class='text-yellow-400 mr-4 mt-1' />
             <p class='text-gray-600'>
               <strong>Sérénité :</strong> Pas de frais d'autoroute ou de parking cachés,
               tout est inclus dans le devis.
             </p>
           </div>
           <div class='flex items-start'>
-            <i class='fas fa-calendar-alt text-yellow-400 mr-4 mt-1'></i>
+            <Icon name='lucide:calendar' size={16} class='text-yellow-400 mr-4 mt-1' />
             <p class='text-gray-600'>
               <strong>Disponibilité :</strong> Réservation possible 24h/24 pour vos
               vols matinaux ou retours tardifs.
@@ -214,7 +215,7 @@ import Footer from "../components/Footer.astro";
           href='tel:0633968023'
           class='inline-flex flex-col sm:flex-row items-center gap-2 bg-slate-900 text-white px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg text-center'>
           <span class='flex items-center'>
-            <i class='fas fa-phone mr-2'></i>
+            <Icon name='lucide:phone' size={20} class='mr-2' />
             Appeler Anthony
           </span>
           <span class='whitespace-nowrap'>06 33 96 80 23</span>

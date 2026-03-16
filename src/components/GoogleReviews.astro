@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const reviews = [
   {
     author: "Yann JOLLY",
@@ -836,11 +838,11 @@ const writeReviewLink =
           <div class='text-center'>
             <div class='text-2xl font-bold text-slate-900'>5,0</div>
             <div class='text-yellow-400 text-sm flex gap-0.5'>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
+              <Icon name='lucide:star' size={14} fill='currentColor' />
+              <Icon name='lucide:star' size={14} fill='currentColor' />
+              <Icon name='lucide:star' size={14} fill='currentColor' />
+              <Icon name='lucide:star' size={14} fill='currentColor' />
+              <Icon name='lucide:star' size={14} fill='currentColor' />
             </div>
           </div>
           <div class='text-gray-600 text-sm border-l border-gray-300 pl-3'>
@@ -863,7 +865,7 @@ const writeReviewLink =
         id='prevBtn'
         aria-label='Avis précédents'
         class='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'>
-        <i class='fas fa-chevron-left'></i>
+        <Icon name='lucide:chevron-left' size={20} />
       </button>
 
       <!-- Container du slider -->
@@ -880,7 +882,7 @@ const writeReviewLink =
                   <div class='flex items-center mb-4'>
                     <div class='text-yellow-400 text-sm flex'>
                       {[...Array(review.rating)].map(() => (
-                        <i class='fas fa-star' />
+                        <Icon name='lucide:star' size={14} fill='currentColor' />
                       ))}
                     </div>
                     <span class='text-gray-500 text-xs ml-auto'>
@@ -907,7 +909,7 @@ const writeReviewLink =
                       </p>
                       <p class='text-xs text-gray-500'>Client Google</p>
                     </div>
-                    <i class='fab fa-google text-slate-300 text-xl ml-auto' />
+                    <Icon name='simple-icons:google' class='text-slate-300 ml-auto' size={20} />
                   </div>
                 </div>
               </div>
@@ -921,7 +923,7 @@ const writeReviewLink =
         id='nextBtn'
         aria-label='Avis suivants'
         class='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'>
-        <i class='fas fa-chevron-right'></i>
+        <Icon name='lucide:chevron-right' size={20} />
       </button>
 
       <!-- Pagination -->
@@ -1176,7 +1178,7 @@ const writeReviewLink =
         target='_blank'
         rel='noopener noreferrer'
         class='bg-yellow-400 text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg flex items-center'>
-        <i class='fas fa-pen mr-2'></i>
+        <Icon name='lucide:pen' class='mr-2' size={16} />
         Donnez votre avis
       </a>
       <a
@@ -1184,7 +1186,7 @@ const writeReviewLink =
         target='_blank'
         rel='noopener noreferrer'
         class='text-slate-600 hover:text-slate-900 font-medium px-6 py-3 transition flex items-center'>
-        <i class='fab fa-google mr-2'></i>
+        <Icon name='simple-icons:google' class='mr-2' size={16} />
         Voir tous les avis
       </a>
     </div>

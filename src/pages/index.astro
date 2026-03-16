@@ -9,6 +9,7 @@ import Contact from "../components/Contact.astro";
 import GoogleReviews from "../components/GoogleReviews.astro";
 import Pricing from "../components/Pricing.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title='Taxi Gervais - La Roche-sur-Yon - 06 33 96 80 23'>
@@ -30,7 +31,7 @@ import Footer from "../components/Footer.astro";
       href='tel:0633968023'
       aria-label='Appeler Taxi Anthony Gervais'
       class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <i class='fas fa-phone-alt text-2xl'></i>
+      <Icon name='lucide:phone' size={24} />
     </a>
   </div>
 </Layout>

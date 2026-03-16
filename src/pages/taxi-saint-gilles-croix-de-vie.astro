@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -16,7 +17,7 @@ import Footer from "../components/Footer.astro";
         <div class='max-w-3xl'>
           <div
             class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <i class='fas fa-umbrella-beach mr-2'></i>
+            <Icon name='lucide:umbrella' size={16} class='mr-2 inline' />
             Direction le Littoral Vendéen
           </div>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
@@ -33,7 +34,7 @@ import Footer from "../components/Footer.astro";
             href='tel:0633968023'
             class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
             <span class='flex items-center'>
-              <i class='fas fa-phone-alt mr-2'></i>
+              <Icon name='lucide:phone' size={20} class='mr-2' />
               <span class='hidden sm:inline'>Réserver mon trajet plage</span>
               <span class='sm:hidden'>Réserver</span>
             </span>
@@ -62,7 +63,7 @@ import Footer from "../components/Footer.astro";
         <div class='space-y-6'>
           <div class='flex items-start'>
             <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
-              <i class='fas fa-users'></i>
+              <Icon name='lucide:users' size={24} />
             </div>
             <div>
               <h3 class='text-xl font-bold text-slate-900 mb-2'>
@@ -77,7 +78,7 @@ import Footer from "../components/Footer.astro";
           </div>
           <div class='flex items-start'>
             <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
-              <i class='fas fa-map-marked-alt'></i>
+              <Icon name='lucide:map-pin' size={24} />
             </div>
             <div>
               <h3 class='text-xl font-bold text-slate-900 mb-2'>
@@ -92,7 +93,7 @@ import Footer from "../components/Footer.astro";
           </div>
           <div class='flex items-start'>
             <div class='bg-orange-100 p-3 rounded-full mr-4 text-orange-600'>
-              <i class='fas fa-coins'></i>
+              <Icon name='lucide:coins' size={24} />
             </div>
             <div>
               <h3 class='text-xl font-bold text-slate-900 mb-2'>
@@ -180,7 +181,7 @@ import Footer from "../components/Footer.astro";
         <a
           href='tel:0633968023'
           class='inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg shadow-xl uppercase tracking-wider'>
-          <i class='fas fa-phone mr-2'></i> 06 33 96 80 23
+          <Icon name='lucide:phone' size={20} class='mr-2 inline' /> 06 33 96 80 23
         </a>
       </div>
     </section>

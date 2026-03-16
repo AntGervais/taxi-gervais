@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout
@@ -16,7 +17,7 @@ import Footer from "../components/Footer.astro";
         <div class='max-w-3xl'>
           <div
             class='inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 animate-pulse'>
-            <i class='fas fa-clock mr-2'></i>
+            <Icon name='lucide:clock' size={16} class='mr-2 inline' />
             Disponible 24h/24 & 7j/7 sur réservation
           </div>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
@@ -34,7 +35,7 @@ import Footer from "../components/Footer.astro";
             href='tel:0633968023'
             class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-center'>
             <span class='flex items-center'>
-              <i class='fas fa-phone-alt mr-2'></i>
+              <Icon name='lucide:phone' size={20} class='mr-2 inline' />
               Réserver maintenant
             </span>
             <span class='whitespace-nowrap'>06 33 96 80 23</span>
@@ -60,7 +61,7 @@ import Footer from "../components/Footer.astro";
             <ul class='space-y-4'>
               <li class='flex items-start'>
                 <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
-                  <i class='fas fa-check text-yellow-600'></i>
+                  <Icon name='lucide:check' size={16} class='text-yellow-600' />
                 </div>
                 <div>
                   <h3 class='font-bold text-slate-900'>Réactivité Garantie</h3>
@@ -72,7 +73,7 @@ import Footer from "../components/Footer.astro";
               </li>
               <li class='flex items-start'>
                 <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
-                  <i class='fas fa-moon text-yellow-600'></i>
+                  <Icon name='lucide:moon' size={16} class='text-yellow-600' />
                 </div>
                 <div>
                   <h3 class='font-bold text-slate-900'>Service de Nuit</h3>
@@ -84,7 +85,7 @@ import Footer from "../components/Footer.astro";
               </li>
               <li class='flex items-start'>
                 <div class='bg-yellow-100 p-2 rounded-lg mr-4 mt-1'>
-                  <i class='fas fa-shield-alt text-yellow-600'></i>
+                  <Icon name='lucide:shield' size={16} class='text-yellow-600' />
                 </div>
                 <div>
                   <h3 class='font-bold text-slate-900'>Sécurité & Confort</h3>
@@ -158,7 +159,7 @@ import Footer from "../components/Footer.astro";
           <a
             href='tel:0633968023'
             class='bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition transform hover:scale-105 text-lg'>
-            <i class='fas fa-phone-alt mr-2'></i>
+            <Icon name='lucide:phone' size={20} class='mr-2 inline' />
             06 33 96 80 23
           </a>
           <a
