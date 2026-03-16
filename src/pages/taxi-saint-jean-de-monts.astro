@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Icon } from 'astro-icon/components';
+import ServiceHero from "../components/ServiceHero.astro";
+import ServiceCTA from "../components/ServiceCTA.astro";
 ---
 
 <Layout
@@ -10,39 +12,14 @@ import { Icon } from 'astro-icon/components';
   description='Besoin d un taxi entre La Roche-sur-Yon et Saint-Jean-de-Monts ? Transport vers la grande plage et la forêt de pins à tarif transparent. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
   <Navbar />
   <main>
-    <!-- Hero Section -->
-    <section
-      class='bg-slate-900 text-white py-20'>
-      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='max-w-3xl'>
-          <div
-            class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <Icon name='lucide:umbrella' size={16} class='mr-2 inline' />
-            Direction le Littoral Vendéen
-          </div>
-          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
-            Taxi <span class='text-yellow-400'
-              >La Roche-sur-Yon ↔ Saint-Jean-de-Monts</span
-            >
-          </h1>
-          <p class='text-xl text-white mb-8'>
-            Rejoignez la célèbre station balnéaire et ses 8 km de plage de sable
-            fin sans contrainte de stationnement. Transport toutes distances vers
-            cette destination familiale incontournable.
-          </p>
-          <a
-            href='tel:0633968023'
-            class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
-            <span class='flex items-center'>
-              <Icon name='lucide:phone' size={20} class='mr-2' />
-              <span class='hidden sm:inline'>Réserver mon trajet plage</span>
-              <span class='sm:hidden'>Réserver</span>
-            </span>
-            <span class='whitespace-nowrap'>06 33 96 80 23</span>
-          </a>
-        </div>
-      </div>
-    </section>
+    <ServiceHero
+      title="Taxi"
+      highlightedText="La Roche-sur-Yon ↔ Saint-Jean-de-Monts"
+      description="Rejoignez la célèbre station balnéaire et ses 8 km de plage de sable fin sans contrainte de stationnement. Transport toutes distances vers cette destination familiale incontournable."
+      ctaText="Réserver mon trajet plage"
+      badgeIcon="lucide:umbrella"
+      badgeText="Direction le Littoral Vendéen"
+    />
 
     <!-- Content Section -->
     <section class='py-20 bg-white text-gray-700'>
@@ -173,20 +150,10 @@ import { Icon } from 'astro-icon/components';
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class='py-20 bg-yellow-400 text-slate-900 text-center'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <h2 class='text-3xl font-bold mb-6'>Prêt pour le grand air ?</h2>
-        <p class='text-xl mb-8'>
-          Réservez votre taxi pour Saint-Jean-de-Monts et voyagez sans stress.
-        </p>
-        <a
-          href='tel:0633968023'
-          class='inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg shadow-xl uppercase tracking-wider'>
-          <Icon name='lucide:phone' size={20} class='mr-2 inline' /> 06 33 96 80 23
-        </a>
-      </div>
-    </section>
+    <ServiceCTA
+      title="Prêt pour le grand air ?"
+      description="Réservez votre taxi pour Saint-Jean-de-Monts et voyagez sans stress."
+    />
   </main>
   <Footer />
 </Layout>

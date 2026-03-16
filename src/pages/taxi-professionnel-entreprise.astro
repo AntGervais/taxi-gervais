@@ -2,52 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import MobileCallButton from "../components/MobileCallButton.astro";
+import FAQSection from "../components/FAQSection.astro";
 import { Icon } from 'astro-icon/components';
+
+const faqs = [
+  {
+    question: "Proposez-vous la facturation entreprise ?",
+    answer: "Oui, je fournis des factures détaillées avec tous les éléments nécessaires pour vos notes de frais et comptabilité d'entreprise. Possibilité d'ouvrir un compte professionnel pour une facturation mensuelle."
+  },
+  {
+    question: "Pouvez-vous assurer le transport de plusieurs collaborateurs ?",
+    answer: "Absolument. Mon véhicule 8 places est idéal pour transporter une équipe complète. Parfait pour les séminaires, formations ou déplacements groupés."
+  },
+  {
+    question: "Proposez-vous des forfaits pour entreprises ?",
+    answer: "Oui, je propose des forfaits adaptés aux besoins récurrents : mise à disposition à la journée, contrats mensuels, conventions annuelles. Contactez-moi pour un devis personnalisé."
+  },
+  {
+    question: "Puis-je travailler pendant le trajet ?",
+    answer: "Bien sûr. Conduite souple et silencieuse, pour vous permettre de travailler, passer des appels ou vous reposer en toute tranquillité."
+  }
+];
 ---
 
 <Layout
   title='Taxi La Roche-sur-Yon Vendée | Taxi Gervais'
   description='Solution de transport professionnel pour entreprises à La Roche-sur-Yon. Facture, compte professionnel, ponctualité garantie. Déplacements business, séminaires, salons.'>
-  <script type='application/ld+json' slot='head'>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Proposez-vous la facturation entreprise ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, je fournis des factures détaillées avec tous les éléments nécessaires pour vos notes de frais et comptabilité d'entreprise. Possibilité d'ouvrir un compte professionnel pour une facturation mensuelle."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pouvez-vous assurer le transport de plusieurs collaborateurs ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolument. Mon véhicule 8 places est idéal pour transporter une équipe complète. Parfait pour les séminaires, formations ou déplacements groupés."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Proposez-vous des forfaits pour entreprises ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, je propose des forfaits adaptés aux besoins récurrents : mise à disposition à la journée, contrats mensuels, conventions annuelles. Contactez-moi pour un devis personnalisé."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Puis-je travailler pendant le trajet ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Bien sûr. Conduite souple et silencieuse, pour vous permettre de travailler, passer des appels ou vous reposer en toute tranquillité."
-          }
-        }
-      ]
-    }
-  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -437,72 +418,7 @@ import { Icon } from 'astro-icon/components';
     </section>
 
     <!-- FAQ -->
-    <section class='py-20 bg-gray-50'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='text-center mb-12'>
-          <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-            Questions Fréquentes
-          </h2>
-          <div class='w-20 h-1 bg-yellow-400 mx-auto'></div>
-        </div>
-
-        <div class='space-y-4'>
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Proposez-vous la facturation entreprise ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, je fournis des factures détaillées avec tous les éléments
-              nécessaires pour vos notes de frais et comptabilité d'entreprise.
-              Possibilité d'ouvrir un compte professionnel pour une facturation
-              mensuelle.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Pouvez-vous assurer le transport de plusieurs collaborateurs ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Absolument. Mon <a
-                href='/taxi-8-places-transport-groupe/'
-                class='text-yellow-600 hover:text-yellow-700 font-semibold'
-                >véhicule 8 places</a
-              > est idéal pour transporter une équipe complète. Parfait pour les séminaires,
-              formations ou déplacements groupés.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Proposez-vous des forfaits pour entreprises ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, je propose des forfaits adaptés aux besoins récurrents : mise
-              à disposition à la journée, contrats mensuels, conventions
-              annuelles. Contactez-moi pour un devis personnalisé.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Puis-je travailler pendant le trajet ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Bien sûr. Conduite souple et silencieuse, pour vous permettre de
-              travailler, passer des appels ou vous reposer en toute
-              tranquillité.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQSection faqs={faqs} />
 
     <!-- Services connexes -->
     <section class='py-12 bg-white'>
@@ -596,13 +512,5 @@ import { Icon } from 'astro-icon/components';
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
-    <a
-      href='tel:0633968023'
-      aria-label='Appeler Taxi Anthony Gervais'
-      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <Icon name='lucide:phone' size={24} />
-    </a>
-  </div>
+  <MobileCallButton />
 </Layout>

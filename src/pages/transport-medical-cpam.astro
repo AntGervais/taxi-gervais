@@ -2,44 +2,29 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import MobileCallButton from "../components/MobileCallButton.astro";
+import FAQSection from "../components/FAQSection.astro";
 import { Icon } from 'astro-icon/components';
+
+const faqs = [
+  {
+    question: "Combien de temps à l'avance dois-je réserver ?",
+    answer: "Je recommande de réserver au moins 24h à l'avance. Pour les urgences, appelez-moi : je ferai mon maximum pour vous accommoder."
+  },
+  {
+    question: "Que se passe-t-il si j'oublie ma carte Vitale ?",
+    answer: "Sans carte Vitale, je ne peux pas appliquer le tiers payant. Vous devrez régler le trajet et vous faire rembourser par votre CPAM."
+  },
+  {
+    question: "Puis-je être accompagné lors du transport ?",
+    answer: "Oui, si votre prescription le mentionne. Mon véhicule 8 places peut accueillir un ou plusieurs accompagnants."
+  }
+];
 ---
 
 <Layout
   title='Transport Médical Conventionné CPAM La Roche-sur-Yon - Taxi Gervais'
   description="Taxi conventionné CPAM à La Roche-sur-Yon. Pas d'avance de frais pour vos transports médicaux éligibles. Tiers payant accepté pour consultations, examens et traitements.">
-  <script type='application/ld+json' slot='head'>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Combien de temps à l'avance dois-je réserver ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Je recommande de réserver au moins 24h à l'avance. Pour les urgences, appelez-moi : je ferai mon maximum pour vous accommoder."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Que se passe-t-il si j'oublie ma carte Vitale ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sans carte Vitale, je ne peux pas appliquer le tiers payant. Vous devrez régler le trajet et vous faire rembourser par votre CPAM."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Puis-je être accompagné lors du transport ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, si votre prescription le mentionne. Mon véhicule 8 places peut accueillir un ou plusieurs accompagnants."
-          }
-        }
-      ]
-    }
-  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -267,54 +252,7 @@ import { Icon } from 'astro-icon/components';
     </section>
 
     <!-- FAQ -->
-    <section class='py-20 bg-white'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='text-center mb-16'>
-          <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-            Questions Fréquentes
-          </h2>
-          <div class='w-20 h-1 bg-yellow-400 mx-auto'></div>
-        </div>
-
-        <div class='space-y-6'>
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Combien de temps à l'avance dois-je réserver ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Je recommande de réserver au moins 24h à l'avance. Pour les
-              urgences, appelez-moi : je ferai mon maximum pour vous accommoder.
-            </p>
-          </div>
-
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Que se passe-t-il si j'oublie ma carte Vitale ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Sans carte Vitale, je ne peux pas appliquer le tiers payant. Vous
-              devrez régler le trajet et vous faire rembourser par votre CPAM.
-            </p>
-          </div>
-
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Puis-je être accompagné lors du transport ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, si votre prescription le mentionne. Mon <a
-                href='/taxi-8-places-transport-groupe/'
-                class='text-yellow-600 hover:text-yellow-700 font-semibold'
-                >véhicule 8 places</a
-              > peut accueillir un ou plusieurs accompagnants.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQSection faqs={faqs} />
 
     <!-- Services connexes -->
     <section class='py-12 bg-gray-50'>
@@ -392,13 +330,5 @@ import { Icon } from 'astro-icon/components';
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
-    <a
-      href='tel:0633968023'
-      aria-label='Appeler Taxi Anthony Gervais'
-      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <Icon name='lucide:phone' size={24} />
-    </a>
-  </div>
+  <MobileCallButton />
 </Layout>

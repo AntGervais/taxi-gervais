@@ -2,52 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import MobileCallButton from "../components/MobileCallButton.astro";
+import FAQSection from "../components/FAQSection.astro";
 import { Icon } from 'astro-icon/components';
+
+const faqs = [
+  {
+    question: "Mon assurance auto prend-elle en charge le rapatriement en taxi ?",
+    answer: "Oui ! La plupart des assurances auto incluent une garantie assistance qui couvre le rapatriement des passagers en cas de panne ou accident, souvent dès 0 km du domicile. Je vous fournis une facture détaillée que vous transmettez à votre assurance pour remboursement."
+  },
+  {
+    question: "Combien de temps faut-il pour venir me chercher après une panne ?",
+    answer: "Je m'organise au plus vite selon votre localisation. Pour les pannes dans un rayon de 100 km, je peux généralement intervenir sous 1 à 2 heures. Pour les pannes plus éloignées, nous organisons ensemble l'intervention. Disponible 7j/7."
+  },
+  {
+    question: "Que faire si je suis en panne avec toute ma famille et beaucoup de bagages ?",
+    answer: "Pas de panique ! Mon taxi 8 places peut rapatrier jusqu'à 8 personnes avec leurs bagages en un seul trajet. Plus besoin d'organiser plusieurs véhicules ou de laisser des affaires sur place. Tout le monde rentre ensemble."
+  },
+  {
+    question: "Quelles distances couvrez-vous pour le rapatriement ?",
+    answer: "J'interviens partout en France pour vous ramener vers La Roche-sur-Yon et la Vendée. Je peux aussi vous rapatrier depuis la Vendée vers n'importe quelle destination en cas de panne lors de vos départs en vacances ou déplacements."
+  }
+];
 ---
 
 <Layout
   title='Rapatriement panne Taxi La Roche-sur-Yon | Taxi Gervais'
   description='Votre voiture en panne loin de chez vous ? Service de rapatriement taxi longue distance, pris en charge par votre assurance auto. Disponible 7j/7 en Vendée et toute la France.'>
-  <script type='application/ld+json' slot='head'>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Mon assurance auto prend-elle en charge le rapatriement en taxi ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui ! La plupart des assurances auto incluent une garantie assistance qui couvre le rapatriement des passagers en cas de panne ou accident, souvent dès 0 km du domicile. Je vous fournis une facture détaillée que vous transmettez à votre assurance pour remboursement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien de temps faut-il pour venir me chercher après une panne ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Je m'organise au plus vite selon votre localisation. Pour les pannes dans un rayon de 100 km, je peux généralement intervenir sous 1 à 2 heures. Pour les pannes plus éloignées, nous organisons ensemble l'intervention. Disponible 7j/7."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Que faire si je suis en panne avec toute ma famille et beaucoup de bagages ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pas de panique ! Mon taxi 8 places peut rapatrier jusqu'à 8 personnes avec leurs bagages en un seul trajet. Plus besoin d'organiser plusieurs véhicules ou de laisser des affaires sur place. Tout le monde rentre ensemble."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelles distances couvrez-vous pour le rapatriement ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "J'interviens partout en France pour vous ramener vers La Roche-sur-Yon et la Vendée. Je peux aussi vous rapatrier depuis la Vendée vers n'importe quelle destination en cas de panne lors de vos départs en vacances ou déplacements."
-          }
-        }
-      ]
-    }
-  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -289,81 +270,7 @@ import { Icon } from 'astro-icon/components';
     </section>
 
     <!-- FAQ -->
-    <section class='py-20 bg-gray-50'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='text-center mb-16'>
-          <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-            Questions Fréquentes
-          </h2>
-          <div class='w-20 h-1 bg-yellow-400 mx-auto'></div>
-        </div>
-
-        <div class='space-y-6'>
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Mon assurance auto prend-elle en charge le rapatriement en taxi
-                ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui ! La plupart des assurances auto incluent une garantie
-              assistance qui couvre le rapatriement des passagers en cas de
-              panne ou accident, souvent dès 0 km du domicile. Je vous fournis
-              une facture détaillée que vous transmettez à votre assurance pour
-              remboursement.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Combien de temps faut-il pour venir me chercher après une panne
-                ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Je m'organise au plus vite selon votre localisation. Pour les
-              pannes dans un rayon de 100 km, je peux généralement intervenir
-              sous 1 à 2 heures. Pour les pannes plus éloignées, nous organisons
-              ensemble l'intervention. Disponible 7j/7.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Que faire si je suis en panne avec toute ma famille et beaucoup
-                de bagages ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Pas de panique ! Mon <a
-                href='/taxi-8-places-transport-groupe/'
-                class='text-blue-600 hover:underline'>taxi 8 places</a
-              > peut rapatrier jusqu'à 8 personnes avec leurs bagages en un seul trajet.
-              Plus besoin d'organiser plusieurs véhicules. Tout le monde rentre ensemble.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Quelles distances couvrez-vous pour le rapatriement ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              J'interviens partout en France pour vous ramener vers La
-              Roche-sur-Yon et la Vendée. Je peux aussi vous rapatrier depuis la
-              Vendée vers n'importe quelle destination en cas de panne lors de
-              vos départs en vacances ou déplacements.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQSection faqs={faqs} />
 
     <!-- Services connexes -->
     <section class='py-12 bg-gray-50'>
@@ -462,13 +369,5 @@ import { Icon } from 'astro-icon/components';
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
-    <a
-      href='tel:0633968023'
-      aria-label='Appeler Taxi Anthony Gervais - Urgence Panne'
-      class='bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition animate-pulse'>
-      <Icon name='lucide:phone' size={24} />
-    </a>
-  </div>
+  <MobileCallButton />
 </Layout>

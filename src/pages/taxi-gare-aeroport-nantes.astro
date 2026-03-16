@@ -2,52 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import MobileCallButton from "../components/MobileCallButton.astro";
+import FAQSection from "../components/FAQSection.astro";
 import { Icon } from 'astro-icon/components';
+
+const faqs = [
+  {
+    question: "À quelle heure dois-je prévoir le départ pour l'aéroport ?",
+    answer: "Je recommande d'arriver 2h avant un vol européen et 3h avant un vol international. Comptez environ 1h de trajet + marge de sécurité. Je vous conseille sur l'heure de départ optimale."
+  },
+  {
+    question: "Combien de bagages puis-je emporter ?",
+    answer: "Mon véhicule 8 places dispose d'un grand coffre. Pour 1-4 passagers, vous pouvez emporter sans problème valises + bagages cabine. Précisez le nombre de bagages lors de la réservation."
+  },
+  {
+    question: "Que se passe-t-il si mon vol est retardé ?",
+    answer: "Pour les retours d'aéroport, je surveille votre vol en temps réel. Si votre avion a du retard, je m'adapte gratuitement (dans la limite du raisonnable)."
+  },
+  {
+    question: "Le tarif inclut-il les frais d'autoroute ?",
+    answer: "Oui, le tarif fixe que je vous annonce inclut tout : carburant, autoroute, retour à vide. Aucun supplément."
+  }
+];
 ---
 
 <Layout
   title='Taxi Aéroport Nantes & Gare - La Roche-sur-Yon | Taxi Gervais'
   description="Transfert fiable vers l'aéroport Nantes Atlantique et les gares depuis La Roche-sur-Yon. Ponctualité garantie, véhicule 8 places, tarif fixe sur devis. Réservez votre taxi.">
-  <script type='application/ld+json' slot='head'>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "À quelle heure dois-je prévoir le départ pour l'aéroport ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Je recommande d'arriver 2h avant un vol européen et 3h avant un vol international. Comptez environ 1h de trajet + marge de sécurité. Je vous conseille sur l'heure de départ optimale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien de bagages puis-je emporter ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Mon véhicule 8 places dispose d'un grand coffre. Pour 1-4 passagers, vous pouvez emporter sans problème valises + bagages cabine. Précisez le nombre de bagages lors de la réservation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Que se passe-t-il si mon vol est retardé ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pour les retours d'aéroport, je surveille votre vol en temps réel. Si votre avion a du retard, je m'adapte gratuitement (dans la limite du raisonnable)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Le tarif inclut-il les frais d'autoroute ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, le tarif fixe que je vous annonce inclut tout : carburant, autoroute, retour à vide. Aucun supplément."
-          }
-        }
-      ]
-    }
-  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -462,67 +443,7 @@ import { Icon } from 'astro-icon/components';
     </section>
 
     <!-- FAQ -->
-    <section class='py-20 bg-white'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='text-center mb-12'>
-          <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-            Questions Fréquentes
-          </h2>
-          <div class='w-20 h-1 bg-yellow-400 mx-auto'></div>
-        </div>
-
-        <div class='space-y-4'>
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >À quelle heure dois-je prévoir le départ pour l'aéroport ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Je recommande d'arriver 2h avant un vol européen et 3h avant un
-              vol international. Comptez environ 1h de trajet + marge de
-              sécurité. Je vous conseille sur l'heure de départ optimale.
-            </p>
-          </div>
-
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Combien de bagages puis-je emporter ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Mon véhicule 8 places dispose d'un grand coffre. Pour 1-4
-              passagers, vous pouvez emporter sans problème valises + bagages
-              cabine. Précisez le nombre de bagages lors de la réservation.
-            </p>
-          </div>
-
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Que se passe-t-il si mon vol est retardé ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Pour les retours d'aéroport, je surveille votre vol en temps réel.
-              Si votre avion a du retard, je m'adapte gratuitement (dans la
-              limite du raisonnable).
-            </p>
-          </div>
-
-          <div class='bg-gray-50 rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Le tarif inclut-il les frais d'autoroute ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, le tarif fixe que je vous annonce inclut tout : carburant,
-              autoroute, retour à vide. Aucun supplément.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQSection faqs={faqs} />
 
     <!-- Services connexes -->
     <section class='py-12 bg-gray-50'>
@@ -598,13 +519,5 @@ import { Icon } from 'astro-icon/components';
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
-    <a
-      href='tel:0633968023'
-      aria-label='Appeler Taxi Anthony Gervais'
-      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <Icon name='lucide:phone' size={24} />
-    </a>
-  </div>
+  <MobileCallButton />
 </Layout>

@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import ServiceHero from "../components/ServiceHero.astro";
+import ServiceCTA from "../components/ServiceCTA.astro";
 import { Icon } from 'astro-icon/components';
 ---
 
@@ -10,32 +12,15 @@ import { Icon } from 'astro-icon/components';
   description='Besoin d un taxi entre La Roche-sur-Yon et Nantes ? Transferts aéroport Nantes Atlantique et Gare de Nantes à tarif fixe. Véhicule 8 places. Réservez au 06 33 96 80 23.'>
   <Navbar />
   <main>
-    <!-- Hero Section -->
-    <section class='bg-slate-900 text-white py-20'>
-      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='max-w-3xl'>
-          Liaison La Roche &lt;-&gt; Nantes
-          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
-            Taxi <span class='text-yellow-400'>La Roche-sur-Yon ↔ Nantes</span>
-          </h1>
-          <p class='text-xl text-gray-300 mb-8'>
-            Simplifiez vos trajets vers la cité des Ducs. Que ce soit pour
-            l'aéroport, la gare ou un rendez-vous professionnel, profitez d'un
-            trajet confortable et serein.
-          </p>
-          <a
-            href='tel:0633968023'
-            class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
-            <span class='flex items-center'>
-              <Icon name='lucide:phone' size={20} class='mr-2' />
-              <span class='hidden sm:inline'>Réserver mon trajet Nantes</span>
-              <span class='sm:hidden'>Réserver Nantes</span>
-            </span>
-            <span class='whitespace-nowrap'>06 33 96 80 23</span>
-          </a>
-        </div>
-      </div>
-    </section>
+    <ServiceHero
+      title="Taxi"
+      highlightedText="La Roche-sur-Yon ↔ Nantes"
+      description="Simplifiez vos trajets vers la cité des Ducs. Que ce soit pour l'aéroport, la gare ou un rendez-vous professionnel, profitez d'un trajet confortable et serein."
+      ctaText="Réserver mon trajet Nantes"
+      ctaTextShort="Réserver Nantes"
+      badgeIcon="lucide:map-pin"
+      badgeText="Liaison La Roche ↔ Nantes"
+    />
 
     <!-- Content Sections -->
     <section class='py-20 bg-white'>
@@ -202,26 +187,10 @@ import { Icon } from 'astro-icon/components';
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class='py-20 bg-yellow-400 text-slate-900 text-center'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <h2 class='text-3xl font-bold mb-6'>
-          Prêt pour votre trajet vers Nantes ?
-        </h2>
-        <p class='text-xl mb-8 opacity-90'>
-          Obtenez votre devis gratuit et réservez votre véhicule en 2 minutes.
-        </p>
-        <a
-          href='tel:0633968023'
-          class='inline-flex flex-col sm:flex-row items-center gap-2 bg-slate-900 text-white px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition text-lg text-center'>
-          <span class='flex items-center'>
-            <Icon name='lucide:phone' size={20} class='mr-2' />
-            Appeler Anthony
-          </span>
-          <span class='whitespace-nowrap'>06 33 96 80 23</span>
-        </a>
-      </div>
-    </section>
+    <ServiceCTA
+      title="Prêt pour votre trajet vers Nantes ?"
+      description="Obtenez votre devis gratuit et réservez votre véhicule en 2 minutes."
+    />
   </main>
   <Footer />
 </Layout>

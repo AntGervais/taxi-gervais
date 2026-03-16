@@ -2,52 +2,41 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import MobileCallButton from "../components/MobileCallButton.astro";
+import FAQSection from "../components/FAQSection.astro";
 import { Icon } from 'astro-icon/components';
+
+const faqs = [
+  {
+    question: "Combien coûte un trajet en taxi 8 places ?",
+    answer: "Le tarif dépend de la distance et de la durée du trajet. Le prix est unique pour le véhicule (pas par passager), ce qui le rend très économique quand on divise par 8 ! Appelez-moi pour un devis gratuit adapté à votre trajet."
+  },
+  {
+    question: "Peut-on vraiment être 8 personnes avec bagages ?",
+    answer: "Oui ! Le véhicule dispose de 8 places assises réglementaires ET d'un grand coffre. Pour les bagages très volumineux, je peux adapter la configuration (par exemple 6-7 personnes + beaucoup de bagages). Précisez vos besoins lors de la réservation."
+  },
+  {
+    question: "Le véhicule est-il adapté pour les enfants ?",
+    answer: "Absolument. Le véhicule est équipé de ceintures pour tous les passagers. Si vous voyagez avec de jeunes enfants nécessitant des sièges auto, merci de me le signaler lors de la réservation pour que je puisse organiser l'installation."
+  },
+  {
+    question: "Puis-je réserver pour plusieurs trajets dans la journée ?",
+    answer: "Oui, je propose des forfaits à la journée ou demi-journée pour les événements nécessitant plusieurs rotations (mariages, séminaires). C'est souvent plus avantageux que de réserver plusieurs trajets séparés. Contactez-moi pour un devis personnalisé."
+  },
+  {
+    question: "Faites-vous les trajets longue distance ?",
+    answer: "Oui, je réalise des trajets toutes distances : aéroports (Nantes, Paris), autres régions, etc. Le taxi 8 places est idéal pour les longs trajets car tout le monde peut se reposer pendant que je conduis."
+  },
+  {
+    question: "Le véhicule est-il accessible aux personnes à mobilité réduite ?",
+    answer: "Le véhicule dispose d'un espace adaptable. Pour les personnes en fauteuil roulant ou avec des besoins spécifiques, merci de me contacter au préalable pour que je puisse organiser au mieux votre transport."
+  }
+];
 ---
 
 <Layout
   title='Taxi 8 Places La Roche-sur-Yon | Taxi Gervais'
   description='Véhicule 8 places spacieux et confortable pour vos déplacements en groupe à La Roche-sur-Yon. Parfait pour familles, événements, sorties groupe, aéroport. Réservez votre taxi 8 places.'>
-  <script type='application/ld+json' slot='head'>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Combien coûte un trajet en taxi 8 places ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le tarif dépend de la distance et de la durée du trajet. Le prix est unique pour le véhicule (pas par passager), ce qui le rend très économique quand on divise par 8 ! Appelez-moi pour un devis gratuit adapté à votre trajet."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on vraiment être 8 personnes avec bagages ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui ! Le véhicule dispose de 8 places assises réglementaires ET d'un grand coffre. Pour les bagages très volumineux, je peux adapter la configuration (par exemple 6-7 personnes + beaucoup de bagages). Précisez vos besoins lors de la réservation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Le véhicule est-il adapté pour les enfants ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolument. Le véhicule est équipé de ceintures pour tous les passagers. Si vous voyagez avec de jeunes enfants nécessitant des sièges auto, merci de me le signaler lors de la réservation pour que je puisse organiser l'installation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Puis-je réserver pour plusieurs trajets dans la journée ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, je propose des forfaits à la journée ou demi-journée pour les événements nécessitant plusieurs rotations (mariages, séminaires). C'est souvent plus avantageux que de réserver plusieurs trajets séparés. Contactez-moi pour un devis personnalisé."
-          }
-        }
-      ]
-    }
-  </script>
   <Navbar />
   <main>
     <!-- Hero Section -->
@@ -585,101 +574,7 @@ import { Icon } from 'astro-icon/components';
     </section>
 
     <!-- FAQ -->
-    <section class='py-20 bg-gray-50'>
-      <div class='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='text-center mb-16'>
-          <h2 class='text-3xl font-bold text-slate-900 mb-4'>
-            Questions Fréquentes
-          </h2>
-          <div class='w-20 h-1 bg-yellow-400 mx-auto'></div>
-        </div>
-
-        <div class='space-y-6'>
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Combien coûte un trajet en taxi 8 places ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Le tarif dépend de la distance et de la durée du trajet. Le prix
-              est unique pour le véhicule (pas par passager), ce qui le rend
-              très économique quand on divise par 8 ! Appelez-moi pour un devis
-              gratuit adapté à votre trajet.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Peut-on vraiment être 8 personnes avec bagages ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui ! Le véhicule dispose de 8 places assises réglementaires ET
-              d'un grand coffre. Pour les bagages très volumineux, je peux
-              adapter la configuration (par exemple 6-7 personnes + beaucoup de
-              bagages). Précisez vos besoins lors de la réservation.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Le véhicule est-il adapté pour les enfants ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Absolument. Le véhicule est équipé de ceintures pour tous les
-              passagers. Si vous voyagez avec de jeunes enfants nécessitant des
-              sièges auto, merci de me le signaler lors de la réservation pour
-              que je puisse organiser l'installation.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Puis-je réserver pour plusieurs trajets dans la journée ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, je propose des forfaits à la journée ou demi-journée pour les
-              événements nécessitant plusieurs rotations (mariages, séminaires).
-              C'est souvent plus avantageux que de réserver plusieurs trajets
-              séparés. Contactez-moi pour un devis personnalisé.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span>Faites-vous les trajets longue distance ?</span>
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Oui, je réalise des trajets toutes distances : aéroports (Nantes,
-              Paris), autres régions, etc. Le taxi 8 places est idéal pour les
-              longs trajets car tout le monde peut se reposer pendant que je
-              conduis.
-            </p>
-          </div>
-
-          <div class='bg-white rounded-xl p-6 shadow-sm'>
-            <h3 class='text-lg font-bold text-slate-900 mb-3 flex items-start'>
-              <Icon name='lucide:circle-help' size={20} class='text-yellow-500 mr-3 mt-1 flex-shrink-0' />
-              <span
-                >Le véhicule est-il accessible aux personnes à mobilité réduite
-                ?</span
-              >
-            </h3>
-            <p class='text-gray-700 ml-8'>
-              Le véhicule dispose d'un espace adaptable. Pour les personnes en
-              fauteuil roulant ou avec des besoins spécifiques, merci de me
-              contacter au préalable pour que je puisse organiser au mieux votre
-              transport.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <FAQSection faqs={faqs} />
 
     <!-- Services connexes -->
     <section class='py-12 bg-gray-50'>
@@ -770,13 +665,5 @@ import { Icon } from 'astro-icon/components';
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
-    <a
-      href='tel:0633968023'
-      aria-label='Appeler Taxi Anthony Gervais'
-      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
-      <Icon name='lucide:phone' size={24} />
-    </a>
-  </div>
+  <MobileCallButton />
 </Layout>
