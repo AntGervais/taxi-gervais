@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import MobileCallButton from "../components/MobileCallButton.astro";
 import FAQSection from "../components/FAQSection.astro";
+import ServiceHero from "../components/ServiceHero.astro";
 import { Icon } from 'astro-icon/components';
 
 const faqs = [
@@ -31,33 +32,14 @@ const faqs = [
   description='Solution de transport professionnel pour entreprises à La Roche-sur-Yon. Facture, compte professionnel, ponctualité garantie. Déplacements business, séminaires, salons.'>
   <Navbar />
   <main>
-    <!-- Hero Section -->
-    <section
-      class='bg-slate-900 text-white py-20'>
-      <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div class='max-w-3xl'>
-          <div
-            class='inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6'>
-            <Icon name='lucide:briefcase' size={16} class='mr-2 inline' />
-            Transport Professionnel
-          </div>
-          <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
-            Transport Professionnel pour Entreprises
-          </h1>
-          <p class='text-xl text-gray-300 mb-8'>
-            Solution de transport dédiée aux professionnels à La Roche-sur-Yon.
-            Ponctualité, discrétion et service adapté à vos besoins
-            d'entreprise. Facture professionnelle, compte entreprise disponible.
-          </p>
-          <a
-            href='tel:0633968023'
-            class='inline-block bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
-            <Icon name='lucide:phone' size={20} class='mr-2 inline' />
-            06 33 96 80 23
-          </a>
-        </div>
-      </div>
-    </section>
+    <ServiceHero
+      title="Transport Professionnel pour"
+      highlightedText="Entreprises"
+      description="Solution de transport dédiée aux professionnels à La Roche-sur-Yon. Ponctualité, discrétion et service adapté à vos besoins d'entreprise. Facture professionnelle, compte entreprise disponible."
+      ctaText="Réserver un transport pro"
+      badgeIcon="lucide:briefcase"
+      badgeText="Transport Professionnel"
+    />
 
     <!-- Services pour professionnels -->
     <section class='py-20 bg-white'>
