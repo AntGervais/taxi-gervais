@@ -11,7 +11,48 @@ import Pricing from "../components/Pricing.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title='Taxi Gervais - La Roche-sur-Yon - 06 33 96 80 23'>
+<Layout
+  title='Taxi Gervais - La Roche-sur-Yon - Conventionné CPAM'>
+  <script type='application/ld+json' slot='head'>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment réserver un taxi à La Roche-sur-Yon ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Appelez directement Anthony Gervais au 06 33 96 80 23, disponible 24h/24 et 7j/7. Vous pouvez aussi envoyer un SMS si la ligne est occupée. Pour les déplacements récurrents ou les courses à l'aéroport, une réservation 24 à 48h à l'avance est recommandée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le taxi est-il conventionné CPAM pour les transports médicaux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Taxi Anthony Gervais est agréé CPAM. Les trajets médicaux (dialyse, chimiothérapie, radiothérapie, consultations spécialisées) peuvent être pris en charge par la Sécurité Sociale sur prescription médicale. Renseignez-vous auprès de votre médecin ou de votre caisse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la zone d'intervention du taxi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basé à La Roche-sur-Yon (85), Taxi Gervais intervient dans toute la Vendée : Les Sables-d'Olonne, La Tranche-sur-Mer, Saint-Gilles-Croix-de-Vie, Noirmoutier et Nantes (gare SNCF et aéroport Atlantique). Le rapatriement longue distance est également disponible sur tout le territoire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de personnes le taxi peut-il transporter ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le véhicule dispose de 8 places, idéal pour les familles nombreuses, les groupes d'amis ou les déplacements professionnels. Il dispose également d'un grand coffre pour les bagages, même en groupe."
+          }
+        }
+      ]
+    }
+  </script>
   <Navbar />
   <main>
     <Hero />
@@ -34,3 +75,4 @@ import Footer from "../components/Footer.astro";
     </a>
   </div>
 </Layout>
+
