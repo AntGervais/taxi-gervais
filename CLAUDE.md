@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a French taxi service website for "Taxi Anthony Gervais" based in La Roche-sur-Yon (85). The site is a static marketing/landing page built with Astro 5 and Tailwind CSS 4.
+This is a French taxi service website for "Taxi Anthony Gervais" based in La Roche-sur-Yon (85). The site is a static marketing/landing page built with Astro 7 and Tailwind CSS 4.
 
 ## Commands
 
@@ -16,7 +16,7 @@ npm run preview  # Preview production build locally
 
 ## Architecture
 
-**Stack:** Astro 5, Tailwind CSS 4 (via Vite plugin), Font Awesome icons, Inter font
+**Stack:** Astro 7, Tailwind CSS 4 (via Vite plugin), Font Awesome icons, Inter font
 
 **Key files:**
 - `src/layouts/Layout.astro` - Base HTML layout with SEO meta tags, Open Graph, and schema.org structured data

@@ -4,7 +4,7 @@ Site web pour le service de taxi à La Roche-sur-Yon (85).
 
 ## Tech
 
-- Astro 5
+- Astro 7
 - Tailwind CSS 4
 
 ## Commandes
