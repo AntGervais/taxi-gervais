@@ -65,12 +65,15 @@ import Footer from "../components/Footer.astro";
   </main>
   <Footer />
 
-  <!-- Mobile Call Button -->
-  <div class='md:hidden fixed bottom-4 right-4 z-50'>
+  <!-- Bouton d'appel mobile -->
+  <div class='fixed bottom-5 right-5 z-50 md:hidden'>
     <a
       href='tel:0633968023'
       aria-label='Appeler Taxi Anthony Gervais'
-      class='bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition animate-bounce'>
+      class='relative flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-soft-lg transition duration-200 hover:bg-green-600 active:scale-95'>
+      <span
+        class='absolute inset-0 -z-10 rounded-full bg-green-500/60 motion-safe:animate-ping'
+      ></span>
       <i class='fas fa-phone-alt text-2xl'></i>
     </a>
   </div>

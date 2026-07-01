@@ -1,2 +1,182 @@
-
 @import "tailwindcss";
+
+/* ============================================================
+   Fondation design — Taxi Gervais
+   Charte : jaune #fbbf24 (accent unique) + slate (neutres)
+   ============================================================ */
+
+@theme {
+  /* Accent de marque exposé comme token réutilisable */
+  --color-brand: #fbbf24;
+  --color-brand-strong: #f59e0b;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Décale les ancres sous la navbar sticky (h-20 = 5rem) + marge */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    /* Ligatures + alternates Inter pour un rendu plus soigné */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+
+  /* Titres : plus de présence, moins d'orphelins */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Chiffres alignés pour prix, téléphones, tableaux */
+  .nums,
+  time,
+  th,
+  td {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Focus visible cohérent au clavier (accessibilité) */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* Curseur main sur tous les éléments cliquables (les <button> natifs
+     affichent une flèche par défaut) */
+  button:not(:disabled),
+  [role="button"],
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  /* Ombres teintées slate (hue du fond) plutôt que noir pur */
+  .shadow-soft {
+    box-shadow:
+      0 1px 2px -1px rgb(15 23 42 / 0.08),
+      0 6px 16px -4px rgb(15 23 42 / 0.1);
+  }
+
+  .shadow-soft-lg {
+    box-shadow:
+      0 2px 4px -2px rgb(15 23 42 / 0.1),
+      0 12px 32px -8px rgb(15 23 42 / 0.16);
+  }
+
+  /* Ombre chaude autour d'un élément jaune (CTA principal) */
+  .shadow-brand {
+    box-shadow: 0 10px 28px -8px rgb(245 158 11 / 0.5);
+  }
+
+  /* Liseré supérieur : barre pleine largeur clippée par les coins arrondis
+     de la carte (overflow-hidden) — extrémités droites, épouse l'arrondi. */
+  .card-accent {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-accent::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--color-brand),
+      var(--color-brand-strong)
+    );
+  }
+
+  /* ==========================================================
+     Système de surfaces — une seule grammaire pour tous les blocs
+     - .surface        : bloc ÉLEVÉ (blanc + filet + ombre douce)
+     - .surface-inset  : bloc EN CREUX (teinté + filet, SANS ombre)
+     Règle : élevé = ombre ; en creux = pas d'ombre. Jamais l'inverse.
+     ========================================================== */
+  .surface {
+    background-color: #fff;
+    border-radius: 1rem; /* rounded-2xl */
+    /* filet (ring 1px) + ombre douce composés en une seule déclaration */
+    box-shadow:
+      0 0 0 1px rgb(226 232 240),
+      0 1px 2px -1px rgb(15 23 42 / 0.08),
+      0 6px 16px -4px rgb(15 23 42 / 0.1);
+  }
+
+  .surface-interactive {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .surface-interactive:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 0 0 1px rgb(226 232 240),
+      0 2px 4px -2px rgb(15 23 42 / 0.1),
+      0 12px 32px -8px rgb(15 23 42 / 0.16);
+  }
+
+  .surface-inset {
+    background-color: rgb(248 250 252); /* slate-50 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: inset 0 0 0 1px rgb(226 232 240); /* filet slate-200 */
+  }
+
+  .surface-inset-warm {
+    background-color: rgb(254 252 232); /* yellow-50 */
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0 0 1px rgb(253 230 138); /* filet yellow-200 */
+  }
+}
+
+@layer utilities {
+  /* Grain subtil pour casser les aplats sombres (hero, sections foncées).
+     À appliquer sur un élément DÉJÀ positionné (absolute/relative) : on ne
+     force pas la position ici pour ne pas écraser un `absolute` existant. */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Respect des préférences de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

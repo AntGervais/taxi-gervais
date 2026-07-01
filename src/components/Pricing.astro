@@ -1,111 +1,118 @@
 ---
 const routes = [
   {
-    title: "Transfert Aéroport & Gare",
+    title: "Transfert aéroport & gare",
     description:
-      "Taxi La Roche-sur-Yon Nantes : liaisons vers l'aéroport Nantes Atlantique et la gare SNCF. Ponctualité garantie.",
-    price: "à partir de 160€",
+      "Taxi La Roche-sur-Yon ↔ Nantes : liaisons vers l'aéroport Nantes Atlantique et la gare SNCF. Ponctualité garantie.",
+    price: "à partir de 160 €",
     icon: "fas fa-plane",
     link: "/taxi-nantes/",
   },
   {
-    title: "Direction le Littoral",
+    title: "Direction le littoral",
     description:
-      "Taxi vers La Tranche-sur-Mer, les Sables-d'Olonne et les autres plages de Vendée. Transport famille et groupes avec véhicule 8 places.",
-    price: "à partir de 80€",
+      "Taxi vers La Tranche-sur-Mer, Les Sables-d'Olonne et les plages de Vendée. Familles et groupes avec véhicule 8 places.",
+    price: "à partir de 80 €",
     icon: "fas fa-umbrella-beach",
     link: "/taxi-la-tranche-sur-mer/",
   },
   {
-    title: "Trajets Urbains",
+    title: "Trajets urbains",
     description:
       "Déplacements à La Roche-sur-Yon : gare SNCF, centre hospitalier, rendez-vous personnel et professionnel. Tarifs réglementés.",
-    price: "à partir de 10€",
-    icon: "fas fa-train",
+    price: "à partir de 10 €",
+    icon: "fas fa-city",
     link: "/tarifs/",
   },
 ];
 ---
 
-<section id='tarifs' class='py-20 bg-slate-50'>
-  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='text-center mb-16'>
-      <h2 class='text-3xl font-bold text-slate-900'>
-        Tarifs Taxi à La Roche-sur-Yon
+<section id='tarifs' class='bg-white py-20 md:py-24'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div class='mb-14'>
+      <p
+        class='mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-yellow-600'>
+        Tarifs
+      </p>
+      <h2 class='text-3xl font-bold text-slate-900 md:text-4xl'>
+        Des prix transparents, réglementés en Vendée
       </h2>
-      <div class='w-20 h-1 bg-yellow-400 mx-auto mt-4'></div>
-      <p class='mt-6 text-gray-600 max-w-2xl mx-auto'>
-        Des tarifs transparents et compétitifs pour tous vos trajets. Estimation
-        gratuite par téléphone ou via notre formulaire.
+      <p class='mt-4 max-w-2xl text-slate-600'>
+        Estimation gratuite par téléphone ou via le formulaire. Aucun frais
+        caché.
       </p>
     </div>
 
-    <div class='grid md:grid-cols-3 gap-8'>
+    <div class='grid gap-6 md:grid-cols-3'>
       {
         routes.map((route) => (
-          <div class='bg-gray-50 p-8 rounded-xl hover:shadow-xl shadow-lg transition border-t-4 border-yellow-400 group'>
-            <div class='bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 text-yellow-600 text-2xl group-hover:bg-yellow-400 group-hover:text-slate-900 transition'>
+          <div class='card-accent group flex h-full flex-col rounded-2xl bg-white p-7 shadow-soft ring-1 ring-slate-200 transition duration-300 hover:-translate-y-1 hover:shadow-soft-lg'>
+            <span class='mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-slate-100 text-xl text-slate-700 transition duration-300 group-hover:bg-yellow-400 group-hover:text-slate-900'>
               <i class={route.icon} />
+            </span>
+            <h3 class='text-lg font-bold text-slate-900'>{route.title}</h3>
+            <p class='mt-3 text-sm leading-relaxed text-slate-600'>
+              {route.description}
+            </p>
+            <div class='mt-auto pt-6'>
+              <p class='text-2xl font-bold tabular-nums text-slate-900'>
+                {route.price}
+              </p>
+              <a
+                href={route.link}
+                class='mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-all hover:gap-2.5 hover:text-yellow-700'>
+                En savoir plus
+                <i class='fas fa-arrow-right text-xs' />
+              </a>
             </div>
-            <h3 class='text-xl font-bold mb-4'>{route.title}</h3>
-            <p class='text-gray-600 mb-3'>{route.description}</p>
-            <p class='font-semibold text-slate-900 mb-3'>{route.price}</p>
-            <a
-              href={route.link}
-              class='text-yellow-700 hover:text-yellow-800 font-semibold text-sm'>
-              En savoir plus →
-            </a>
           </div>
         ))
       }
     </div>
 
-    <div
-      class='mt-12 bg-white p-8 rounded-xl shadow-lg border border-slate-100'>
-      <div class='grid md:grid-cols-2 gap-8 items-center'>
+    <div class='mt-8 rounded-2xl bg-white p-8 shadow-soft ring-1 ring-slate-200'>
+      <div class='grid items-center gap-8 md:grid-cols-2'>
         <div>
-          <h3 class='text-xl font-bold mb-4'>Calcul de nos tarifs</h3>
-          <p class='text-gray-600 mb-4'>
-            Nos prix sont basés sur les tarifs réglementés en vigueur en Vendée
-            :
+          <h3 class='text-xl font-bold text-slate-900'>Comment sont calculés nos tarifs</h3>
+          <p class='mt-4 text-sm text-slate-600'>
+            Nos prix suivent les tarifs réglementés en vigueur en Vendée :
           </p>
-          <ul class='space-y-2 text-sm text-gray-600'>
-            <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Prise en charge initiale
+          <ul class='mt-4 space-y-2.5 text-sm text-slate-600'>
+            <li class='flex items-center gap-2.5'>
+              <i class='fas fa-check text-yellow-500'></i> Prise en charge initiale
             </li>
-            <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Tarif au kilomètre
-              (Jour/Nuit)
+            <li class='flex items-center gap-2.5'>
+              <i class='fas fa-check text-yellow-500'></i> Tarif au kilomètre (jour / nuit)
             </li>
-            <li class='flex items-center'>
-              <i class='fas fa-check text-yellow-500 mr-2'></i> Temps d'attente ou
-              marche lente
+            <li class='flex items-center gap-2.5'>
+              <i class='fas fa-check text-yellow-500'></i> Temps d'attente ou marche lente
             </li>
           </ul>
         </div>
         <div class='text-center md:text-right'>
-          <p class='text-sm text-slate-500 mb-4 italic'>
+          <p class='mb-4 text-sm italic text-slate-500'>
             Besoin d'un prix exact pour une autre destination ?
           </p>
           <a
             href='tel:0633968023'
-            class='inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-md'>
-            <i class='fas fa-calculator mr-2'></i> 06 33 96 80 23
+            class='inline-flex items-center gap-2 rounded-full bg-slate-900 px-8 py-4 font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-slate-800 active:translate-y-0 active:scale-[0.98]'>
+            <i class='fas fa-calculator'></i>
+            <span class='tabular-nums'>06 33 96 80 23</span>
           </a>
         </div>
       </div>
     </div>
 
     <div
-      class='mt-8 text-center bg-yellow-50 p-4 rounded-lg border border-yellow-100'>
-      <p class='text-sm text-yellow-800'>
-        <i class='fas fa-info-circle mr-2'></i>
-        <strong>Note :</strong> Pour le <a
+      class='mt-6 flex items-start gap-3 rounded-xl bg-yellow-50 p-4 text-sm text-yellow-900 ring-1 ring-yellow-200/60'>
+      <i class='fas fa-info-circle mt-0.5 text-yellow-600'></i>
+      <p>
+        Pour le <a
           href='/transport-medical-cpam/'
-          class='font-bold underline hover:text-yellow-900'
+          class='font-semibold underline underline-offset-2 hover:text-yellow-950'
           >transport médical assis</a
-        >, aucun frais n'est à avancer si vous bénéficiez d'un bon de transport
-        (agréé CPAM).
+        >, aucun frais à avancer si vous disposez d'un bon de transport (agréé
+        CPAM).
       </p>
     </div>
   </div>

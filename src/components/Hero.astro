@@ -4,82 +4,119 @@ import heroBg from "../assets/hero-Gare_SNCF_de_La-Roche-sur-Yon.webp";
 import taxiImage from "../assets/taxi-anthony-gervais-laroche-85.webp";
 ---
 
-<div id='accueil' class='relative bg-slate-800 text-white py-24'>
-  <div class='absolute inset-0 overflow-hidden opacity-20'>
-    <!-- Image de fond -->
+<section
+  id='accueil'
+  class='relative isolate overflow-hidden bg-slate-900 text-white'>
+  <!-- Fond : image + overlays pour la profondeur et la lisibilité -->
+  <div class='absolute inset-0 -z-10 grain'>
     <Image
       src={heroBg}
-      alt='Taxi Anthony Gervais - Transport médical et privé à La Roche-sur-Yon'
+      alt='Gare SNCF de La Roche-sur-Yon, point de départ du taxi Anthony Gervais'
       title='Taxi Anthony Gervais - Transport médical et privé à La Roche-sur-Yon'
-      class='w-full h-full object-cover'
+      class='h-full w-full object-cover object-center'
       loading='eager'
       fetchpriority='high'
-      quality={30}
+      quality={35}
       widths={[640, 768, 1024, 1280, 1536]}
       sizes='100vw'
     />
+    <div
+      class='absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-900/50'>
+    </div>
+    <div
+      class='absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40'>
+    </div>
+    <!-- Halo chaud discret, rappel de la couleur taxi -->
+    <div
+      class='pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-yellow-400/10 blur-3xl'>
+    </div>
   </div>
+
   <div
-    class='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center'>
-    <div class='md:w-2/3 text-center md:text-left mb-10 md:mb-0'>
-      <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
-        Taxi Gervais, votre chauffeur de confiance à <span
-          class='text-yellow-400'>La Roche-sur-Yon</span
+    class='relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 pb-24 pt-20 sm:px-6 md:flex-row md:pb-32 md:pt-28 lg:px-8'>
+    <div class='md:w-3/5 text-center md:text-left'>
+      <!-- Preuve sociale, données réelles Google -->
+      <div
+        class='mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm backdrop-blur-sm'>
+        <span class='flex text-yellow-400' aria-hidden='true'>
+          <i class='fas fa-star text-xs'></i>
+          <i class='fas fa-star text-xs'></i>
+          <i class='fas fa-star text-xs'></i>
+          <i class='fas fa-star text-xs'></i>
+          <i class='fas fa-star text-xs'></i>
+        </span>
+        <span class='font-medium tabular-nums'>5,0 sur 141 avis Google</span>
+      </div>
+
+      <h1
+        class='mb-6 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl'>
+        Votre chauffeur de confiance à <span class='text-yellow-400'
+          >La Roche-sur-Yon</span
         >
       </h1>
-      <p class='text-lg text-gray-300 mb-8'>
-        Anthony Gervais vous accompagne pour tous vos déplacements privés,
+      <p
+        class='mb-9 max-w-xl text-lg leading-relaxed text-slate-300 md:mx-0 mx-auto'>
+        Anthony Gervais vous accompagne pour vos déplacements privés,
         professionnels et médicaux en Vendée. <span
-          class='text-yellow-400 font-semibold'>Taxi conventionné</span
-        > CPAM. Disponible <span class='text-yellow-400 font-semibold'
-          >24h/24 et 7j/7</span
+          class='font-semibold text-white'>Taxi conventionné CPAM</span
+        >, disponible <span class='font-semibold text-white'>24h/24 et 7j/7</span
         > sur réservation. Ponctualité et confort garantis.
       </p>
       <div
-        class='flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
+        class='flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start'>
         <a
           href='tel:0633968023'
-          class='bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-500 transition shadow-lg flex items-center justify-center transform hover:scale-105 duration-200 whitespace-nowrap'>
-          <i class='fas fa-phone mr-2'></i> 06 33 96 80 23
+          class='shadow-brand flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-yellow-400 px-8 py-4 text-lg font-bold text-slate-900 transition duration-200 hover:bg-yellow-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]'>
+          <i class='fas fa-phone'></i>
+          <span class='tabular-nums'>06 33 96 80 23</span>
+        </a>
+        <a
+          href='#contact'
+          class='flex items-center justify-center gap-2 rounded-full border border-white/25 px-8 py-4 text-lg font-semibold text-white transition duration-200 hover:border-white/50 hover:bg-white/5 active:scale-[0.98]'>
+          <i class='fas fa-calendar-check text-slate-300'></i>
+          Réserver à l'avance
         </a>
       </div>
     </div>
-    <!-- Carte Visuelle -->
-    <div class='md:w-1/3 flex justify-center'>
+
+    <!-- Carte véhicule -->
+    <div class='w-full max-w-sm md:w-2/5'>
       <div
-        class='bg-white text-slate-900 p-6 rounded-xl shadow-2xl max-w-sm rotate-2 hover:rotate-0 transition duration-500 border-4 border-white'>
-        <div class='flex items-center justify-between mb-4'>
-          <p class='font-bold text-xl'>Anthony Gervais</p>
-          <i class='fas fa-check-circle text-green-500 text-xl'></i>
+        class='rotate-1 rounded-2xl border border-white/10 bg-white/95 p-5 text-slate-900 shadow-soft-lg backdrop-blur transition duration-500 hover:rotate-0'>
+        <div class='mb-4 flex items-center justify-between'>
+          <p class='text-lg font-bold'>Anthony Gervais</p>
+          <span
+            class='inline-flex items-center gap-1.5 rounded-full bg-green-50 px-2.5 py-1 text-xs font-semibold text-green-700'>
+            <i class='fas fa-circle text-[6px]'></i> Disponible
+          </span>
         </div>
-        <div
-          class='h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden relative'>
+        <div class='mb-4 h-44 overflow-hidden rounded-xl bg-slate-100'>
           <Image
             src={taxiImage}
             alt='Taxi Anthony Gervais 8 places à La Roche-sur-Yon Vendée'
             title='Taxi Anthony Gervais 8 places à La Roche-sur-Yon Vendée'
-            class='w-full h-full object-cover'
+            class='h-full w-full object-cover'
             loading='lazy'
             quality={70}
             widths={[240, 350, 700]}
-            sizes='(max-width: 640px) 100vw, 240px'
+            sizes='(max-width: 640px) 100vw, 350px'
           />
         </div>
-        <div class='space-y-3 text-sm font-medium'>
-          <p class='flex items-center'>
-            <i class='fas fa-map-marker-alt text-yellow-500 w-8 text-center'
-            ></i> La Roche-sur-Yon & Agglo
-          </p>
-          <p class='flex items-center'>
-            <i class='fas fa-clock text-yellow-500 w-8 text-center'></i> Disponible
-            7j/7 sur réservation
-          </p>
-          <p class='flex items-center'>
-            <i class='fas fa-users text-yellow-500 w-8 text-center'></i> Véhicule
-            8 places
-          </p>
-        </div>
+        <ul class='space-y-3 text-sm font-medium'>
+          <li class='flex items-center gap-3'>
+            <i class='fas fa-map-marker-alt w-5 text-center text-yellow-500'></i>
+            La Roche-sur-Yon &amp; agglomération
+          </li>
+          <li class='flex items-center gap-3'>
+            <i class='fas fa-clock w-5 text-center text-yellow-500'></i>
+            Disponible 7j/7 sur réservation
+          </li>
+          <li class='flex items-center gap-3'>
+            <i class='fas fa-users w-5 text-center text-yellow-500'></i>
+            Véhicule 8 places
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-</div>
+</section>

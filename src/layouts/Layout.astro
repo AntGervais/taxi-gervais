@@ -4,17 +4,18 @@ interface Props {
   description?: string;
 }
 
-import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
 
 const { title, description } = Astro.props;
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang='fr' class='scroll-smooth scroll-pt-12'>
+<html lang='fr' class='scroll-smooth'>
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -55,13 +56,13 @@ import "../styles/global.css";
           "longitude": -1.426
         },
         "areaServed": [
-          {"@type": "City", "name": "La Roche-sur-Yon"},
-          {"@type": "City", "name": "Nantes"},
-          {"@type": "City", "name": "Les Sables-d'Olonne"},
-          {"@type": "City", "name": "La Tranche-sur-Mer"},
-          {"@type": "City", "name": "Saint-Gilles-Croix-de-Vie"},
-          {"@type": "City", "name": "Noirmoutier-en-l'Île"},
-          {"@type": "AdministrativeArea", "name": "Vendée"}
+          { "@type": "City", "name": "La Roche-sur-Yon" },
+          { "@type": "City", "name": "Nantes" },
+          { "@type": "City", "name": "Les Sables-d'Olonne" },
+          { "@type": "City", "name": "La Tranche-sur-Mer" },
+          { "@type": "City", "name": "Saint-Gilles-Croix-de-Vie" },
+          { "@type": "City", "name": "Noirmoutier-en-l'Île" },
+          { "@type": "AdministrativeArea", "name": "Vendée" }
         ],
         "priceRange": "$$",
         "openingHoursSpecification": {
@@ -1463,7 +1464,10 @@ import "../styles/global.css";
       content={description ||
         "Votre chauffeur de confiance à La Roche-sur-Yon. Anthony Gervais vous accompagne 7j/7 pour vos trajets privés, professionnels et médicaux (CPAM). Véhicule 8 places, déplacements Nantes, Les Sables, toute la Vendée. ☎️ 06 33 96 80 23"}
     />
-    <meta property='og:image' content='https://taxi-gervais-85.fr/social-image.webp' />
+    <meta
+      property='og:image'
+      content='https://taxi-gervais-85.fr/social-image.webp'
+    />
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='630' />
     <meta property='og:locale' content='fr_FR' />
@@ -1477,7 +1481,10 @@ import "../styles/global.css";
       content={description ||
         "Votre chauffeur de confiance à La Roche-sur-Yon. Anthony Gervais vous accompagne 7j/7 pour vos trajets privés, professionnels et médicaux (CPAM). Véhicule 8 places, déplacements Nantes, Les Sables, toute la Vendée."}
     />
-    <meta property='twitter:image' content='https://taxi-gervais-85.fr/social-image.webp' />
+    <meta
+      property='twitter:image'
+      content='https://taxi-gervais-85.fr/social-image.webp'
+    />
     <slot name='head' />
     <!-- Font Awesome (Optimized) -->
     <link
@@ -1488,30 +1495,7 @@ import "../styles/global.css";
     />
     <noscript><link rel='stylesheet' href='/css/fontawesome.css' /></noscript>
   </head>
-  <body class='bg-gray-50 text-gray-800 font-sans antialiased'>
+  <body class='bg-slate-900 text-slate-800 font-sans antialiased'>
     <slot />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  body {
-    font-family: "Inter", sans-serif;
-  }
-  .taxi-yellow {
-    color: #fbbf24;
-  }
-  .bg-taxi-yellow {
-    background-color: #fbbf24;
-  }
-</style>
