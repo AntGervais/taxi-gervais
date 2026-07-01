@@ -1,194 +1,213 @@
-<div id='contact' class='pb-12 pt-6 bg-gray-50'>
-  <div class='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='bg-white rounded-2xl shadow-xl overflow-hidden'>
-      <div class='bg-yellow-400 p-6 text-center'>
-        <h2 class='text-2xl font-bold text-slate-900'>Réserver votre trajet</h2>
-        <p class='text-slate-800 font-medium'>
-          Appelez directement ou envoyez un message
+---
+const fieldClass =
+  "w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 outline-none transition focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/60 aria-[invalid=true]:border-red-400 aria-[invalid=true]:ring-red-400/40";
+const labelClass = "mb-1 block text-sm font-medium text-slate-700";
+const errorClass = "mt-1 hidden text-sm text-red-600";
+---
+
+<section id='contact' class='bg-slate-50 pb-16 pt-12'>
+  <div class='mx-auto max-w-3xl px-4 sm:px-6 lg:px-8'>
+    <div class='overflow-hidden rounded-2xl bg-white shadow-soft-lg ring-1 ring-slate-200'>
+      <div class='bg-yellow-400 px-6 py-7 text-center'>
+        <h2 class='text-2xl font-bold text-slate-900'>Réservez votre trajet</h2>
+        <p class='mt-1 font-medium text-slate-800'>
+          Appelez directement ou envoyez votre demande
         </p>
       </div>
-      <div class='p-8'>
-        <!-- Gros bouton Appel -->
-        <div class='text-center mb-8'>
-          <p class='text-gray-500 mb-4'>
+
+      <div class='p-6 sm:p-8'>
+        <div class='mb-8 text-center'>
+          <p class='mb-4 text-slate-500'>
             Pour une réponse immédiate, privilégiez l'appel :
           </p>
           <a
             href='tel:0633968023'
-            class='inline-flex items-center justify-center bg-slate-900 text-white text-lg sm:text-xl font-bold px-8 py-5 rounded-full hover:bg-slate-800 transition transform hover:scale-105 shadow-lg w-full md:w-auto whitespace-nowrap'>
-            <i class='fas fa-phone-alt mr-3 text-yellow-400'></i> 06 33 96 80 23
+            class='shadow-brand inline-flex w-full items-center justify-center gap-3 whitespace-nowrap rounded-full bg-slate-900 px-8 py-5 text-lg font-bold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-slate-800 active:translate-y-0 active:scale-[0.99] sm:text-xl md:w-auto'>
+            <i class='fas fa-phone-alt text-yellow-400'></i>
+            <span class='tabular-nums'>06 33 96 80 23</span>
           </a>
         </div>
 
-        <div class='relative flex py-5 items-center'>
-          <div class='flex-grow border-t border-gray-300'></div>
-          <span class='flex-shrink mx-4 text-gray-500 text-center text-sm sm:text-base'
-            >Ou par écrit (réservation à l'avance)</span
+        <div class='relative flex items-center py-5'>
+          <div class='flex-grow border-t border-slate-200'></div>
+          <span class='mx-4 flex-shrink text-center text-sm text-slate-500'
+            >Ou par écrit, pour réserver à l'avance</span
           >
-          <div class='flex-grow border-t border-gray-300'></div>
+          <div class='flex-grow border-t border-slate-200'></div>
         </div>
 
-        <!-- Formulaire avec attribut Netlify pour que ça marche sans serveur -->
         <form
           id='contact-form'
           name='contact'
           method='POST'
           action='/success/'
           data-netlify='true'
-          class='space-y-6 mt-6'>
-          <div class='grid md:grid-cols-2 gap-6'>
+          novalidate
+          class='mt-6 space-y-5'>
+          <div class='grid gap-5 md:grid-cols-2'>
             <div>
-              <label class='block text-sm font-medium text-gray-700 mb-1'
-                >Nom complet</label
-              >
+              <label for='nom' class={labelClass}>Nom complet</label>
               <input
                 type='text'
+                id='nom'
                 name='nom'
                 autocomplete='name'
                 required
-                class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
+                aria-describedby='nom-error'
+                class={fieldClass}
                 placeholder='Votre nom'
               />
+              <p id='nom-error' class={errorClass}>Merci d'indiquer votre nom.</p>
             </div>
             <div>
-              <label class='block text-sm font-medium text-gray-700 mb-1'
-                >Téléphone</label
-              >
+              <label for='telephone' class={labelClass}>Téléphone</label>
               <input
                 type='tel'
+                id='telephone'
                 name='telephone'
                 autocomplete='tel'
                 required
-                class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
-                placeholder='06 .. .. .. ..'
+                aria-describedby='telephone-error'
+                class={fieldClass}
+                placeholder='06 00 00 00 00'
               />
+              <p id='telephone-error' class={errorClass}>
+                Indiquez un numéro de téléphone valide.
+              </p>
             </div>
           </div>
 
           <div>
-            <label class='block text-sm font-medium text-gray-700 mb-1'
-              >Adresse e-mail</label
-            >
+            <label for='email' class={labelClass}>Adresse e-mail</label>
             <input
               type='email'
+              id='email'
               name='email'
               autocomplete='email'
               required
-              class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
+              aria-describedby='email-error'
+              class={fieldClass}
               placeholder='votre@email.fr'
             />
+            <p id='email-error' class={errorClass}>
+              Indiquez une adresse e-mail valide.
+            </p>
           </div>
 
-          <div class='grid md:grid-cols-2 gap-6'>
+          <div class='grid gap-5 md:grid-cols-2'>
             <div>
-              <label
-                for='date'
-                class='block text-sm font-medium text-gray-700 mb-1'
-                >Date de la réservation</label
-              >
+              <label for='date' class={labelClass}>Date de la réservation</label>
               <input
                 type='date'
                 id='date'
                 name='date'
                 required
-                class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
+                aria-describedby='date-error'
+                class={fieldClass}
               />
+              <p id='date-error' class={errorClass}>Choisissez une date.</p>
             </div>
             <div>
-              <label
-                for='heure'
-                class='block text-sm font-medium text-gray-700 mb-1'
-                >Heure de la réservation</label
+              <label for='heure' class={labelClass}>Heure de la réservation</label
               >
               <input
                 type='time'
                 id='heure'
                 name='heure'
                 required
-                class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none'
+                aria-describedby='heure-error'
+                class={fieldClass}
               />
+              <p id='heure-error' class={errorClass}>Choisissez une heure.</p>
             </div>
           </div>
 
           <div>
-            <label class='block text-sm font-medium text-gray-700 mb-1'
-              >Trajet (Départ / Arrivée)</label
+            <label for='trajet' class={labelClass}>Trajet (départ / arrivée)</label
             >
             <textarea
+              id='trajet'
               name='trajet'
               required
-              class='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent outline-none h-24'
-              placeholder='Ex: Gare de La Roche vers Rue de la Paix...'
+              aria-describedby='trajet-error'
+              class={`${fieldClass} h-24 resize-y`}
+              placeholder='Ex : gare de La Roche-sur-Yon vers rue de la Paix…'
             ></textarea>
+            <p id='trajet-error' class={errorClass}>
+              Précisez votre point de départ et votre destination.
+            </p>
           </div>
 
           <button
-            id='submit-btn'
             type='submit'
-            disabled
-            class='w-full bg-gray-300 text-gray-500 font-bold py-3 rounded-lg cursor-not-allowed transition flex items-center justify-center border border-gray-300'>
-            <span>Remplissez tous les champs</span>
-            <i class='fas fa-paper-plane ml-2'></i>
+            class='flex w-full items-center justify-center gap-2 rounded-lg bg-yellow-400 py-3.5 font-bold text-slate-900 transition duration-200 hover:bg-yellow-300 active:scale-[0.99]'>
+            Envoyer ma demande de réservation
+            <i class='fas fa-paper-plane'></i>
           </button>
         </form>
 
         <script>
+          type Rule = (value: string) => boolean;
+
+          const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const phoneRe = /^[+0-9\s().-]{10,}$/;
+
+          const rules: Record<string, Rule> = {
+            nom: (v) => v.trim().length >= 2,
+            telephone: (v) => phoneRe.test(v.trim()),
+            email: (v) => emailRe.test(v.trim()),
+            date: (v) => v.trim() !== "",
+            heure: (v) => v.trim() !== "",
+            trajet: (v) => v.trim().length >= 3,
+          };
+
           const form = document.getElementById(
             "contact-form"
-          ) as HTMLFormElement;
-          const btn = document.getElementById(
-            "submit-btn"
-          ) as HTMLButtonElement;
-          const inputs = form.querySelectorAll("input, textarea");
+          ) as HTMLFormElement | null;
 
-          function checkForm() {
-            let isValid = true;
-            inputs.forEach((input) => {
-              if (
-                input instanceof HTMLInputElement ||
-                input instanceof HTMLTextAreaElement
-              ) {
-                if (!input.value.trim()) isValid = false;
-              }
+          if (form) {
+            const setError = (field: HTMLElement, show: boolean) => {
+              const error = document.getElementById(`${field.id}-error`);
+              field.setAttribute("aria-invalid", show ? "true" : "false");
+              if (error) error.classList.toggle("hidden", !show);
+            };
+
+            const validateField = (field: HTMLInputElement | HTMLTextAreaElement) => {
+              const rule = rules[field.name];
+              if (!rule) return true;
+              const valid = rule(field.value);
+              setError(field, !valid);
+              return valid;
+            };
+
+            const fields = Array.from(
+              form.querySelectorAll("input[name], textarea[name]")
+            ) as (HTMLInputElement | HTMLTextAreaElement)[];
+
+            fields.forEach((field) => {
+              // On efface l'erreur pendant la saisie, on revalide en quittant le champ
+              field.addEventListener("input", () => {
+                if (field.getAttribute("aria-invalid") === "true")
+                  validateField(field);
+              });
+              field.addEventListener("blur", () => {
+                if (field.value.trim() !== "") validateField(field);
+              });
             });
 
-            if (isValid) {
-              btn.disabled = false;
-              btn.classList.remove(
-                "bg-gray-300",
-                "text-gray-500",
-                "cursor-not-allowed"
-              );
-              btn.classList.add(
-                "bg-yellow-400",
-                "text-slate-900",
-                "hover:bg-yellow-500",
-                "cursor-pointer"
-              );
-              btn.innerHTML = `<span>Envoyer la demande de réservation</span> <i class="fas fa-paper-plane ml-2"></i>`;
-            } else {
-              btn.disabled = true;
-              btn.classList.add(
-                "bg-gray-300",
-                "text-gray-500",
-                "cursor-not-allowed"
-              );
-              btn.classList.remove(
-                "bg-yellow-400",
-                "text-slate-900",
-                "hover:bg-yellow-500",
-                "cursor-pointer"
-              );
-              btn.innerHTML = `<span>Remplissez tous les champs</span> <i class="fas fa-paper-plane ml-2"></i>`;
-            }
+            form.addEventListener("submit", (e) => {
+              let firstInvalid: HTMLElement | null = null;
+              fields.forEach((field) => {
+                if (!validateField(field) && !firstInvalid) firstInvalid = field;
+              });
+              if (firstInvalid) {
+                e.preventDefault();
+                (firstInvalid as HTMLElement).focus();
+              }
+            });
           }
-
-          inputs.forEach((input) => {
-            input.addEventListener("input", checkForm);
-            input.addEventListener("change", checkForm);
-          });
         </script>
       </div>
     </div>
   </div>
-</div>
+</section>

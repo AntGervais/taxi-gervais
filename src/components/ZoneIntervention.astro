@@ -1,46 +1,66 @@
-<div id='zone' class='bg-gray-100 py-16'>
-  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-    <h2 class='text-3xl font-bold text-slate-900 mb-8'>Zone d'intervention</h2>
-    <p class='text-lg text-gray-600 max-w-3xl mx-auto mb-10'>
-      Basé à <span class='font-bold text-slate-900'>La Roche-sur-Yon</span>,
-      Anthony Gervais intervient dans toute la Vendée et ses stations balnéaires.
-      Liaison régulière <a href='/taxi-les-sables-d-olonne/' class='font-semibold text-slate-900 hover:text-yellow-600 underline'>Les Sables-d'Olonne</a> et <a href='/taxi-la-tranche-sur-mer/' class='font-semibold text-slate-900 hover:text-yellow-600 underline'>La Tranche-sur-Mer</a>.
-      Taxi <a href='/taxi-nantes/' class='font-semibold text-slate-900 hover:text-yellow-600 underline'>La Roche-sur-Yon Nantes</a> disponible pour vos trajets vers la gare SNCF et l'aéroport Nantes Atlantique.
-    </p>
-    <div class='grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10'>
-      <div class='bg-white p-5 rounded-lg shadow-md'>
-        <div class='flex items-center gap-3'>
-          <div class='bg-yellow-100 w-12 h-12 rounded-full text-yellow-600 flex-shrink-0 flex items-center justify-center'>
-            <i class='fas fa-map-marker-alt text-xl'></i>
+---
+const zones = [
+  {
+    icon: "fas fa-map-marker-alt",
+    title: "Vendée & littoral",
+    detail: "Les Sables-d'Olonne, La Tranche-sur-Mer",
+  },
+  {
+    icon: "fas fa-train",
+    title: "Nantes & aéroport",
+    detail: "Gare SNCF, aéroport Atlantique",
+  },
+  {
+    icon: "fas fa-map-marked-alt",
+    title: "Stationnement",
+    detail: "La Roche-sur-Yon (85000)",
+  },
+];
+---
+
+<section id='zone' class='bg-slate-50 py-20 md:py-24'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div class='mb-12'>
+      <p
+        class='mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-yellow-600'>
+        Zone d'intervention
+      </p>
+      <h2 class='text-3xl font-bold text-slate-900 md:text-4xl'>
+        Toute la Vendée, de La Roche au bord de mer
+      </h2>
+      <p class='mt-5 max-w-3xl text-lg leading-relaxed text-slate-600'>
+        Basé à <span class='font-semibold text-slate-900'>La Roche-sur-Yon</span
+        >, Anthony Gervais intervient dans toute la Vendée et ses stations
+        balnéaires. Liaison régulière <a
+          href='/taxi-les-sables-d-olonne/'
+          class='font-semibold text-slate-900 underline underline-offset-2 hover:text-yellow-700'
+          >Les Sables-d'Olonne</a
+        > et <a
+          href='/taxi-la-tranche-sur-mer/'
+          class='font-semibold text-slate-900 underline underline-offset-2 hover:text-yellow-700'
+          >La Tranche-sur-Mer</a
+        >. Taxi <a
+          href='/taxi-nantes/'
+          class='font-semibold text-slate-900 underline underline-offset-2 hover:text-yellow-700'
+          >La Roche-sur-Yon ↔ Nantes</a
+        > disponible pour la gare SNCF et l'aéroport Nantes Atlantique.
+      </p>
+    </div>
+
+    <div class='grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+      {
+        zones.map((zone) => (
+          <div class='flex items-center gap-4 rounded-2xl bg-white p-6 shadow-soft ring-1 ring-slate-200 transition duration-300 hover:-translate-y-0.5 hover:shadow-soft-lg'>
+            <span class='flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-yellow-100 text-xl text-yellow-600'>
+              <i class={zone.icon} />
+            </span>
+            <div class='min-w-0'>
+              <p class='font-bold text-slate-900'>{zone.title}</p>
+              <p class='mt-0.5 text-sm text-slate-500'>{zone.detail}</p>
+            </div>
           </div>
-          <div class='text-left'>
-            <p class='font-bold text-slate-900 text-sm'>Vendée & Littoral</p>
-            <p class='text-xs text-gray-500'>Les Sables, La Tranche</p>
-          </div>
-        </div>
-      </div>
-      <div class='bg-white p-5 rounded-lg shadow-md'>
-        <div class='flex items-center gap-3'>
-          <div class='bg-yellow-100 w-12 h-12 rounded-full text-yellow-600 flex-shrink-0 flex items-center justify-center'>
-            <i class='fas fa-train text-xl'></i>
-          </div>
-          <div class='text-left'>
-            <p class='font-bold text-slate-900 text-sm'>Nantes & Aéroport</p>
-            <p class='text-xs text-gray-500'>Gare, Aéroport Atlantique</p>
-          </div>
-        </div>
-      </div>
-      <div class='bg-white p-5 rounded-lg shadow-md'>
-        <div class='flex items-center gap-3'>
-          <div class='bg-yellow-100 w-12 h-12 rounded-full text-yellow-600 flex-shrink-0 flex items-center justify-center'>
-            <i class='fas fa-map-marked-alt text-xl'></i>
-          </div>
-          <div class='text-left'>
-            <p class='font-bold text-slate-900 text-sm'>Stationnement</p>
-            <p class='text-xs text-gray-500'>La Roche-sur-Yon (85000)</p>
-          </div>
-        </div>
-      </div>
+        ))
+      }
     </div>
   </div>
-</div>
+</section>

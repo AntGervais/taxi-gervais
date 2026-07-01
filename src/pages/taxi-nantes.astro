@@ -13,18 +13,21 @@ import Footer from "../components/Footer.astro";
     <section class='bg-slate-900 text-white py-20'>
       <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div class='max-w-3xl'>
-          Liaison La Roche &lt;-&gt; Nantes
+          <p
+            class='mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm font-semibold text-yellow-400'>
+            <i class='fas fa-route'></i> Liaison La Roche-sur-Yon ↔ Nantes
+          </p>
           <h1 class='text-4xl md:text-5xl font-bold mb-6 leading-tight'>
             Taxi <span class='text-yellow-400'>La Roche-sur-Yon ↔ Nantes</span>
           </h1>
-          <p class='text-xl text-gray-300 mb-8'>
+          <p class='text-xl text-slate-300 mb-8'>
             Simplifiez vos trajets vers la cité des Ducs. Que ce soit pour
             l'aéroport, la gare ou un rendez-vous professionnel, profitez d'un
             trajet confortable et serein.
           </p>
           <a
             href='tel:0633968023'
-            class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105 text-lg text-center'>
+            class='inline-flex flex-col sm:flex-row items-center gap-2 bg-yellow-400 text-slate-900 px-6 sm:px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition duration-200 hover:-translate-y-0.5 active:scale-[0.98] text-lg text-center'>
             <span class='flex items-center'>
               <i class='fas fa-phone-alt mr-2'></i>
               <span class='hidden sm:inline'>Réserver mon trajet Nantes</span>
@@ -41,18 +44,18 @@ import Footer from "../components/Footer.astro";
       <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div class='grid md:grid-cols-3 gap-8'>
           <div
-            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-blue-600 shadow-lg'>
-            <div class='text-blue-600 text-4xl mb-4'>
+            class='card-accent surface surface-interactive p-8'>
+            <div class='text-yellow-500 text-4xl mb-4'>
               <i class='fas fa-plane'></i>
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Aéroport Nantes Atlantique
             </h2>
-            <p class='text-gray-600 mb-4 text-sm'>
+            <p class='text-slate-600 mb-4 text-sm'>
               Évitez le stress du parking et des navettes. Je vous dépose
               directement devant votre terminal de départ.
             </p>
-            <ul class='text-sm text-gray-500 space-y-2'>
+            <ul class='text-sm text-slate-500 space-y-2'>
               <li>
                 <i class='fas fa-check text-green-500 mr-2'></i> ~1h de trajet
               </li>
@@ -66,18 +69,18 @@ import Footer from "../components/Footer.astro";
             </ul>
           </div>
           <div
-            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-yellow-500 shadow-lg'>
+            class='card-accent surface surface-interactive p-8'>
             <div class='text-yellow-500 text-4xl mb-4'>
               <i class='fas fa-train'></i>
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Gare de Nantes
             </h2>
-            <p class='text-gray-600 mb-4 text-sm'>
+            <p class='text-slate-600 mb-4 text-sm'>
               Pour vos correspondances TGV, profitez d'une liaison directe et
               rapide entre la Vendée et la gare de Nantes.
             </p>
-            <ul class='text-sm text-gray-500 space-y-2'>
+            <ul class='text-sm text-slate-500 space-y-2'>
               <li>
                 <i class='fas fa-check text-green-500 mr-2'></i> ~50 min de trajet
               </li>
@@ -91,18 +94,18 @@ import Footer from "../components/Footer.astro";
             </ul>
           </div>
           <div
-            class='bg-slate-50 p-8 rounded-2xl border-t-4 border-slate-900 shadow-lg'>
+            class='card-accent surface surface-interactive p-8'>
             <div class='text-slate-900 text-4xl mb-4'>
               <i class='fas fa-briefcase'></i>
             </div>
             <h2 class='text-2xl font-bold text-slate-900 mb-4'>
               Trajets Professionnels
             </h2>
-            <p class='text-gray-600 mb-4 text-sm'>
+            <p class='text-slate-600 mb-4 text-sm'>
               Un rendez-vous d'affaires à Nantes ? Travaillez à bord de mon
               véhicule spacieux pendant que je assure la route.
             </p>
-            <ul class='text-sm text-gray-500 space-y-2'>
+            <ul class='text-sm text-slate-500 space-y-2'>
               <li>
                 <i class='fas fa-check text-green-500 mr-2'></i> Facturation simplifiée
               </li>
@@ -133,7 +136,7 @@ import Footer from "../components/Footer.astro";
                 <th class='p-4 border-b border-slate-700'>Tarif indicatif</th>
               </tr>
             </thead>
-            <tbody class='text-gray-300'>
+            <tbody class='text-slate-300'>
               <tr>
                 <td class='p-4 border-b border-slate-700'
                   >La Roche → Nantes Aéroport</td
@@ -155,7 +158,7 @@ import Footer from "../components/Footer.astro";
             </tbody>
           </table>
         </div>
-        <p class='mt-6 text-sm text-gray-500 italic text-center'>
+        <p class='mt-6 text-sm text-slate-500 italic text-center'>
           *Tarifs indicatifs selon la réglementation en vigueur. Contactez-moi
           pour un devis précis.
         </p>
@@ -171,28 +174,28 @@ import Footer from "../components/Footer.astro";
         <div class='grid md:grid-cols-2 gap-8'>
           <div class='flex items-start'>
             <i class='fas fa-star text-yellow-400 mr-4 mt-1'></i>
-            <p class='text-gray-600'>
+            <p class='text-slate-600'>
               <strong>Expérience :</strong> Excellente connaissance de l'itinéraire
               et du trafic nantais pour éviter les bouchons.
             </p>
           </div>
           <div class='flex items-start'>
             <i class='fas fa-users text-yellow-400 mr-4 mt-1'></i>
-            <p class='text-gray-600'>
+            <p class='text-slate-600'>
               <strong>Capacité :</strong> Transport jusqu'à 8 passagers et tous leurs
               bagages dans un seul taxi.
             </p>
           </div>
           <div class='flex items-start'>
             <i class='fas fa-shield-alt text-yellow-400 mr-4 mt-1'></i>
-            <p class='text-gray-600'>
+            <p class='text-slate-600'>
               <strong>Sérénité :</strong> Pas de frais d'autoroute ou de parking cachés,
               tout est inclus dans le devis.
             </p>
           </div>
           <div class='flex items-start'>
             <i class='fas fa-calendar-alt text-yellow-400 mr-4 mt-1'></i>
-            <p class='text-gray-600'>
+            <p class='text-slate-600'>
               <strong>Disponibilité :</strong> Réservation possible 24h/24 pour vos
               vols matinaux ou retours tardifs.
             </p>

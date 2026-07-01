@@ -1,33 +1,57 @@
-<nav class='bg-slate-900 text-white sticky top-0 z-50 shadow-lg'>
-  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='flex justify-between h-20 items-center'>
+---
+const path = Astro.url.pathname;
+const isHome = path === "/";
+
+const links = [
+  { href: "/", label: "Accueil", current: isHome },
+  { href: "/#services", label: "Services", current: false },
+  { href: "/tarifs/", label: "Tarifs", current: path.startsWith("/tarifs") },
+  { href: "/#avis", label: "Avis", current: false },
+  { href: "/#contact", label: "Contact", current: false },
+];
+---
+
+<nav
+  class='sticky top-0 z-50 bg-slate-900/95 text-white shadow-soft backdrop-blur supports-[backdrop-filter]:bg-slate-900/80'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div class='flex h-20 items-center justify-between'>
       <a
         href='/'
-        class='flex items-center space-x-3 hover:opacity-80 transition'>
-        <div class='bg-yellow-400 text-slate-900 px-2.5 py-2 rounded-lg'>
+        class='group flex items-center gap-3 rounded-lg transition'
+        aria-label='Taxi Gervais, retour à l’accueil'>
+        <span
+          class='rounded-lg bg-yellow-400 px-2.5 py-2 text-slate-900 transition duration-200 group-hover:bg-yellow-300'>
           <i class='fas fa-taxi text-2xl'></i>
-        </div>
-        <div>
-          <span class='text-xl font-bold block leading-tight'>TAXI GERVAIS</span
-          >
-          <span class='text-xs text-gray-400 tracking-wider'
+        </span>
+        <span class='leading-tight'>
+          <span class='block text-xl font-bold'>TAXI GERVAIS</span>
+          <span class='block text-xs tracking-[0.15em] text-slate-400'
             >LA ROCHE-SUR-YON (85)</span
           >
-        </div>
+        </span>
       </a>
-      <div class='hidden md:flex space-x-8 items-center'>
-        <a href='/' class='hover:text-yellow-400 transition'>Accueil</a>
-        <a href='/#services' class='hover:text-yellow-400 transition'
-          >Services</a
-        >
-        <a href='/#avis' class='hover:text-yellow-400 transition'>Avis</a>
-        <a href='/#contact' class='hover:text-yellow-400 transition'>Contact</a>
+
+      <div class='hidden items-center gap-8 md:flex'>
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              aria-current={link.current ? "page" : undefined}
+              class:list={[
+                "relative py-1 text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:rounded-full after:bg-yellow-400 after:transition-all after:duration-300 hover:text-yellow-400 hover:after:w-full",
+                link.current ? "text-yellow-400 after:w-full" : "text-slate-200",
+              ]}>
+              {link.label}
+            </a>
+          ))
+        }
       </div>
+
       <a
         href='tel:0633968023'
-        class='hidden md:block bg-yellow-400 text-slate-900 pl-4 pr-2 lg:px-6 py-2 rounded-full font-bold hover:bg-yellow-500 transition transform hover:scale-105'>
-        <i class='fas fa-phone-alt mr-2'></i>
-        <span class='hidden lg:inline'>06 33 96 80 23</span>
+        class='hidden items-center gap-2 rounded-full bg-yellow-400 py-2 pl-4 pr-4 font-bold text-slate-900 transition duration-200 hover:-translate-y-0.5 hover:bg-yellow-300 active:translate-y-0 active:scale-[0.98] md:flex lg:px-6'>
+        <i class='fas fa-phone-alt'></i>
+        <span class='hidden tabular-nums lg:inline'>06 33 96 80 23</span>
       </a>
     </div>
   </div>

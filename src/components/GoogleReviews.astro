@@ -842,37 +842,42 @@ const writeReviewLink =
   "https://www.google.com/search?newwindow=1&sca_esv=454c728905f0b91c&sxsrf=AE3TifNwtmrLBlZ5EzZwWRMQLEtdpGMoMg:1764109083140&q=Taxi+Anthony+Gervais+-+La+Roche+sur+Yon+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2NDSwtDAyNbE0NjA0tDS3MDA32cDI-IpRJySxIlPBMa8kIz-vUsE9tagsMbNYQVfBJ1EhKD85I1WhuLRIITI_T8GxLLN4EStJygHgbYl_eAAAAA&rldimm=9109825493011978074&tbm=lcl&hl=fr-FR&sa=X&ved=2ahUKEwjXovu5qo6RAxWrUKQEHbQkLbEQ9fQKegQIKhAF&biw=1728&bih=911&dpr=2#lkt=LocalPoiReviews&lrd=0x48042f5059cd427d:0x7e6c9a051cc6d75a,3,,,,";
 ---
 
-<section class='py-12 bg-gray-50'>
-  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='text-center mb-12'>
-      <div class='flex flex-col items-center gap-5'>
-        <h2 class='text-3xl font-bold text-slate-900'>
-          Ce que nos clients disent
+<section id='avis' class='bg-white py-20 md:py-24'>
+  <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div
+      class='mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between'>
+      <div class='max-w-xl'>
+        <p
+          class='mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-yellow-600'>
+          Avis Google
+        </p>
+        <h2 class='text-3xl font-bold text-slate-900 md:text-4xl'>
+          Ce que disent nos clients
         </h2>
-        <div
-          class='bg-white px-6 py-3 rounded-lg shadow-md border border-gray-200 flex items-center gap-3'>
-          <div class='text-center'>
-            <div class='text-2xl font-bold text-slate-900'>5,0</div>
-            <div class='text-yellow-400 text-sm flex gap-0.5'>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-              <i class='fas fa-star'></i>
-            </div>
-          </div>
-          <div class='text-gray-600 text-sm border-l border-gray-300 pl-3'>
-            <div class='font-semibold'>141 avis</div>
-            <div class='text-xs text-gray-500'>Google</div>
-          </div>
-        </div>
+        <p class='mt-4 text-slate-600'>
+          La satisfaction de nos clients est notre priorité. Découvrez leurs
+          témoignages, vérifiés sur Google.
+        </p>
       </div>
-      <div class='w-20 h-1 bg-yellow-400 mx-auto mt-6 mb-6'></div>
-      <p class='text-gray-600 mx-auto'>
-        La satisfaction de nos clients est notre priorité.
-        <br />
-        Découvrez leurs témoignages sur Google.
-      </p>
+      <div
+        class='inline-flex flex-shrink-0 items-center gap-3 self-start rounded-full bg-slate-50 px-5 py-2.5 ring-1 ring-slate-200 md:self-auto'>
+        <span class='text-2xl font-bold tabular-nums text-slate-900'>5,0</span>
+        <span class='flex gap-0.5 text-sm text-yellow-400' aria-hidden='true'>
+          <i class='fas fa-star'></i>
+          <i class='fas fa-star'></i>
+          <i class='fas fa-star'></i>
+          <i class='fas fa-star'></i>
+          <i class='fas fa-star'></i>
+        </span>
+        <span class='border-l border-slate-300 pl-3 text-left text-sm text-slate-600'>
+          <span class='block font-semibold'
+            ><span class='tabular-nums'>141</span> avis</span
+          >
+          <span class='flex items-center gap-1 text-xs text-slate-500'
+            ><i class='fab fa-google'></i> Google</span
+          >
+        </span>
+      </div>
     </div>
 
     <div class='relative mb-12'>
@@ -880,7 +885,7 @@ const writeReviewLink =
       <button
         id='prevBtn'
         aria-label='Avis précédents'
-        class='absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'>
+        class='absolute left-0 top-1/2 z-10 flex h-12 w-12 -translate-x-4 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-700 shadow-soft ring-1 ring-slate-200 transition hover:text-yellow-500 hover:shadow-soft-lg active:scale-95 disabled:cursor-not-allowed disabled:opacity-40'>
         <i class='fas fa-chevron-left'></i>
       </button>
 
@@ -894,20 +899,20 @@ const writeReviewLink =
               <div
                 class='w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4'
                 data-index={index}>
-                <div class='bg-white p-6 md:p-8 rounded-xl shadow-md hover:shadow-lg transition border border-gray-100 flex flex-col h-full'>
+                <div class='flex h-full flex-col rounded-2xl bg-white p-6 md:p-8 shadow-soft ring-1 ring-slate-200 transition duration-300 hover:shadow-soft-lg'>
                   <div class='flex items-center mb-4'>
                     <div class='text-yellow-400 text-sm flex'>
                       {[...Array(review.rating)].map(() => (
                         <i class='fas fa-star' />
                       ))}
                     </div>
-                    <span class='text-gray-500 text-xs ml-auto'>
+                    <span class='text-slate-500 text-xs ml-auto'>
                       {review.date}
                     </span>
                   </div>
                   <div class='mb-6 grow relative'>
                     <p
-                      class='text-gray-600 italic review-text overflow-hidden'
+                      class='text-slate-600 italic review-text overflow-hidden'
                       style='display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;'>
                       "{review.text}"
                     </p>
@@ -923,7 +928,7 @@ const writeReviewLink =
                       <p class='font-bold text-slate-900 text-sm'>
                         {review.author}
                       </p>
-                      <p class='text-xs text-gray-500'>Client Google</p>
+                      <p class='text-xs text-slate-500'>Client Google</p>
                     </div>
                     <i class='fab fa-google text-slate-300 text-xl ml-auto' />
                   </div>
@@ -938,7 +943,7 @@ const writeReviewLink =
       <button
         id='nextBtn'
         aria-label='Avis suivants'
-        class='absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition flex items-center justify-center text-slate-700 hover:text-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer'>
+        class='absolute right-0 top-1/2 z-10 flex h-12 w-12 translate-x-4 -translate-y-1/2 items-center justify-center rounded-full bg-white text-slate-700 shadow-soft ring-1 ring-slate-200 transition hover:text-yellow-500 hover:shadow-soft-lg active:scale-95 disabled:cursor-not-allowed disabled:opacity-40'>
         <i class='fas fa-chevron-right'></i>
       </button>
 
@@ -951,7 +956,7 @@ const writeReviewLink =
         </div>
         <!-- Barre de progression -->
         <div
-          class='max-w-xs mx-auto mt-3 h-1 bg-gray-200 rounded-full overflow-hidden'>
+          class='max-w-xs mx-auto mt-3 h-1 bg-slate-200 rounded-full overflow-hidden'>
           <div
             id='progressBar'
             class='h-full bg-yellow-400 transition-all duration-500 ease-in-out'
@@ -1188,21 +1193,21 @@ const writeReviewLink =
       });
     </script>
 
-    <div class='flex flex-col sm:flex-row justify-center items-center gap-4'>
+    <div class='flex flex-col items-center justify-center gap-4 sm:flex-row'>
       <a
         href={writeReviewLink}
         target='_blank'
         rel='noopener noreferrer'
-        class='bg-yellow-400 text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg flex items-center'>
-        <i class='fas fa-pen mr-2'></i>
+        class='shadow-brand flex items-center gap-2 rounded-full bg-yellow-400 px-8 py-3.5 font-bold text-slate-900 transition duration-200 hover:-translate-y-0.5 hover:bg-yellow-300 active:translate-y-0 active:scale-[0.98]'>
+        <i class='fas fa-pen'></i>
         Donnez votre avis
       </a>
       <a
         href={googleReviewsLink}
         target='_blank'
         rel='noopener noreferrer'
-        class='text-slate-600 hover:text-slate-900 font-medium px-6 py-3 transition flex items-center'>
-        <i class='fab fa-google mr-2'></i>
+        class='flex items-center gap-2 px-6 py-3 font-medium text-slate-600 transition hover:text-slate-900'>
+        <i class='fab fa-google'></i>
         Voir tous les avis
       </a>
     </div>
